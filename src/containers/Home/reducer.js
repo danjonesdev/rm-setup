@@ -1,4 +1,3 @@
-/* @flow */
 
 import _ from 'lodash';
 
@@ -8,9 +7,6 @@ import {
   USERS_FAILURE,
   USERS_SUCCESS,
 } from './action';
-import type { Home, Action } from '../../types';
-
-type State = Home;
 
 const initialState = {
   readyStatus: USERS_INVALID,
@@ -18,7 +14,7 @@ const initialState = {
   list: [],
 };
 
-export default (state: State = initialState, action: Action): State => {
+export default (state = initialState, action) => {
   switch (action.type) {
     case USERS_REQUESTING:
       return _.assign({}, state, { readyStatus: USERS_REQUESTING });

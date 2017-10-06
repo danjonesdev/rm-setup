@@ -1,26 +1,21 @@
 /* eslint-disable react/sort-comp */
-/* @flow */
 
 import React, { PureComponent } from 'react';
-import type { Element } from 'react';
+import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import type { Connector } from 'react-redux';
 import Helmet from 'react-helmet';
 
 import * as action from './action';
-import type { Home as HomeType, Dispatch, Reducer } from '../../types';
 import UserList from '../../components/UserList';
 import styles from './styles.scss';
 
-type Props = { home: HomeType, fetchUsersIfNeeded: () => void };
-
 // Export this for unit testing more easily
-export class Home extends PureComponent<Props> {
+export class Home extends PureComponent {
   componentDidMount() {
     this.props.fetchUsersIfNeeded();
   }
 
-  renderUserList = (): Element<'p' | typeof UserList> => {
+  renderUserList = () => {
     const { home } = this.props;
 
     if (
@@ -48,11 +43,27 @@ export class Home extends PureComponent<Props> {
   }
 }
 
-const connector: Connector<{}, Props> = connect(
-  ({ home }: Reducer) => ({ home }),
-  (dispatch: Dispatch) => ({
+const connector = connect(
+  ({ home }) => ({ home }),
+  dispatch => ({
     fetchUsersIfNeeded: () => dispatch(action.fetchUsersIfNeeded()),
   }),
 );
+
+Home.propTypes = {
+  home: PropTypes.shape({
+    readyStatus: PropTypes.string,
+    list: PropTypes.arrayOf(PropTypes.object).isRequired,
+  }),
+  fetchUsersIfNeeded: PropTypes.func,
+};
+
+Home.defaultProps = {
+  home: {
+    readyStatus: '',
+    list: [{}],
+  },
+  fetchUsersIfNeeded: () => {},
+};
 
 export default connector(Home);

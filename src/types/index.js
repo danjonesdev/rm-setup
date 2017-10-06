@@ -2,11 +2,11 @@
 
 import type { Store as ReduxStore } from 'redux';
 
-export type Home = {
-  readyStatus: string,
-  err: any,
-  list: Array<Object>,
-};
+// export type Home = {
+//   readyStatus: string,
+//   err: any,
+//   list: Array<Object>,
+// };
 
 export type UserInfo = {
   [userId: string]: {
