@@ -8,13 +8,13 @@ import type { Store as ReduxStore } from 'redux';
 //   list: Array<Object>,
 // };
 
-export type UserInfo = {
-  [userId: string]: {
-    readyStatus: string,
-    err: any,
-    info: Object,
-  },
-};
+// export type UserInfo = {
+//   [userId: string]: {
+//     readyStatus: string,
+//     err: any,
+//     info: Object,
+//   },
+// };
 
 export type Reducer = {
   home: Home,
