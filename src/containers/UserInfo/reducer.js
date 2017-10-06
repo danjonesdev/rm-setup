@@ -7,11 +7,8 @@ import {
   USER_FAILURE,
   USER_SUCCESS,
 } from './action';
-import type { UserInfo, Action } from '../../types';
 
-type State = UserInfo;
-
-export default (state: State = {}, action: Action): State => {
+export default (state = {}, action) => {
   switch (action.type) {
     case USER_REQUESTING:
       return _.assign({}, state, {
