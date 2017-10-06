@@ -21,7 +21,7 @@ import type { Store as ReduxStore } from 'redux';
 //   userInfo: UserInfo,
 //   router: any,
 // };
-//
+
 // export type Action =
 //   { type: 'USERS_REQUESTING' } |
 //   { type: 'USERS_SUCCESS', data: Array<Object> } |
