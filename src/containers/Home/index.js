@@ -53,7 +53,8 @@ const connector = connect(
 Home.propTypes = {
   home: PropTypes.shape({
     readyStatus: PropTypes.string,
-    list: PropTypes.arrayOf(PropTypes.object).isRequired,
+    err: PropTypes.any,
+    list: PropTypes.arrayOf(PropTypes.object),
   }),
   fetchUsersIfNeeded: PropTypes.func,
 };
@@ -61,6 +62,7 @@ Home.propTypes = {
 Home.defaultProps = {
   home: {
     readyStatus: '',
+    err: '',
     list: [{}],
   },
   fetchUsersIfNeeded: () => {},
