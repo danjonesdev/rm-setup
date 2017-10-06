@@ -1,4 +1,3 @@
-/* @flow */
 
 export const USER_REQUESTING = 'USER_REQUESTING';
 export const USER_FAILURE = 'USER_FAILURE';
