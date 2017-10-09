@@ -1,11 +1,11 @@
 /* @flow */
 
 import type { Dispatch } from './types';
-import { fetchHotArticlesIfNeeded } from './containers/HotArticles/action';
-import { fetchUserIfNeeded } from './containers/UserInfo/action';
-import HomePage from './containers/Home';
-import UserInfoPage from './containers/UserInfo';
-import NotFoundPage from './containers/NotFound';
+import { fetchHotArticlesIfNeeded } from './containers/Fragments/HotArticles/action';
+import { fetchUserIfNeeded } from './containers/Pages/UserInfo/action';
+import HomePage from './containers/Pages/Home';
+import UserInfoPage from './containers/Pages/UserInfo';
+import NotFoundPage from './containers/Pages/NotFound';
 
 export default [
   {

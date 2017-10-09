@@ -4,7 +4,7 @@ import React from 'react';
 // import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 
-import HotArticlesz from '../../containers/HotArticles';
+import HotArticlesz from '../../../containers/Fragments/HotArticles';
 import styles from './styles.scss';
 
 // Export this for unit testing more easily

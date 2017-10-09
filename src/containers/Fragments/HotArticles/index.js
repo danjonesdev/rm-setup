@@ -5,8 +5,7 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
 import * as action from './action';
-import HotArticleList from '../../components/HotArticleList';
-import styles from './styles.scss';
+import HotArticleList from '../../../components/HotArticleList';
 
 // Export this for unit testing more easily
 export class HotArticles extends PureComponent {
@@ -34,7 +33,7 @@ export class HotArticles extends PureComponent {
 
   render() {
     return (
-      <div className={styles.HotArticles}>
+      <div>
         {this.renderHotArticleList()}
       </div>
     );

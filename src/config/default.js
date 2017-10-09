@@ -4,7 +4,7 @@ module.exports = {
   app: {
     htmlAttributes: { lang: 'en' },
     title: 'React Cool Starter',
-    titleTemplate: 'React Cool Starter - %s',
+    titleTemplate: 'rm-setup - %s',
     meta: [
       {
         name: 'description',
