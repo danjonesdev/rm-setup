@@ -56,9 +56,7 @@ UserInfo.propTypes = {
     err: PropTypes.any,
     info: PropTypes.object,
   }),
-  match: PropTypes.shape({
-    id: PropTypes.string,
-  }),
+  match: PropTypes.object, // eslint-disable-line react/forbid-prop-types
   fetchUserIfNeeded: PropTypes.func,
 };
 
@@ -69,9 +67,7 @@ UserInfo.defaultProps = {
     err: '',
     info: {},
   },
-  match: {
-    id: '',
-  },
+  match: [],
   fetchUserIfNeeded: () => {},
 };
 

@@ -1,12 +1,10 @@
 /* @flow */
 
 import React from 'react';
-import type { Element } from 'react';
+import PropTypes from 'prop-types';
 import styles from './styles.scss';
 
-type Props = { info: Object };
-
-const UserCard = ({ info }: Props): Element<'div'> => (
+const UserCard = ({ info }): Element<'div'> => (
   <div className={styles.UserCard}>
     <h4>User Card</h4>
     <ul>
@@ -17,5 +15,13 @@ const UserCard = ({ info }: Props): Element<'div'> => (
     </ul>
   </div>
 );
+
+UserCard.propTypes = {
+  info: PropTypes.object, // eslint-disable-line react/forbid-prop-types
+};
+
+UserCard.defaultProps = {
+  info: [],
+};
 
 export default UserCard;

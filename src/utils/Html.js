@@ -59,7 +59,7 @@ const Html = ({ store, htmlContent }: Props): Element<'html'> => {
                 // $FlowFixMe: It's not an issue
                 require('../containers/Pages/NotFound/styles.scss')._style +
                 // $FlowFixMe: It's not an issue
-                require('../components/UserList/styles.scss')._style +
+                require('../components/HotArticleList/styles.scss')._style +
                 // $FlowFixMe: It's not an issue
                 require('../components/UserCard/styles.scss')._style,
               }}
