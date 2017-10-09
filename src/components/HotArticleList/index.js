@@ -8,8 +8,8 @@ import styles from './styles.scss';
 
 type Props = { list: Array<Object> };
 
-const UserList = ({ list }: Props): Element<'div'> => (
-  <div className={styles.UserList}>
+const HotArticleList = ({ list }: Props): Element<'div'> => (
+  <div className={styles.HotArticleList}>
     <h4>User List</h4>
     <ul>
       {list.map(user => (
@@ -21,4 +21,4 @@ const UserList = ({ list }: Props): Element<'div'> => (
   </div>
 );
 
-export default UserList;
+export default HotArticleList;
