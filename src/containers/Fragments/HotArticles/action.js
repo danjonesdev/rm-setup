@@ -4,7 +4,7 @@ export const HOTARTICLES_REQUESTING = 'HOTARTICLES_REQUESTING';
 export const HOTARTICLES_FAILURE = 'HOTARTICLES_FAILURE';
 export const HOTARTICLES_SUCCESS = 'HOTARTICLES_SUCCESS';
 
-export const API_URL = 'https://jsonplaceholder.typicode.com/users';
+export const API_URL = 'api/articles';
 
 // Export this for unit testing more easily
 export const fetchHotArticles = (axios: any, URL: string = API_URL) =>

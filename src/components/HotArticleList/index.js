@@ -14,7 +14,7 @@ const HotArticleList = ({ list }: Props): Element<'div'> => (
     <ul>
       {list.map(user => (
         <li key={user.id}>
-          <Link to={`/UserInfo/${user.id}`}>{user.name}</Link>
+          <Link to={`/UserInfo/${user.id}`}>{user.title}</Link>
         </li>
       ))}
     </ul>
