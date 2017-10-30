@@ -1,16 +1,20 @@
 /* eslint-disable react/sort-comp */
+/* eslint-disable import/no-named-as-default */
+
 
 import React from 'react';
 // import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 
-import HotArticlesz from '../../../containers/Fragments/HotArticles';
+import HotArticles from '../../../containers/Fragments/HotArticles';
+import Heading from '../../../components/elements/Heading';
 
 // Export this for unit testing more easily
 const Home = () => (
   <div>
     <Helmet title="Home" />
-    <HotArticlesz />
+    <Heading type="h1" color="red" text="Featured" />
+    <HotArticles />
   </div>
 );
 
