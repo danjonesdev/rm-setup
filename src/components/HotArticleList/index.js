@@ -4,12 +4,10 @@ import React from 'react';
 import type { Element } from 'react';
 import { Link } from 'react-router-dom';
 
-import styles from './styles.scss';
-
 type Props = { list: Array<Object> };
 
 const HotArticleList = ({ list }: Props): Element<'div'> => (
-  <div className={styles.HotArticleList}>
+  <div>
     <h4>User List</h4>
     <ul>
       {list.map(user => (

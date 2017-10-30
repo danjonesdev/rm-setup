@@ -2,10 +2,9 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
-import styles from './styles.scss';
 
 const UserCard = ({ info }): Element<'div'> => (
-  <div className={styles.UserCard}>
+  <div>
     <h4>User Card</h4>
     <ul>
       <li>Name: {info.name}</li>

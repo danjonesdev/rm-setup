@@ -7,7 +7,6 @@ import Helmet from 'react-helmet';
 
 import * as action from './action';
 import UserCard from '../../../components/UserCard';
-import styles from './styles.scss';
 
 // Export this for unit testing more easily
 export class UserInfo extends PureComponent {
@@ -34,7 +33,7 @@ export class UserInfo extends PureComponent {
 
   render() {
     return (
-      <div className={styles.UserInfo}>
+      <div>
         <Helmet title="User Info" />
         {this.renderUserCard()}
       </div>

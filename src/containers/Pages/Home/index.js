@@ -5,11 +5,10 @@ import React from 'react';
 import Helmet from 'react-helmet';
 
 import HotArticlesz from '../../../containers/Fragments/HotArticles';
-import styles from './styles.scss';
 
 // Export this for unit testing more easily
 const Home = () => (
-  <div className={styles.Home}>
+  <div>
     <Helmet title="Home" />
     <HotArticlesz />
   </div>

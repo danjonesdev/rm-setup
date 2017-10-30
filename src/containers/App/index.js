@@ -10,7 +10,6 @@ import config from '../../config';
 import routes from '../../routes';
 // Import your global styles here
 // import '../../theme/normalize.css';
-import styles from './styles.scss';
 
 const App = (): Element<'div'> => {
   // Use it when sub routes are added to any route it'll work
@@ -27,9 +26,9 @@ const App = (): Element<'div'> => {
   );
 
   return (
-    <div className={styles.App}>
+    <div>
       <Helmet {...config.app} />
-      <div className={styles.header}>
+      <div>
         <img src={require('./assets/logo.svg')} alt="Logo" role="presentation" />
         <h1>{config.app.title}</h1>
       </div>
