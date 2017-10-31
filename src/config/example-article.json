@@ -6,14 +6,23 @@
   "title": "Follow The Signs 001",
   "body": [
     {
-      "section": "Lorem ipsum this is section 1"
+      "section": {
+        "heading": "",
+        "content": "",
+      }
     },
     {
-      "section": "Lorem ipsum this is section 2"
+      "section": {
+        "heading": "",
+        "content": "",
+      }
     },
     {
-      "section": "Lorem ipsum this is section 3"
-    }
+      "section": {
+        "heading": "",
+        "content": "",
+      }
+    },
   ],
   "links": [
     {
