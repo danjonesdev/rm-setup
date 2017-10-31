@@ -28,6 +28,7 @@ export class LatestArticles extends PureComponent {
       return <p>Oops, Failed to load list!</p>;
     }
 
+    console.log(latestArticles.list);
     return <LatestArticleList list={latestArticles.list} />;
   };
 

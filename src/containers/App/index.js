@@ -28,7 +28,7 @@ const App = (): Element<'div'> => {
     <div>
       <Helmet {...config.app} />
       <div>
-        <img className="img" src={require('./assets/logo.svg')} alt="Logo" role="presentation" />
+        <img className="h3" src={require('./assets/logo.svg')} alt="Logo" role="presentation" />
         <h1>{config.app.title}</h1>
       </div>
       <hr />

@@ -1,31 +1,23 @@
 {
-  "_id": {
-    "$oid": "596d2c9af36d281eb4412cee"
-  },
   "id": 1,
   "title": "Follow The Signs 001",
-  "body": [
-    {
+  "body": [{
       "section": {
-        "heading": "",
-        "content": "",
+        "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam."
       }
     },
     {
       "section": {
-        "heading": "",
-        "content": "",
+        "content": ""
       }
     },
     {
       "section": {
-        "heading": "",
-        "content": "",
+        "content": ""
       }
-    },
+    }
   ],
-  "links": [
-    {
+  "links": [{
       "text": "lorem",
       "url": "ipsum"
     },
