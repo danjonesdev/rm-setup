@@ -7,15 +7,14 @@ import { Link } from 'react-router-dom';
 type Props = { list: Array<Object> };
 
 const HotArticleList = ({ list }: Props): Element<'div'> => (
-  <div>
-    <h4>User List</h4>
-    <ul>
+  <div className="container">
+    <div className="row">
       {list.map(user => (
-        <li key={user.id}>
+        <div className="col-sm-6">
           <Link to={`/UserInfo/${user.id}`}>{user.title}</Link>
-        </li>
+        </div>
       ))}
-    </ul>
+    </div>
   </div>
 );
 

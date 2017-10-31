@@ -1,0 +1,32 @@
+{
+  "_id": {
+    "$oid": "596d2c9af36d281eb4412cee"
+  },
+  "id": 1,
+  "title": "Follow The Signs 001",
+  "body": [
+    {
+      "section": "Lorem ipsum this is section 1"
+    },
+    {
+      "section": "Lorem ipsum this is section 2"
+    },
+    {
+      "section": "Lorem ipsum this is section 3"
+    }
+  ],
+  "links": [
+    {
+      "text": "lorem",
+      "url": "ipsum"
+    },
+    {
+      "text": "lorem",
+      "url": "ipsum"
+    }
+  ],
+  "created": {
+    "date": "",
+    "author": ""
+  }
+}

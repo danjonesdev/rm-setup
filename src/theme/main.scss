@@ -2,7 +2,7 @@
 
 // Vendor
 @import 'vendor/normalize';
-@import 'vendor/prism';
+// @import 'vendor/prism';
 
 // Variables
 @import 'vars/index';
@@ -22,10 +22,12 @@
 @import 'utilities/helper';
 @import 'utilities/state';
 
+@import 'vendor/bootstrap-grid';
+
 @import 'utilities/layout/clearfix';
 @import 'utilities/layout/display';
-@import 'utilities/layout/flexbox';
-@import 'utilities/layout/grid';
+// @import 'utilities/layout/flexbox';
+// @import 'utilities/layout/grid';
 @import 'utilities/layout/height';
 @import 'utilities/layout/max-width';
 @import 'utilities/layout/negative-margin';
