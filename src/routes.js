@@ -1,7 +1,7 @@
 /* @flow */
 
 import type { Dispatch } from './types';
-import { fetchHotArticlesIfNeeded } from './containers/Fragments/HotArticles/action';
+import { fetchLatestArticlesIfNeeded } from './containers/Fragments/LatestArticles/action';
 import { fetchUserIfNeeded } from './containers/Pages/UserInfo/action';
 import HomePage from './containers/Pages/Home';
 import UserInfoPage from './containers/Pages/UserInfo';
@@ -13,7 +13,7 @@ export default [
     exact: true,
     component: HomePage, // Add your route here
     loadData: (dispatch: Dispatch) => Promise.all([
-      dispatch(fetchHotArticlesIfNeeded()), // Register your server-side call action(s) here
+      dispatch(fetchLatestArticlesIfNeeded()), // Register your server-side call action(s) here
     ]),
   },
   {

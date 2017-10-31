@@ -6,7 +6,7 @@ import React from 'react';
 // import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 
-import HotArticles from '../../../containers/Fragments/HotArticles';
+import LatestArticles from '../../../containers/Fragments/LatestArticles';
 import Heading from '../../../components/Elements/Heading';
 
 // Export this for unit testing more easily
@@ -14,7 +14,7 @@ const Home = () => (
   <div>
     <Helmet title="Home" />
     <Heading type="h1" color="red" text="Featured" />
-    <HotArticles />
+    <LatestArticles />
   </div>
 );
 

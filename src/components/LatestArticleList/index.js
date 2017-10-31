@@ -6,11 +6,12 @@ import { Link } from 'react-router-dom';
 
 type Props = { list: Array<Object> };
 
-const HotArticleList = ({ list }: Props): Element<'div'> => (
+const LatestArticleList = ({ list }: Props): Element<'div'> => (
   <div className="container">
     <div className="row">
       {list.map(user => (
         <div className="col-sm-6">
+          <img alt='' src="http://www.billboard.com/files/media/Noisia-Outer-Edges-press-photo-2016-billboard-1240.jpg" />
           <Link to={`/UserInfo/${user.id}`}>{user.title}</Link>
         </div>
       ))}
@@ -18,4 +19,4 @@ const HotArticleList = ({ list }: Props): Element<'div'> => (
   </div>
 );
 
-export default HotArticleList;
+export default LatestArticleList;
