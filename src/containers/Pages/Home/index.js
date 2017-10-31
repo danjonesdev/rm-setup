@@ -7,7 +7,7 @@ import React from 'react';
 import Helmet from 'react-helmet';
 
 import HotArticles from '../../../containers/Fragments/HotArticles';
-import Heading from '../../../components/elements/Heading';
+import Heading from '../../../components/Elements/Heading';
 
 // Export this for unit testing more easily
 const Home = () => (

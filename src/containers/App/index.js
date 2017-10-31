@@ -8,7 +8,7 @@ import _ from 'lodash';
 
 import config from '../../config';
 import routes from '../../routes';
-import '../../theme/variables.scss';
+import '../../theme/main.scss';
 
 const App = (): Element<'div'> => {
   // Use it when sub routes are added to any route it'll work

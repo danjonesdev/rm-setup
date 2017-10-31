@@ -1,0 +1,10 @@
+/* stylelint-disable */
+
+.link {
+  text-decoration: none;
+  transition: all 0.2s ease-in;
+}
+
+.link:focus {
+  outline: 1px dotted currentColor;
+}
