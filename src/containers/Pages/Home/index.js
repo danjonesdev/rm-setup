@@ -11,11 +11,11 @@ import Heading from '../../../components/Elements/Heading';
 
 // Export this for unit testing more easily
 const Home = () => (
-  <div>
+  <main role="main">
     <Helmet title="Home" />
     <Heading type="h1" color="red" text="Featured" />
     <LatestArticles />
-  </div>
+  </main>
 );
 
 // Home.propTypes = {

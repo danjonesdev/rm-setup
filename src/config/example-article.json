@@ -1,33 +1,67 @@
 {
-  "id": 1,
-  "title": "Follow The Signs 001",
-  "body": [{
-      "section": {
-        "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam."
+  "id":1,
+  "title":"Follow The Signs 001",
+  "body":[
+    {
+      "section":{
+        "type":"standard",
+        "title":"Head first into the Signs EP",
+        "content":"Lorem dolor sit amet, sed do eiusmod tempor incididunt ut et dolore magna. Ut enim ad veniam.",
+        "img": "ep-cover"
       }
     },
     {
-      "section": {
-        "content": ""
+      "section":{
+        "type":"questions",
+        "question":"What inspired you to make this EP?",
+        "answer":"Lorem ipsum dolor sit amet, consectetur adipiscing eliore magna aliqua. Ut enim ad minim."
       }
     },
     {
-      "section": {
-        "content": ""
+      "section":{
+        "type":"ul",
+        "list":[
+          "Blah",
+          "Blah",
+          "Blah"
+        ]
+      }
+    },
+    {
+      "section":{
+        "type":"ol",
+        "list":[
+          "Blah",
+          "Blah",
+          "Blah"
+        ]
+      }
+    }
+    {
+      "section":{
+        "type":"soundcloud",
+        "ur": "www.soundcloud.com/blah"
+      }
+    },
+    {
+      "section":{
+        "type":"youtube",
+        "ur": "www.youtube.com/blah"
       }
     }
   ],
-  "links": [{
-      "text": "lorem",
-      "url": "ipsum"
+  "links":[
+    {
+      "text":"lorem",
+      "url":"ipsum"
     },
     {
-      "text": "lorem",
-      "url": "ipsum"
+      "text":"lorem",
+      "url":"ipsum"
     }
   ],
-  "created": {
-    "date": "",
-    "author": ""
+  "created":{
+    "date":"",
+    "author":""
   }
 }

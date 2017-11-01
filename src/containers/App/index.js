@@ -27,10 +27,10 @@ const App = (): Element<'div'> => {
   return (
     <div>
       <Helmet {...config.app} />
-      <div>
+      <header role="banner">
         <img className="h3" src={require('./assets/logo.svg')} alt="Logo" role="presentation" />
         <h1>{config.app.title}</h1>
-      </div>
+      </header>
       <hr />
       <Switch>{routes.map(route => routeWithSubRoutes(route))}</Switch>
     </div>
