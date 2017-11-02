@@ -55,6 +55,8 @@ if (__DEV__) {
 //GET ARTICLES_LATEST
 app.get('/api/articles', (req, res) => {
 
+  console.log('/api/articles');
+
     //var indexLimit = parseInt(req.query.indexLimit, 10);
     var articles = [];
     // console.log(indexLimit);
@@ -67,12 +69,39 @@ app.get('/api/articles', (req, res) => {
         .then(result => {
             articles = articles.concat(result);
         }).then(() => {
+            console.log(articles);
             res.send(articles);
         }).catch(e => {
             console.error(e);
         });
 
-    console.log("test");
+});
+
+//GET ARTICLE
+app.get('/api/article', (req, res) => {
+
+    var ObjectId = require('mongodb').ObjectID;
+    // var articleId = req.query.id;
+    var articles = [];
+
+    console.log('/api/article');
+    //console.log(articleId);
+    //console.log(articleId);
+
+    db.collection('articles')
+        // .findOne("id": articleId)
+        .findOne({"_id": new ObjectId(req.query.id)})
+        // .sort("date", -1)
+        // .toArray()
+        .then(result => {
+            articles = articles.concat(result);
+        }).then(() => {
+            console.log(articles);
+            res.send(articles);
+        }).catch(e => {
+            console.error(e);
+        });
+
 });
 
 // Register server-side rendering middleware

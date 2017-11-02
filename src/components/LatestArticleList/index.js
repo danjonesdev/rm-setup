@@ -14,7 +14,7 @@ const LatestArticleList = ({ list }: Props): Element<'div'> => (
     <div className="row">
       {list.map(article => (
         <div className="col-sm-6">
-          <Link className="link" to={`/UserInfo/${article.id}`}>
+          <Link className="link" to={`/UserInfo/${article._id}`}>
             <figure>
               <img className="mb3" alt="" src="http://www.billboard.com/files/media/Noisia-Outer-Edges-press-photo-2016-billboard-1240.jpg" />
               <span>New</span>

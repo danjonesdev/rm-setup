@@ -4,7 +4,7 @@ export const LATESTARTICLES_REQUESTING = 'LATESTARTICLES_REQUESTING';
 export const LATESTARTICLES_FAILURE = 'LATESTARTICLES_FAILURE';
 export const LATESTARTICLES_SUCCESS = 'LATESTARTICLES_SUCCESS';
 
-export const API_URL = 'api/articles';
+export const API_URL = '/api/articles';
 
 // Export this for unit testing more easily
 export const fetchLatestArticles = (axios: any, URL: string = API_URL) =>
