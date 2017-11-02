@@ -20,8 +20,8 @@ export class Heading extends PureComponent {
       case 'h6':
         return <h6 className={`t7  lh-title  fw9  pv2 ${this.props.color}`}>{this.props.text}</h6>;
       default:
-        console.log('Heading element not returned.');
-        return null;
+        console.log('Not Returned: Heading.renderHeading');
+        return false;
     }
   };
 
