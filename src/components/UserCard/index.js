@@ -13,11 +13,11 @@ const UserCard = ({ info }): Element<'div'> => (
 );
 
 UserCard.propTypes = {
-  info: PropTypes.object, // eslint-disable-line react/forbid-prop-types
+  info: PropTypes.shape(), // eslint-disable-line react/forbid-prop-types
 };
 
 UserCard.defaultProps = {
-  info: [],
+  info: {},
 };
 
 export default UserCard;

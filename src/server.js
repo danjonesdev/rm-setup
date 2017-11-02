@@ -82,7 +82,7 @@ app.get('/api/article', (req, res) => {
 
     var ObjectId = require('mongodb').ObjectID;
     // var articleId = req.query.id;
-    var articles = [];
+    var article = {};
 
     console.log('/api/article');
     //console.log(articleId);
@@ -94,10 +94,10 @@ app.get('/api/article', (req, res) => {
         // .sort("date", -1)
         // .toArray()
         .then(result => {
-            articles = articles.concat(result);
+            article = result;
         }).then(() => {
-            console.log(articles);
-            res.send(articles);
+            console.log(article);
+            res.send(article);
         }).catch(e => {
             console.error(e);
         });
