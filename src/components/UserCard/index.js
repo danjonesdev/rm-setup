@@ -19,14 +19,15 @@ export class UserCard extends PureComponent {
   };
 
   section = () => {
-    if (this.props.info.title) {
-      this.props.info.body.map((section) => {
-        console.log('TEST');
-        console.log(section);
-        return <p>test</p>;
-      });
+    if (this.props.info.body) {
+      console.log(this.props);
+      return this.props.info.body.map(body => (
+        <p>{body.section.type}</p>
+      ));
     }
-  };
+    console.log('Not Returned: UserCard.heading');
+    return false;
+  }
 
   render() {
     return (
