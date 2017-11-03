@@ -9,21 +9,30 @@ import Heading from '../Elements/Heading';
 // Export this for unit testing more easily
 export class UserCard extends PureComponent {
   heading = () => {
-    const info = this.props.info;
-
-    if (info.title) {
+    if (this.props.info.title) {
       return (
-        <Heading type="h1" color="black" text={info.title} />
+        <Heading type="h1" color="black" text={this.props.info.title} />
       );
     }
     console.log('Not Returned: UserCard.heading');
     return false;
   };
 
+  section = () => {
+    if (this.props.info.title) {
+      this.props.info.body.map((section) => {
+        console.log('TEST');
+        console.log(section);
+        return <p>test</p>;
+      });
+    }
+  };
+
   render() {
     return (
       <div>
         {this.heading()}
+        {this.section()}
       </div>
     );
   }
