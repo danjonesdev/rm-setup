@@ -6,6 +6,8 @@ import PropTypes from 'prop-types';
 
 import Heading from '../Elements/Heading';
 
+import Standard from './Sections/Standard';
+
 // Export this for unit testing more easily
 export class UserCard extends PureComponent {
   heading = () => {
@@ -25,7 +27,11 @@ export class UserCard extends PureComponent {
       switch (item.section.type) {
         case 'Standard':
           return (
-            <p>{item.section.type}</p>
+            <Standard
+              title={item.section.title}
+              content={item.section.content}
+              img={item.section.img}
+            />
           );
         case 'Interview':
           return (
