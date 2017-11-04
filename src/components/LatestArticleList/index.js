@@ -1,31 +1,42 @@
-/* @flow */
 /* eslint-disable import/no-named-as-default, react/no-array-index-key */
 
-import React from 'react';
-import type { Element } from 'react';
+import React, { PureComponent } from 'react';
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 import Heading from '../Elements/Heading';
+import GetImage from '../Helpers/GetImage';
 
-type Props = { list: Array<Object> };
-
-const LatestArticleList = ({ list }: Props): Element<'div'> => (
-  <article className="container">
-    <div className="row">
-      {list.map((article, i) => (
-        <div key={i} className="col-sm-6">
-          <Link className="link" to={`/UserInfo/${article._id}`}>
-            <figure>
-              <img className="mb3" alt="" src="http://www.billboard.com/files/media/Noisia-Outer-Edges-press-photo-2016-billboard-1240.jpg" />
-              <span>New</span>
-            </figure>
-            <Heading type="h2" color="black" text={article.title} />
-          </Link>
-          <p className="t8  lh-copy  pb3  LatestArticleList__intro">{article.body['0'].section.content}</p>
+// Export this for unit testing more easily
+export class LatestArticleList extends PureComponent {
+  render() {
+    return (
+      <article className="container">
+        <div className="row">
+          {this.props.list.map((article, i) => (
+            <div key={i} className="col-sm-6">
+              <Link className="link" to={`/UserInfo/${article._id}`}>
+                <figure>
+                  <img className="mb3" alt="" src={GetImage(article._id)} />
+                  <span>New</span>
+                </figure>
+                <Heading type="h2" color="black" text={article.title} />
+              </Link>
+              <p className="t8  lh-copy  pb3  LatestArticleList__intro">{article.body['0'].section.content}</p>
+            </div>
+          ))}
         </div>
-      ))}
-    </div>
-  </article>
-);
+      </article>
+    );
+  }
+}
+
+LatestArticleList.propTypes = {
+  list: PropTypes.shape(),
+};
+
+LatestArticleList.defaultProps = {
+  list: {},
+};
 
 export default LatestArticleList;
