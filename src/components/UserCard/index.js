@@ -30,34 +30,42 @@ export class UserCard extends PureComponent {
       switch (item.section.type) {
         case 'Standard':
           return (
-            <Standard
-              key={i}
-              title={item.section.title}
-              content={item.section.content}
-              img={item.section.img}
-            />
+            <div className="pv2">
+              <Standard
+                key={i}
+                title={item.section.title}
+                content={item.section.content}
+                img={item.section.img}
+              />
+            </div>
           );
         case 'Interview':
           return (
-            <QA
-              key={i}
-              question={item.section.question}
-              answer={item.section.answer}
-            />
+            <div className="pv2">
+              <QA
+                key={i}
+                question={item.section.question}
+                answer={item.section.answer}
+              />
+            </div>
           );
         case 'BulletPoints':
           return (
-            <BulletPoints
-              key={i}
-              list={item.section.list}
-            />
+            <div className="pv2">
+              <BulletPoints
+                key={i}
+                list={item.section.list}
+              />
+            </div>
           );
         case 'NumberedList':
           return (
-            <NumberedList
-              key={i}
-              list={item.section.list}
-            />
+            <div className="pv2">
+              <NumberedList
+                key={i}
+                list={item.section.list}
+              />
+            </div>
           );
         case 'SoundcloudEmbed':
           return (

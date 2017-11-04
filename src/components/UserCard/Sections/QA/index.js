@@ -10,7 +10,7 @@ export class QA extends PureComponent {
     console.log(this.props);
     return (
       <div>
-        <em>{this.props.question}</em>
+        <p><em>{this.props.question}</em></p>
         <p>{this.props.answer}</p>
       </div>
     );
