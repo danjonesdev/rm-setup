@@ -9,6 +9,7 @@ import Heading from '../Elements/Heading';
 import Standard from './Sections/Standard';
 import QA from './Sections/QA';
 import BulletPoints from './Sections/BulletPoints';
+import NumberedList from './Sections/NumberedList';
 
 // Export this for unit testing more easily
 export class UserCard extends PureComponent {
@@ -53,7 +54,10 @@ export class UserCard extends PureComponent {
           );
         case 'NumberedList':
           return (
-            <p key={i}>{item.section.type}</p>
+            <NumberedList
+              key={i}
+              list={item.section.list}
+            />
           );
         case 'SoundcloudEmbed':
           return (
