@@ -4,7 +4,7 @@
   "body":[
     {
       "section":{
-        "type":"standard",
+        "type":"Standard",
         "title":"Head first into the Signs EP",
         "content":"Lorem dolor sit amet, sed do eiusmod tempor incididunt ut et dolore magna. Ut enim ad veniam.",
         "img": "ep-cover"
@@ -12,14 +12,14 @@
     },
     {
       "section":{
-        "type":"questions",
+        "type":"Interview",
         "question":"What inspired you to make this EP?",
         "answer":"Lorem ipsum dolor sit amet, consectetur adipiscing eliore magna aliqua. Ut enim ad minim."
       }
     },
     {
       "section":{
-        "type":"ul",
+        "type":"BulletPoints",
         "list":[
           "Blah",
           "Blah",
@@ -29,7 +29,7 @@
     },
     {
       "section":{
-        "type":"ol",
+        "type":"NumberedList",
         "list":[
           "Blah",
           "Blah",
@@ -39,13 +39,13 @@
     },
     {
       "section":{
-        "type":"soundcloud",
+        "type":"SoundcloudEmbed",
         "ur": "www.soundcloud.com/blah"
       }
     },
     {
       "section":{
-        "type":"youtube",
+        "type":"YoutubeEmbed",
         "ur": "www.youtube.com/blah"
       }
     }

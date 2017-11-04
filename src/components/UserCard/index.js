@@ -23,27 +23,27 @@ export class UserCard extends PureComponent {
   sections = (item) => {
     if (item) {
       switch (item.section.type) {
-        case 'standard':
+        case 'Standard':
           return (
             <p>{item.section.type}</p>
           );
-        case 'questions':
+        case 'Interview':
           return (
             <p>{item.section.type}</p>
           );
-        case 'ul':
+        case 'BulletPoints':
           return (
             <p>{item.section.type}</p>
           );
-        case 'ol':
+        case 'NumberedList':
           return (
             <p>{item.section.type}</p>
           );
-        case 'soundcloud':
+        case 'SoundcloudEmbed':
           return (
             <p>{item.section.type}</p>
           );
-        case 'youtube':
+        case 'YoutubeEmbed':
           return (
             <p>{item.section.type}</p>
           );
