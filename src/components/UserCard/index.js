@@ -20,23 +20,50 @@ export class UserCard extends PureComponent {
     return false;
   };
 
-  section = () => {
-    const body = this.props.info.body;
-
-    if (body) {
-      return body.map(item => (
-        <p>{item.section.type}</p>
-      ));
+  section = (item) => {
+    if (item) {
+      switch (item.section.type) {
+        case 'standard':
+          return (
+            <p>{item.section.type}</p>
+          );
+        case 'questions':
+          return (
+            <p>{item.section.type}</p>
+          );
+        case 'ul':
+          return (
+            <p>{item.section.type}</p>
+          );
+        case 'ol':
+          return (
+            <p>{item.section.type}</p>
+          );
+        case 'soundcloud':
+          return (
+            <p>{item.section.type}</p>
+          );
+        case 'youtube':
+          return (
+            <p>{item.section.type}</p>
+          );
+        default:
+          console.log('Not Returned: UserCard.section.switch');
+          return false;
+      }
     }
-    console.log('Not Returned: UserCard.heading');
+    console.log('Not Returned: UserCard.section');
     return false;
   }
 
   render() {
+    const section = this.section;
     return (
       <div>
         {this.heading()}
-        {this.section()}
+        {this.props.info.body.map(item => (
+          section(item)
+        ))}
       </div>
     );
   }
