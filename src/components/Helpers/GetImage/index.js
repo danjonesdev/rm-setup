@@ -5,14 +5,14 @@ const getImage = (id) => {
         return 'https://lh3.googleusercontent.com/ipd9ZSVtPRGRm-OrV90kfTiMHcMDk1Uq19qH76LnYdcFpEtPXw9rZhn_QQjNKf46u_3pXcVpAb1fKcf47UQRJiDe-FGHEkjClI2-lf15QbY6S0HQxNwG30CllnQQ7QNvrdpmOn6iTJVjtUb_okYlhfAfqEJJB5PjmLIZZrJOCoYMFeBxmfmFF4hGbyQ8oW5CY0gIErk_4V-PrHHRoTs2bHo0nWhQsJqXhMPCNSPWqZFlsz4hE0qLGu8zsH5CL0shwmgkoxtpYlcMYCSQOZ4sn0utUHRnt76tSphb6hoz7R0DhbgZdIUqwXe27ebXwmQRQg94QA8WKG5hIK142_txbfnnNB_AxcixGd570ytA_NEdpNc99W4EaRAu0zhcf2GkEXGlJ5b1B0u2sHmnCKjzeB4WXOeIx3tgdSoPJc0nE9BGE-vrqQjFag5Nysy8znu3g1DcvghdibkAh6mKFX9hRUzSTSiYEQcDzzUsA0FhFMTJeFjX85htd0lhfTwnLJyDNC1pqUK2o75EygaHMUp3Nw99R8wKf3cIPWZsBWGU-lO0hoko4wgIeIU18QKtiYD8BQG0kUcF8WOzqGuAc1xI8wo6a_ELxtNQWNSkkkjjrg=s905-no';
       case '59fd2146734d1d63bdd1ecf1': // Enter Renraku
         return 'https://lh3.googleusercontent.com/v4b1R26wpEFTY_7xtLFj5dX4pbSWf4GhvQ5WGAddsC35OyegewJyVd5druxH27tTNyFJ7rY8KC6fhwIoxx9IZIJm8zCQXwtQRLso7ovENGOSf9COQRP5_YLS3GtafhQzOv7KVHqHUbY8sxDFOZIuQbEaELD0T0Jd3wX4WHCFYQs-uUx02Zj_WBSYC17oNYe8693O_HkwcdqG-H6RDiURPXX6h6j0Om1gjIKBNJdI_Cwx4vyIGMUG8cmquhKtwAt2GH-RPVNA1nAu2ReQv1_khQIlc7GnMCkLBzotbNDlXlQy8FqDbikem55MveNQQTLmhtC_uHTIYborUatexJO0HJTvh7mdbsFTN8VfxKBoa2qw09q4xVg8Io9lOx926OblvpPT3ctmA5rLgLvfdzr5UChwhbvNB-yzLFsyTqdW5TNHK7cEHiMXYzItJTJXtcss9REhfuv8z2jas7tbDJq5GtKs1wcXgGKHJCcyd8Fu5ZmcG-W3NBu3GGg6rkdZqlwu7toC7l2gHqdtxu2YKjLQRz2Vy7Nu9EyQQgHx3EstUY8Bcv27M1345s6FXF4AbwvaoFdVdQlmvGHoOPD_6yx3sqdkPwSmhVsXL9yu7wXXDg=s907-no';
-      case '59fd113e734d1d63bdd1d893':
+      case '59fd113e734d1d63bdd1d893': // Follow The Signs 001
         return 'https://lh3.googleusercontent.com/7Q_2upkv58ieW3LtVH4VbjwHxc51XOPm32f49UgQ6DKuA7hPrU1t6wqK93Pk5osJy1bO6Ca3trxD3ERFx6yqFM4u28DU64ZmDicfvovbJSmG5Lmg1Bjo0kx_ymKMksyOwGl-bFM9rXhpR1MKpsa0Thn4uAjsLlLnnzzCh6eQblIXmmcAYvCFv5u-GKoc20qTgliI3Tj2q1Dd9mXKUeeOwZclpozHayD4K2wKdf3VvNh_kpa0BQPcUUANUD8YJC8hUoRlLaYja62j1hZyG3wPmH81-cjthghB8DRB3Ubhi_rGEVhVoI3Q2KVJoMEoSSvxMrUfb3l-wWQ4G_-qNh7uoWQlXrEB3InuyE2tfzX-zMAfVy1Baa1D2txSFSguZN4aY2w0L8ZsQIgUoml2Zt9KukQSJdZMmlqCMkxxZxYoGZgmrvGzhaLF9ymKJEQlBxfZLAmp0c0jGg3DHloBDFiBtLyjuh9vbI4I-PcC8_gjjzU_TPZdbN0A8hM61UjfKdlll-ya2ldkpV6XgnFNKdsaNwcDTdFsKxEyS-g5tx-OL-a2ZJQuyqj_10pEk5KViJG0T9kXKxkOV2JmEyDCRpoT9f436MFw1d30UtB0AoL7aA=s905-no';
       default:
-        console.log('Not Returned: LatestArticleList.getImage.switch');
+        console.log('Not Returned: getImage.switch');
         return false;
     }
   }
-  console.log('Not Returned: LatestArticleList.getImage');
+  console.log('Not Returned: getImage');
   return false;
 };
 
