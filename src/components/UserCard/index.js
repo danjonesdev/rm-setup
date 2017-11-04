@@ -7,6 +7,7 @@ import PropTypes from 'prop-types';
 import Heading from '../Elements/Heading';
 
 import Standard from './Sections/Standard';
+import QA from './Sections/QA';
 
 // Export this for unit testing more easily
 export class UserCard extends PureComponent {
@@ -35,7 +36,10 @@ export class UserCard extends PureComponent {
           );
         case 'Interview':
           return (
-            <p>{item.section.type}</p>
+            <QA
+              question={item.section.question}
+              answer={item.section.answer}
+            />
           );
         case 'BulletPoints':
           return (
