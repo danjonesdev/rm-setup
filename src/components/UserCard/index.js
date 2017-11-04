@@ -1,5 +1,5 @@
 /* @flow */
-/* eslint-disable import/no-named-as-default, react/no-array-index-key */
+/* eslint-disable import/no-named-as-default, react/no-array-index-key, react/self-closing-comp */
 
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
@@ -87,11 +87,19 @@ export class UserCard extends PureComponent {
   render() {
     const sections = this.sections;
     return (
-      <article>
-        {this.heading()}
-        {this.props.info.body.map((item, i) => (
-          sections(item, i)
-        ))}
+      <article className="container">
+        <div className="row">
+          <div className="col-sm-4"></div>
+          <div className="col-sm-16">
+            <div className="col-sm-24">
+              {this.heading()}
+              {this.props.info.body.map((item, i) => (
+                sections(item, i)
+              ))}
+            </div>
+          </div>
+          <div className="col-sm-4"></div>
+        </div>
       </article>
     );
   }
