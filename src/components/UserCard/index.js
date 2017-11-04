@@ -20,7 +20,7 @@ export class UserCard extends PureComponent {
     return false;
   };
 
-  section = (item) => {
+  sections = (item) => {
     if (item) {
       switch (item.section.type) {
         case 'standard':
@@ -52,17 +52,17 @@ export class UserCard extends PureComponent {
           return false;
       }
     }
-    console.log('Not Returned: UserCard.section');
+    console.log('Not Returned: UserCard.sections');
     return false;
   }
 
   render() {
-    const section = this.section;
+    const sections = this.sections;
     return (
       <div>
         {this.heading()}
         {this.props.info.body.map(item => (
-          section(item)
+          sections(item)
         ))}
       </div>
     );
