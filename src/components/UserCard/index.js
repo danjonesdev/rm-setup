@@ -1,5 +1,5 @@
 /* @flow */
-/* eslint-disable import/no-named-as-default */
+/* eslint-disable import/no-named-as-default, react/no-array-index-key */
 
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
@@ -8,6 +8,7 @@ import Heading from '../Elements/Heading';
 
 import Standard from './Sections/Standard';
 import QA from './Sections/QA';
+import BulletPoints from './Sections/BulletPoints';
 
 // Export this for unit testing more easily
 export class UserCard extends PureComponent {
@@ -23,12 +24,13 @@ export class UserCard extends PureComponent {
     return false;
   };
 
-  sections = (item) => {
+  sections = (item, i) => {
     if (item) {
       switch (item.section.type) {
         case 'Standard':
           return (
             <Standard
+              key={i}
               title={item.section.title}
               content={item.section.content}
               img={item.section.img}
@@ -37,25 +39,29 @@ export class UserCard extends PureComponent {
         case 'Interview':
           return (
             <QA
+              key={i}
               question={item.section.question}
               answer={item.section.answer}
             />
           );
         case 'BulletPoints':
           return (
-            <p>{item.section.type}</p>
+            <BulletPoints
+              key={i}
+              list={item.section.list}
+            />
           );
         case 'NumberedList':
           return (
-            <p>{item.section.type}</p>
+            <p key={i}>{item.section.type}</p>
           );
         case 'SoundcloudEmbed':
           return (
-            <p>{item.section.type}</p>
+            <p key={i}>{item.section.type}</p>
           );
         case 'YoutubeEmbed':
           return (
-            <p>{item.section.type}</p>
+            <p key={i}>{item.section.type}</p>
           );
         default:
           console.log('Not Returned: UserCard.section.switch');
@@ -71,8 +77,8 @@ export class UserCard extends PureComponent {
     return (
       <div>
         {this.heading()}
-        {this.props.info.body.map(item => (
-          sections(item)
+        {this.props.info.body.map((item, i) => (
+          sections(item, i)
         ))}
       </div>
     );
