@@ -79,12 +79,12 @@ export class UserCard extends PureComponent {
   render() {
     const sections = this.sections;
     return (
-      <div>
+      <article>
         {this.heading()}
         {this.props.info.body.map((item, i) => (
           sections(item, i)
         ))}
-      </div>
+      </article>
     );
   }
 }
