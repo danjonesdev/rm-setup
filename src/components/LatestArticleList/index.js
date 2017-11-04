@@ -1,5 +1,5 @@
 /* @flow */
-/* eslint-disable import/no-named-as-default */
+/* eslint-disable import/no-named-as-default, react/no-array-index-key */
 
 import React from 'react';
 import type { Element } from 'react';
@@ -12,8 +12,8 @@ type Props = { list: Array<Object> };
 const LatestArticleList = ({ list }: Props): Element<'div'> => (
   <article className="container">
     <div className="row">
-      {list.map(article => (
-        <div className="col-sm-6">
+      {list.map((article, i) => (
+        <div key={i} className="col-sm-6">
           <Link className="link" to={`/UserInfo/${article._id}`}>
             <figure>
               <img className="mb3" alt="" src="http://www.billboard.com/files/media/Noisia-Outer-Edges-press-photo-2016-billboard-1240.jpg" />
