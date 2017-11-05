@@ -1,4 +1,5 @@
 /* @flow */
+/* eslint-disable import/no-named-as-default */
 
 import React from 'react';
 import type { Element } from 'react';
@@ -9,6 +10,8 @@ import _ from 'lodash';
 import config from '../../config';
 import routes from '../../routes';
 import '../../theme/main.scss';
+
+import Header from './Header';
 
 const App = (): Element<'div'> => {
   // Use it when sub routes are added to any route it'll work
@@ -27,10 +30,7 @@ const App = (): Element<'div'> => {
   return (
     <div>
       <Helmet {...config.app} />
-      <header role="banner">
-        <img className="h3" src={require('./assets/logo.svg')} alt="Logo" role="presentation" />
-        <h1>{config.app.title}</h1>
-      </header>
+      <Header />
       <hr />
       <Switch>{routes.map(route => routeWithSubRoutes(route))}</Switch>
     </div>
