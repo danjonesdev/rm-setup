@@ -14,7 +14,7 @@
     fill: $grey;
     transition: fill 0.3s ease-in-out;
 
-    &:hover {
+    &:hover, &:active {
       cursor: pointer;
       fill: $black;
     }
