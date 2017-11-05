@@ -1,0 +1,8 @@
+/* stylelint-disable */
+svg #fb {
+  transition: fill 0.3s ease-in-out;
+}
+
+svg:hover #fb {
+  fill: #111;
+}
