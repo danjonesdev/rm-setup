@@ -2,17 +2,18 @@
 
 import React from 'react';
 import type { Element } from 'react';
+import config from '../../../config';
 
 import { Fb } from '../../../components/Elements/Svg';
 
-console.log(this.props);
-
 const Header = (): Element<'div'> => (
-  <header role="banner">
-    <img className="h3" src={require('../assets/logo.svg')} alt="Logo" role="presentation" />
-    <h1>App</h1>
-    <Fb />
-  </header>
+  <div>
+    <header role="banner">
+      <img className="h3" src={require('../assets/logo.svg')} alt="Logo" role="presentation" />
+      <h1>{config.app.title}</h1>
+      <Fb />
+    </header>
+  </div>
 );
 
 export default Header;
