@@ -18,6 +18,7 @@ const Header = (): Element<'div'> => (
           <div className="col-sm-6">
             <div className="row">
               <div className="col-sm-24">
+                <div className="fn  fr-sm   tac  tal-sm">
                   <Fb />
                   <Tw />
                   <Insta />
@@ -27,6 +28,7 @@ const Header = (): Element<'div'> => (
             </div>
             <div className="row">
               <div className="col-sm-24">
+                <div className="fn  fr-sm   tac  tal-sm">
                   subscribe to newsletter
                 </div>
               </div>
