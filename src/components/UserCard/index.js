@@ -5,6 +5,7 @@ import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 
 import Heading from '../Elements/Heading';
+import GetImage from '../Helpers/GetImage';
 
 import Standard from './Sections/Standard';
 import QA from './Sections/QA';
@@ -87,20 +88,23 @@ export class UserCard extends PureComponent {
   render() {
     const sections = this.sections;
     return (
-      <article className="container">
-        <div className="row">
-          <div className="col-sm-4"></div>
-          <div className="col-sm-16">
-            <div className="col-sm-24">
-              {this.heading()}
-              {this.props.info.body.map((item, i) => (
-                sections(item, i)
-              ))}
+      <div>
+        <img className="mb3" alt={this.props.info.title} src={GetImage(this.props.info._id)} />
+        <article className="container">
+          <div className="row">
+            <div className="col-sm-4"></div>
+            <div className="col-sm-16">
+              <div className="col-sm-24">
+                {this.heading()}
+                {this.props.info.body.map((item, i) => (
+                  sections(item, i)
+                ))}
+              </div>
             </div>
+            <div className="col-sm-4"></div>
           </div>
-          <div className="col-sm-4"></div>
-        </div>
-      </article>
+        </article>
+      </div>
     );
   }
 }
