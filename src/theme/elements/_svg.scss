@@ -1,8 +1,16 @@
 /* stylelint-disable */
-svg #fb {
-  transition: fill 0.3s ease-in-out;
-}
 
-svg:hover #fb {
-  fill: #111;
+[data-svg="fb"],
+[data-svg="insta"],
+[data-svg="sc"],
+[data-svg="tw"] {
+  svg {
+    transition: fill 0.3s ease-in-out;
+    fill: $grey;
+
+    &:hover {
+      cursor: pointer;
+      fill: $black;
+    }
+  }
 }
