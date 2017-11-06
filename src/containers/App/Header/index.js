@@ -11,27 +11,16 @@ const Header = (): Element<'div'> => (
     <header role="banner">
       <div className="container-fluid">
         <div className="row">
-          <div className="col-sm-18">
+          <div className="col-sm-16">
             <img className="h3" src={require('../assets/logo.svg')} alt={config.app.title} role="presentation" />
             <h1 className="hidden">{config.app.title}</h1>
           </div>
-          <div className="col-sm-6">
-            <div className="row">
-              <div className="col-sm-24">
-                <div className="fn  fr-sm   tac  tal-sm">
-                  <Fb />
-                  <Tw />
-                  <Insta />
-                  <Sc />
-                </div>
-              </div>
-            </div>
-            <div className="row">
-              <div className="col-sm-24">
-                <div className="fn  fr-sm   tac  tal-sm">
-                  subscribe to newsletter
-                </div>
-              </div>
+          <div className="col-sm-8">
+            <div className="fn  fr-sm   tac  tal-sm  header__social">
+              <Fb />
+              <Tw />
+              <Insta />
+              <Sc />
             </div>
           </div>
         </div>
