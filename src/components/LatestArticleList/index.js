@@ -17,7 +17,7 @@ export class LatestArticleList extends PureComponent {
             <div key={i} className="col-sm-6">
               <Link className="link" to={`/UserInfo/${article._id}`}>
                 <figure>
-                  <img className="mb3" alt="" src={GetImage(article._id)} />
+                  <img className="mb3  h4" alt="" src={GetImage(article._id)} />
                   <span>New</span>
                 </figure>
                 <Heading type="h2" color="black" text={article.title} />
