@@ -51,6 +51,7 @@
 @import 'utilities/theme/link';
 @import 'utilities/theme/opacity';
 @import 'utilities/theme/hover';
+@import 'utilities/theme/parallax';
 
 @import 'utilities/typography/font-familiy';
 @import 'utilities/typography/font-size';
@@ -72,6 +73,10 @@
 // Modules
 @import 'modules/LatestArticleList';
 
+body {
+  overflow-x: hidden;
+}
+
 header {
   height: 80px;
   z-index: 1000;
@@ -81,45 +86,4 @@ header {
 
 div {
   box-sizing: border-box;
-}
-
-#container {
-    z-index: -1;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  perspective: 1px;
-  overflow-x: hidden;
-  overflow-y: scroll;
-}
-
-#group1 {
-    z-index: -1;
-
-  position: relative;
-  transform-style: preserve-3d;
-  font-size: 20px;
-}
-
-.background {
-    z-index: -1;
-
-  transform: translateZ(-1px) scale(2);
-  height: 80vh;
-  width: 100vw;
-  top: 15px;
-  position: absolute;
-  background: #FF8A8A;
-    background: 50% 20% / cover;
-  background-repeat: no-repeat;
-
-}
-
-.foreground {
-  position: absolute;
-  top: 85vh;
-  width: 100%;
-  background: $white;
 }

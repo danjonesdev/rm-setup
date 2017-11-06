@@ -89,12 +89,10 @@ export class UserCard extends PureComponent {
     const sections = this.sections;
     return (
       <div>
-        <div id="container">
-          <div id="group1">
-            <div className="background" style={{ backgroundImage: `url(${GetImage(this.props.info._id)})` }}>
-
-            </div>
-            <div className="foreground">
+        <div className="parallax-container">
+          <div className="parallax">
+            <div className="parallax-background" style={{ backgroundImage: `url(${GetImage(this.props.info._id)})` }}></div>
+            <div className="parallax-foreground">
               <article classNameName="container">
                 <div classNameName="row">
                   <div classNameName="col-sm-4"></div>
