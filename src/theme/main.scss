@@ -78,48 +78,53 @@ header {
   background: white;
   border-bottom: 1px solid black;
 }
-
-div {
-  box-sizing: border-box;
+html {
+  height: 100%;
+  overflow: hidden;
 }
 
-#container {
-    z-index: -1;
-  position: fixed;
+body {
+  margin: 0;
+  height: 100%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  perspective: 1px;
+  transform-style: preserve-3d;
+}
+
+section {
+  bottom: 100px;
+  position: relative;
+  min-height: 80vh;
+  width: 100vw;
+  transform-style: inherit;
+   box-sizing: border-box;
+  -webkit-overflow-scrolling: touch;
+}
+
+section, section:before {
+  background: 50% 50% / cover;
+}
+
+section:before {
+  content: "";
+  position: absolute;
   top: 0;
+  bottom: 0;
   left: 0;
   right: 0;
-  bottom: 0;
-  perspective: 1px;
-  overflow-x: hidden;
-  overflow-y: scroll;
 }
 
-#group1 {
-    z-index: -1;
 
-  position: relative;
-  transform-style: preserve-3d;
-  font-size: 20px;
-}
 
-.background {
-    z-index: -1;
-
+#hero-1 {
   transform: translateZ(-1px) scale(2);
-  height: 80vh;
-  width: 100vw;
-  top: 15px;
-  position: absolute;
-  background: #FF8A8A;
-    background: 50% 20% / cover;
-  background-repeat: no-repeat;
-
+  z-index: -1;
+  background-position: center;
 }
 
-.foreground {
-  position: absolute;
-  top: 85vh;
-  width: 100%;
-  background: $white;
+
+.normal-scroll {
+  background: #fff;
+  transform: translateZ(0);
 }
