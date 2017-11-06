@@ -31,7 +31,6 @@ const App = (): Element<'div'> => {
     <div>
       <Helmet {...config.app} />
       <Header />
-      <hr />
       <Switch>{routes.map(route => routeWithSubRoutes(route))}</Switch>
     </div>
   );

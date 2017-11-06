@@ -75,6 +75,7 @@
 header {
   z-index: 1000;
   background: white;
+  border-bottom: 1px solid black;
 }
 html {
   height: 100%;
@@ -91,10 +92,9 @@ body {
 }
 
 section {
-
-  padding: 25vh 10%;
+  bottom: 100px;
   position: relative;
-  min-height: 50vh;
+  min-height: 80vh;
   width: 100vw;
   transform-style: inherit;
    box-sizing: border-box;
@@ -114,34 +114,14 @@ section:before {
   right: 0;
 }
 
-/* The brightest duotone color */
-.darken::before {
-  background-color: rgba(221, 204, 0, 1);
-}
 
-/* The darkest duotone color */
-.lighten::after {
-  background-color: rgba(221, 0, 0, 1);
-}
 
 #hero-1 {
-
-  background-image: url("http://cdn.bmwblog.com/wp-content/uploads/MINI-Rocketman-Concept-04.jpg");
   transform: translateZ(-1px) scale(2);
   z-index: -1;
+  background-position: center;
 }
 
-#hero-2 {
-  background-image: url("http://cdn.bmwblog.com/wp-content/uploads/MINI-Rocketman-Concept-10.jpg");
-  transform: translateZ(-1px) scale(2);
-  z-index: -2;
-}
-
-#hero-3 {
-  background-image: url("http://cdn.bmwblog.com/wp-content/uploads/mini-rocketman-261.jpg");
-	background-attachment: fixed;
-  z-index: -3;
-}
 
 .normal-scroll {
   background: #fff;
