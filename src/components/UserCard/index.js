@@ -31,7 +31,7 @@ export class UserCard extends PureComponent {
       switch (item.section.type) {
         case 'Standard':
           return (
-            <div className="pv2">
+            <div classNameName="pv2">
               <Standard
                 key={i}
                 title={item.section.title}
@@ -42,7 +42,7 @@ export class UserCard extends PureComponent {
           );
         case 'Interview':
           return (
-            <div className="pv2">
+            <div classNameName="pv2">
               <QA
                 key={i}
                 question={item.section.question}
@@ -52,7 +52,7 @@ export class UserCard extends PureComponent {
           );
         case 'BulletPoints':
           return (
-            <div className="pv2">
+            <div classNameName="pv2">
               <BulletPoints
                 key={i}
                 list={item.section.list}
@@ -61,7 +61,7 @@ export class UserCard extends PureComponent {
           );
         case 'NumberedList':
           return (
-            <div className="pv2">
+            <div classNameName="pv2">
               <NumberedList
                 key={i}
                 list={item.section.list}
@@ -89,24 +89,29 @@ export class UserCard extends PureComponent {
     const sections = this.sections;
     return (
       <div>
-        <section id="hero-1" style={{ backgroundImage: `url(${GetImage(this.props.info._id)})` }}>
-        </section>
-        <section className="normal-scroll">
-          <article className="container">
-            <div className="row">
-              <div className="col-sm-4"></div>
-              <div className="col-sm-16">
-                <div className="col-sm-24">
-                  {this.heading()}
-                  {this.props.info.body.map((item, i) => (
-                    sections(item, i)
-                  ))}
-                </div>
-              </div>
-              <div className="col-sm-4"></div>
+        <div id="container">
+          <div id="group1">
+            <div className="background" style={{ backgroundImage: `url(${GetImage(this.props.info._id)})` }}>
+
             </div>
-          </article>
-        </section>
+            <div className="foreground">
+              <article classNameName="container">
+                <div classNameName="row">
+                  <div classNameName="col-sm-4"></div>
+                  <div classNameName="col-sm-16">
+                    <div classNameName="col-sm-24">
+                      {this.heading()}
+                      {this.props.info.body.map((item, i) => (
+                        sections(item, i)
+                      ))}
+                    </div>
+                  </div>
+                  <div classNameName="col-sm-4"></div>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
       </div>
     );
   }
