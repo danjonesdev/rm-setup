@@ -12,8 +12,8 @@ const Header = (): Element<'div'> => (
       <div className="container-fluid">
         <div className="row">
           <div className="col-sm-18">
-            <img className="h3" src={require('../assets/logo.svg')} alt="Logo" role="presentation" />
-            <h1>{config.app.title}</h1>
+            <img className="h3" src={require('../assets/logo.svg')} alt={config.app.title} role="presentation" />
+            <h1 className="hidden">{config.app.title}</h1>
           </div>
           <div className="col-sm-6">
             <div className="row">
