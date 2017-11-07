@@ -5,6 +5,7 @@ import type { Element } from 'react';
 import config from '../../../config';
 
 import { Fb, Tw, Insta, Sc } from '../../../components/Elements/Svg';
+import SearchInputz from '../../../components/Helpers/SearchInput';
 
 const Header = (): Element<'div'> => (
   <div>
@@ -16,6 +17,7 @@ const Header = (): Element<'div'> => (
             <h1 className="hidden">{config.app.title}</h1>
           </div>
           <div className="col-sm-8">
+            <SearchInputz />
             <div className="fn  fr-sm   tac  tal-sm  header__social">
               <Fb />
               <Tw />
