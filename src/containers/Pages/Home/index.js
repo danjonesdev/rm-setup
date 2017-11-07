@@ -7,13 +7,11 @@ import React from 'react';
 import Helmet from 'react-helmet';
 
 import LatestArticles from '../../../containers/Fragments/LatestArticles';
-import Heading from '../../../components/Elements/Heading';
 
 // Export this for unit testing more easily
 const Home = () => (
   <main>
     <Helmet title="Home" />
-    <Heading type="h1" color="red" text="Featured" />
     <LatestArticles />
   </main>
 );
