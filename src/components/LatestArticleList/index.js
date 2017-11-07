@@ -14,11 +14,11 @@ export class LatestArticleList extends PureComponent {
       <article className="container">
         <div className="row">
           {this.props.list.map((article, i) => (
-            <div key={i} className="col-sm-6">
+            <div key={i} className="col-sm-6  pb4">
               <Link className="link" to={`/UserInfo/${article._id}`}>
-                <figure>
-                  <img className="mb3  h4" alt="" src={GetImage(article._id)} />
-                  <span>New</span>
+                <figure className="rel">
+                  <img className="mb3  LatestArticleList__img" alt="" src={GetImage(article._id)} />
+                  <span className="abs  pv1  ph2  t8  white LatestArticleList__label">New</span>
                 </figure>
                 <Heading type="h2" color="black" text={article.title} />
               </Link>

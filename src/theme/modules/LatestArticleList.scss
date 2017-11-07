@@ -8,3 +8,15 @@
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
 }
+
+.LatestArticleList__img {
+  height: 150px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.LatestArticleList__label{
+  top: 10px;
+  left: -10px;
+  background: orange;
+}
