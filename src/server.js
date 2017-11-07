@@ -56,7 +56,7 @@ if (__DEV__) {
 app.get('/api/articles', (req, res) => {
 
   console.log('/api/articles');
-  console.log(req.query.query);
+  console.log(req.query.searchQuery);
 
     //var indexLimit = parseInt(req.query.indexLimit, 10);
     var articles = [];
@@ -65,6 +65,33 @@ app.get('/api/articles', (req, res) => {
 
     db.collection('articles')
         .find()
+        .sort("date", -1)
+        .toArray()
+        .then(result => {
+            articles = articles.concat(result);
+        }).then(() => {
+            // console.log(articles);
+            res.send(articles);
+        }).catch(e => {
+            console.error(e);
+        });
+
+});
+
+//GET SEARCH
+app.get('/api/search', (req, res) => {
+
+  console.log('/api/articles');
+  console.log(req.query.searchQuery);
+
+    //var indexLimit = parseInt(req.query.indexLimit, 10);
+    var articles = [];
+    // console.log(indexLimit);
+    //
+
+    db.collection('articles')
+        .find()
+        .limit(2)
         .sort("date", -1)
         .toArray()
         .then(result => {
