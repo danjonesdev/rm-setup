@@ -1,48 +1,44 @@
 /* stylelint-disable */
 
 // Typography
-
 $system-sans: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, 'Ubuntu', 'Roboto', 'Noto', 'Segoe Ui', Arial, sans-serif;
 $helvetica: 'Helvetica Neue', Helvetica, sans-serif;
 $mono: 'Consolas', 'Monaco', monospace;
 $sans: sans-serif;
 $serif: serif;
 
+// theme
+
+@import url('https://fonts.googleapis.com/css?family=Righteous');
+
+$theme-font-a: 'Righteous', cursive;
+
 // Colors
 
 $colors: (
-  black:          #000000,
-  almost-black:   #111111,
-  dark-grey:      #333333,
-  mid-grey:       #555555,
-  grey:           #777777,
-  silver:         #999999,
-  light-silver:   #aaaaaa,
-  moon-grey:      #cccccc,
-  light-grey:     #eeeeee,
-  almost-white:   #f5f5f5,
-  white:          #ffffff,
-  red:            #ff4136,
-  blue:           #0000ff,
+  black:              #000000,
+  almost-black:       #111111,
+  dark-grey:          #333333,
+  mid-grey:           #555555,
+  grey:               #777777,
+  silver:             #999999,
+  light-silver:       #aaaaaa,
+  moon-grey:          #cccccc,
+  light-grey:         #eeeeee,
+  almost-white:       #f5f5f5,
+  white:              #ffffff,
 
   // theme
-  dark-sage:      #738276,
-  sage:           #738678
+  theme-a:            #4d5d53, // #dark-sage
+  theme-a-light:      #738678, // #light-sage
+  theme-b:            #e0929e, // #pink
+  theme-b-light:      #f1b4bc, // #light-pink
+  theme-c:            #345766, // #teal
+  theme-c-light:      #6e8f9d, // #light-teal
+  theme-d:            #735a9c, // #purple
+  theme-d-light:      #6a6086  // #light-purple
 );
 
-$black:          #000000;
-$almost-black:   #111111;
-$dark-grey:      #333333;
-$mid-grey:       #555555;
-$grey:           #777777;
-$silver:         #999999;
-$light-silver:   #aaaaaa;
-$moon-grey:      #cccccc;
-$light-grey:     #eeeeee;
-$almost-white:   #f5f5f5;
-$white:          #ffffff;
-$red:            #ff4136;
-$blue:           #0000ff;
 
 // Breakpoints
 
