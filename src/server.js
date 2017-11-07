@@ -56,6 +56,7 @@ if (__DEV__) {
 app.get('/api/articles', (req, res) => {
 
   console.log('/api/articles');
+  console.log(req.query.query);
 
     //var indexLimit = parseInt(req.query.indexLimit, 10);
     var articles = [];
@@ -69,7 +70,7 @@ app.get('/api/articles', (req, res) => {
         .then(result => {
             articles = articles.concat(result);
         }).then(() => {
-            console.log(articles);
+            // console.log(articles);
             res.send(articles);
         }).catch(e => {
             console.error(e);
@@ -96,7 +97,7 @@ app.get('/api/article', (req, res) => {
         .then(result => {
             article = result;
         }).then(() => {
-            console.log(article);
+            // console.log(article);
             res.send(article);
         }).catch(e => {
             console.error(e);
