@@ -36,7 +36,7 @@ export class SearchInput extends PureComponent {
           <input type="text" value={this.state.inputValue} onChange={evt => this.updateInputValue(evt)} />
         </form>
         {fireRedirect && (
-          <Redirect to={from || `/search/${this.state.inputValue}`} />
+          <Redirect push to={from || `/search/${this.state.inputValue}`} />
         )}
       </div>
     );
