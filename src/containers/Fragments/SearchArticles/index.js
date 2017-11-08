@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
 import * as action from './action';
-import LatestArticleList from '../../../components/LatestArticleList';
+import SearchArticleList from '../../../components/SearchArticleList';
 
 // Export this for unit testing more easily
 export class SearchArticles extends PureComponent {
@@ -29,7 +29,7 @@ export class SearchArticles extends PureComponent {
       return <p>Oops, Failed to load list!</p>;
     }
 
-    return <LatestArticleList list={searchArticles.list} />;
+    return <SearchArticleList list={searchArticles.list} />;
   };
 
   render() {

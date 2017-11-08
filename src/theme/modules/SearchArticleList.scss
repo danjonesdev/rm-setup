@@ -1,6 +1,6 @@
 /* stylelint-disable */
 
-.latestArticleList__intro {
+.searchArticleList__label {
   height: 62px;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -9,16 +9,16 @@
   -webkit-box-orient: vertical;
 }
 
-.latestArticleList__img {
+.searchArticleList__label {
   height: 150px;
   width: 100%;
   object-fit: cover;
 }
 
-.latestArticleList__label{
+.searchArticleList__label{
   height: auto;
   width: auto;
-  top: 10px;
-  left: -10px;
+  top: -10px;
+  left: 10px;
   background: palette(theme-a-light);
 }
