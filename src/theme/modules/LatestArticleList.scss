@@ -1,6 +1,6 @@
 /* stylelint-disable */
 
-.LatestArticleList__intro {
+.latestArticleList__intro {
   height: 62px;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -9,13 +9,13 @@
   -webkit-box-orient: vertical;
 }
 
-.LatestArticleList__img {
+.latestArticleList__img {
   height: 150px;
   width: 100%;
   object-fit: cover;
 }
 
-.LatestArticleList__label{
+.latestArticleList__label{
   top: 10px;
   left: -10px;
   background: palette(theme-a-light);

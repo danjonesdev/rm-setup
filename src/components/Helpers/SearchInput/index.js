@@ -31,9 +31,9 @@ export class SearchInput extends PureComponent {
     const { fireRedirect } = this.state;
 
     return (
-      <div>
-        <form onSubmit={this.submitForm}>
-          <input type="text" value={this.state.inputValue} onChange={evt => this.updateInputValue(evt)} />
+      <div className="searchInput">
+        <form className="searchInput__form" onSubmit={this.submitForm}>
+          <input className="bb  bw1  bc-black  ph2  searchInput__input" type="text" placeholder="search by keyword..." value={this.state.inputValue} onChange={evt => this.updateInputValue(evt)} />
         </form>
         {fireRedirect && (
           <Redirect push to={from || `/search/${this.state.inputValue}`} />

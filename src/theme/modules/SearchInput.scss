@@ -1,0 +1,34 @@
+/* stylelint-disable */
+.searchInput {
+  line-height: 80px;
+  width: 180px;
+  display: inline-block;
+}
+
+.searchInput__form {
+  width: 180px;
+  display: inline-block;
+  padding-bottom: 20px;
+}
+
+.searchInput__input {
+  width: 180px;
+  display: inline-block;
+  border-left: none;
+  border-top: none;
+  border-right: none;
+  line-height: 25px;
+
+  //reset
+  -webkit-appearance: none;
+  outline: none;
+
+  &:focus {
+    outline: none;
+  }
+
+  &::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+  }
+}
