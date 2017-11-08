@@ -17,13 +17,13 @@ export class SearchArticleList extends PureComponent {
             <div key={i} className="col-sm-24  pb4">
               <Link className="link" to={`/UserInfo/${article._id}`}>
                 <div className="row">
-                  <div className="col-sm-8">
+                  <div className="col-sm-12">
                     <figure className="rel">
                       <span className="abs  pv1  ph2  t8  white searchArticleList__label">Latest</span>
                       <img className="mb3  searchArticleList__img" alt="" src={GetImage(article._id)} />
                     </figure>
                   </div>
-                  <div className="col-sm-16">
+                  <div className="col-sm-12">
                     <span className="grey  t8">10/17/09</span>
                     <Heading type="h2" color="black" text={article.title} />
                     <p className="t8  lh-copy  pb3  searchArticleList__intro">{article.body['0'].section.content}</p>
