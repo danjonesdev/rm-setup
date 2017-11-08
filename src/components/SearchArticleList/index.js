@@ -14,8 +14,8 @@ export class SearchArticleList extends PureComponent {
       <article>
         <div className="row">
           {this.props.list.map((article, i) => (
-            <div key={i} className="col-sm-24  pb4">
-              <Link className="link" to={`/UserInfo/${article._id}`}>
+            <Link className="link" to={`/UserInfo/${article._id}`}>
+              <div key={i} className="col-sm-24  pb4">
                 <div className="row">
                   <div className="col-sm-12">
                     <figure className="rel">
@@ -29,8 +29,8 @@ export class SearchArticleList extends PureComponent {
                     <p className="t8  lh-copy  pb3  searchArticleList__intro">{article.body['0'].section.content}</p>
                   </div>
                 </div>
-              </Link>
-            </div>
+              </div>
+            </Link>
           ))}
         </div>
       </article>
