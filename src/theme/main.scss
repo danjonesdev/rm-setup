@@ -81,53 +81,34 @@ header {
   background: white;
   border-bottom: 1px solid black;
 }
-html {
-  height: 100%;
-  overflow: hidden;
-}
-
-body {
-  margin: 0;
-  height: 100%;
-  overflow-y: scroll;
-  overflow-x: hidden;
-  perspective: 1px;
-  transform-style: preserve-3d;
-}
-
-section {
-  bottom: 100px;
-  position: relative;
-  min-height: 80vh;
-  width: 100vw;
-  transform-style: inherit;
-   box-sizing: border-box;
-  -webkit-overflow-scrolling: touch;
-}
-
-section, section:before {
-  background: 50% 50% / cover;
-}
-
-section:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-}
 
 
 
 #hero-1 {
-  transform: translateZ(-1px) scale(2);
-  z-index: -1;
+  height: 40vh;
+  width: 100%;
+filter: blur(10px);
   background-position: center;
+  transform: scale(1.1);
+}
+
+.cont{
+  height: 40vh;
+  width: 100%;
+  overflow: hidden;
 }
 
 
-.normal-scroll {
-  background: #fff;
-  transform: translateZ(0);
+.img{
+  margin: 0 auto;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -330px;
+  width: auto;
+  height: 300px;
+}
+
+.article{
+  margin-top: 120px;
 }

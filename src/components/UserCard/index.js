@@ -89,10 +89,13 @@ export class UserCard extends PureComponent {
     const sections = this.sections;
     return (
       <div>
-        <section id="hero-1" style={{ backgroundImage: `url(${GetImage(this.props.info._id)})` }}>
-        </section>
-        <section className="normal-scroll">
-          <article className="container">
+        <div className="cont">
+          <section id="hero-1" style={{ backgroundImage: `url(${GetImage(this.props.info._id)})` }}>
+          </section>
+        </div>
+        <section className="rel">
+          <img className="img" alt="yo" src={GetImage(this.props.info._id)} />
+          <article className="container  article">
             <div className="row">
               <div className="col-sm-4"></div>
               <div className="col-sm-16">
