@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
 import * as action from './action';
-import SearchArticleList from '../../../components/SearchArticleList';
+import SearchArticleList from '../../../components/ArticleList/Search';
 
 // Export this for unit testing more easily
 export class SearchArticles extends PureComponent {

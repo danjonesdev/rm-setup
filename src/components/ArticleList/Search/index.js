@@ -4,8 +4,8 @@ import React, { PureComponent } from 'react';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
-import Heading from '../Elements/Heading';
-import GetImage from '../Helpers/GetImage';
+import Heading from '../../Elements/Heading';
+import GetImage from '../../Helpers/GetImage';
 
 // Export this for unit testing more easily
 export class SearchArticleList extends PureComponent {

@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
 import * as action from './action';
-import LatestArticleList from '../../../components/LatestArticleList';
+import LatestArticleList from '../../../components/ArticleList/Latest';
 
 // Export this for unit testing more easily
 export class LatestArticles extends PureComponent {
