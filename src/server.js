@@ -90,8 +90,8 @@ app.get('/api/search', (req, res) => {
     //
 
     db.collection('articles')
-        .find()
-        .limit(2)
+        .find({"title" : {$regex : ".*" + req.query.searchQuery + ".*"}})
+        // .limit(2)
         .sort("date", -1)
         .toArray()
         .then(result => {
