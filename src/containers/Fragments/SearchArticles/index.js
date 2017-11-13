@@ -22,11 +22,11 @@ export class SearchArticles extends PureComponent {
       searchArticles.readyStatus === action.SEARCHARTICLES_INVALID ||
       searchArticles.readyStatus === action.SEARCHARTICLES_REQUESTING
     ) {
-      return <p>Loading...</p>;
+      return <div />;
     }
 
     if (searchArticles.readyStatus === action.SEARCHARTICLES_FAILURE) {
-      return <p>Oops, Failed to load list!</p>;
+      return <div />;
     }
 
     return <SearchArticleList list={searchArticles.list} />;

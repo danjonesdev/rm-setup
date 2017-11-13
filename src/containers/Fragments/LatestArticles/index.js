@@ -21,11 +21,11 @@ export class LatestArticles extends PureComponent {
       latestArticles.readyStatus === action.LATESTARTICLES_INVALID ||
       latestArticles.readyStatus === action.LATESTARTICLES_REQUESTING
     ) {
-      return <p>Loading...</p>;
+      return <div />;
     }
 
     if (latestArticles.readyStatus === action.LATESTARTICLES_FAILURE) {
-      return <p>Oops, Failed to load list!</p>;
+      return <div />;
     }
 
     return <LatestArticleList list={latestArticles.list} />;
