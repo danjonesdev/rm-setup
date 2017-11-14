@@ -13,7 +13,7 @@ import BulletPoints from './Sections/BulletPoints';
 import NumberedList from './Sections/NumberedList';
 
 // Export this for unit testing more easily
-export class UserCard extends PureComponent {
+export class ArticleCard extends PureComponent {
   heading = () => {
     const title = this.props.info.title;
 
@@ -22,7 +22,7 @@ export class UserCard extends PureComponent {
         <Heading type="h1" color="black" text={title} />
       );
     }
-    console.log('Not Returned: UserCard.heading');
+    console.log('Not Returned: ArticleCard.heading');
     return false;
   };
 
@@ -77,11 +77,11 @@ export class UserCard extends PureComponent {
             <p key={i}>{item.section.type}</p>
           );
         default:
-          console.log('Not Returned: UserCard.section.switch');
+          console.log('Not Returned: ArticleCard.section.switch');
           return false;
       }
     }
-    console.log('Not Returned: UserCard.sections');
+    console.log('Not Returned: ArticleCard.sections');
     return false;
   }
 
@@ -114,12 +114,12 @@ export class UserCard extends PureComponent {
   }
 }
 
-UserCard.propTypes = {
+ArticleCard.propTypes = {
   info: PropTypes.shape(),
 };
 
-UserCard.defaultProps = {
+ArticleCard.defaultProps = {
   info: {},
 };
 
-export default UserCard;
+export default ArticleCard;

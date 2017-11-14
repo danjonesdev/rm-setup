@@ -14,7 +14,7 @@ export class LatestArticleList extends PureComponent {
       <article className="container">
         <div className="row">
           {this.props.list.map((article, i) => (
-            <Link className="link" to={`/UserInfo/${article._id}`}>
+            <Link className="link" to={`/ArticleInfo/${article._id}`}>
               <div key={i} className="col-sm-6  pb4">
                 <figure className="rel">
                   <span className="abs  pv1  ph2  t8  white latestArticleList__label">Latest</span>

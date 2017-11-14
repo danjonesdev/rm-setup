@@ -22,7 +22,7 @@ const Home = () => (
 //     err: PropTypes.any,
 //     list: PropTypes.arrayOf(PropTypes.object),
 //   }),
-//   fetchUsersIfNeeded: PropTypes.func,
+//   fetchArticlesIfNeeded: PropTypes.func,
 // };
 //
 // Home.defaultProps = {
@@ -31,7 +31,7 @@ const Home = () => (
 //     err: '',
 //     list: [{}],
 //   },
-//   fetchUsersIfNeeded: () => {},
+//   fetchArticlesIfNeeded: () => {},
 // };
 
 export default Home;

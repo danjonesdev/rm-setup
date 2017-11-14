@@ -2,30 +2,30 @@
 import _ from 'lodash';
 
 import {
-  USER_REQUESTING,
-  USER_FAILURE,
-  USER_SUCCESS,
+  ARTICLE_REQUESTING,
+  ARTICLE_FAILURE,
+  ARTICLE_SUCCESS,
 } from './action';
 
 export default (state = {}, action) => {
   switch (action.type) {
-    case USER_REQUESTING:
+    case ARTICLE_REQUESTING:
       return _.assign({}, state, {
-        [action.userId]: {
-          readyStatus: USER_REQUESTING,
+        [action.articleId]: {
+          readyStatus: ARTICLE_REQUESTING,
         },
       });
-    case USER_FAILURE:
+    case ARTICLE_FAILURE:
       return _.assign({}, state, {
-        [action.userId]: {
-          readyStatus: USER_FAILURE,
+        [action.articleId]: {
+          readyStatus: ARTICLE_FAILURE,
           err: action.err,
         },
       });
-    case USER_SUCCESS:
+    case ARTICLE_SUCCESS:
       return _.assign({}, state, {
-        [action.userId]: {
-          readyStatus: USER_SUCCESS,
+        [action.articleId]: {
+          readyStatus: ARTICLE_SUCCESS,
           info: action.data,
         },
       });

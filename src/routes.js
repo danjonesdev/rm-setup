@@ -3,10 +3,10 @@
 import type { Dispatch } from './types';
 import { fetchLatestArticlesIfNeeded } from './containers/Fragments/LatestArticles/action';
 import { fetchSearchArticlesIfNeeded } from './containers/Fragments/SearchArticles/action';
-import { fetchUserIfNeeded } from './containers/Pages/UserInfo/action';
+import { fetchArticleIfNeeded } from './containers/Pages/ArticleInfo/action';
 import HomePage from './containers/Pages/Home';
 import SearchPage from './containers/Pages/Search';
-import UserInfoPage from './containers/Pages/UserInfo';
+import ArticleInfoPage from './containers/Pages/ArticleInfo';
 import NotFoundPage from './containers/Pages/NotFound';
 
 export default [
@@ -26,10 +26,10 @@ export default [
     ]),
   },
   {
-    path: '/UserInfo/:id',
-    component: UserInfoPage,
+    path: '/ArticleInfo/:id',
+    component: ArticleInfoPage,
     loadData: (dispatch: Dispatch, params: Object) => Promise.all([
-      dispatch(fetchUserIfNeeded(params.id)),
+      dispatch(fetchArticleIfNeeded(params.id)),
     ]),
   },
   {
