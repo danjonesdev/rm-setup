@@ -1,68 +1,66 @@
 {
-  "id":1,
-  "title":"Follow The Signs 001",
-  "description": '',
-  "body":[
-    {
-      "section":{
-        "type":"Standard",
-        "title":"Head first into the Signs EP",
-        "content":"Lorem dolor sit amet, sed do eiusmod tempor incididunt ut et dolore magna. Ut enim ad veniam.",
-        "img": "ep-cover"
-      }
-    },
-    {
-      "section":{
-        "type":"Interview",
-        "question":"What inspired you to make this EP?",
-        "answer":"Lorem ipsum dolor sit amet, consectetur adipiscing eliore magna aliqua. Ut enim ad minim."
-      }
-    },
-    {
-      "section":{
-        "type":"BulletPoints",
-        "list":[
-          "Blah",
-          "Blah",
-          "Blah"
-        ]
-      }
-    },
-    {
-      "section":{
-        "type":"NumberedList",
-        "list":[
-          "Blah",
-          "Blah",
-          "Blah"
-        ]
-      }
-    },
-    {
-      "section":{
-        "type":"SoundcloudEmbed",
-        "ur": "www.soundcloud.com/blah"
-      }
-    },
-    {
-      "section":{
-        "type":"YoutubeEmbed",
-        "ur": "www.youtube.com/blah"
-      }
-    }
-  ],
-  "links":[
-    {
-      "text":"lorem",
-      "url":"ipsum"
-    },
-    {
-      "text":"lorem",
-      "url":"ipsum"
-    }
-  ],
-  "created":{
-    "date":"",
-    "author":""
-  }
+	"title": "Soundcloud Test",
+	"description": "",
+	"body": [{
+			"section": {
+				"type": "Standard",
+				"title": "Head first into the Signs EP",
+				"content": "Lorem dolor sit amet, sed do eiusmod tempor incididunt ut et dolore magna. Ut enim ad veniam.",
+				"img": "ep-cover"
+			}
+		},
+		{
+			"section": {
+				"type": "Interview",
+				"question": "What inspired you to make this EP?",
+				"answer": "Lorem ipsum dolor sit amet, consectetur adipiscing eliore magna aliqua. Ut enim ad minim."
+			}
+		},
+		{
+			"section": {
+				"type": "BulletPoints",
+				"list": [
+					"Blah",
+					"Blah",
+					"Blah"
+				]
+			}
+		},
+		{
+			"section": {
+				"type": "NumberedList",
+				"list": [
+					"Blah",
+					"Blah",
+					"Blah"
+				]
+			}
+		},
+		{
+			"section": {
+				"type": "Soundcloud",
+				"soundcloudId": "313636877",
+				"title": "Aagentah - Babylon"
+			}
+		},
+		{
+			"section": {
+				"type": "YoutubeEmbed",
+				"ur": "www.youtube.com/blah"
+			}
+		}
+	],
+	"links": [{
+			"text": "lorem",
+			"url": "ipsum"
+		},
+		{
+			"text": "lorem",
+			"url": "ipsum"
+		}
+	],
+	"created": {
+		"date": "",
+		"author": ""
+	}
 }

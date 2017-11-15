@@ -11,6 +11,7 @@ import Standard from './Sections/Standard';
 import QA from './Sections/QA';
 import BulletPoints from './Sections/BulletPoints';
 import NumberedList from './Sections/NumberedList';
+import Soundcloud from './Sections/Soundcloud';
 
 // Export this for unit testing more easily
 export class ArticleCard extends PureComponent {
@@ -68,9 +69,14 @@ export class ArticleCard extends PureComponent {
               />
             </div>
           );
-        case 'SoundcloudEmbed':
+        case 'Soundcloud':
           return (
-            <p key={i}>{item.section.type}</p>
+            <div className="pv2">
+              <Soundcloud
+                title={item.section.title}
+                soundcloudId={item.section.soundcloudId}
+              />
+            </div>
           );
         case 'YoutubeEmbed':
           return (
