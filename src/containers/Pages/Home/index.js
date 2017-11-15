@@ -5,6 +5,7 @@
 import React from 'react';
 // import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
+import Player from 'react-soundcloud-player';
 
 import LatestArticles from '../../../containers/Fragments/LatestArticles';
 
@@ -13,7 +14,9 @@ const Home = () => (
   <main>
     <Helmet title="Home" />
     <LatestArticles />
+    <Player audio_id="313636877" title="Easyfun - Fanta" />
   </main>
+
 );
 
 // Home.propTypes = {
