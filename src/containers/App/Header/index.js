@@ -9,7 +9,7 @@ import { Fb, Tw, Insta, Sc } from '../../../components/Elements/Svg';
 import SearchInput from '../../../components/Helpers/SearchInput';
 
 const Header = (): Element<'div'> => (
-  <div>
+  <div className="rel  shadow1  z9">
     <header role="banner">
       <div className="container-fluid">
         <div className="row">
