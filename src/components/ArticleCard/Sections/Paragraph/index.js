@@ -4,28 +4,24 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 
-import Player from 'react-soundcloud-player';
-
 // Export this for unit testing more easily
-export class Soundcloud extends PureComponent {
+export class Paragraph extends PureComponent {
   render() {
     console.log(this.props);
     return (
       <div>
-        <Player audio_id={this.props.id} title={this.props.text} />
+        <p>{this.props.text}</p>
       </div>
     );
   }
 }
 
-Soundcloud.propTypes = {
+Paragraph.propTypes = {
   text: PropTypes.string,
-  id: PropTypes.string,
 };
 
-Soundcloud.defaultProps = {
+Paragraph.defaultProps = {
   text: '',
-  id: '',
 };
 
-export default Soundcloud;
+export default Paragraph;

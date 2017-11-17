@@ -5,7 +5,7 @@ import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 
 // Export this for unit testing more easily
-export class BulletPoints extends PureComponent {
+export class BulletList extends PureComponent {
   render() {
     console.log(this.props);
     return (
@@ -20,14 +20,14 @@ export class BulletPoints extends PureComponent {
   }
 }
 
-BulletPoints.propTypes = {
+BulletList.propTypes = {
   list: PropTypes.arrayOf(PropTypes.string),
 };
 
-BulletPoints.defaultProps = {
+BulletList.defaultProps = {
   list: [
     '',
   ],
 };
 
-export default BulletPoints;
+export default BulletList;

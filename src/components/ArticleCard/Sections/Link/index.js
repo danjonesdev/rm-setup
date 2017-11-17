@@ -4,28 +4,27 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 
-import Player from 'react-soundcloud-player';
-
 // Export this for unit testing more easily
-export class Soundcloud extends PureComponent {
+export class Link extends PureComponent {
   render() {
     console.log(this.props);
     return (
       <div>
-        <Player audio_id={this.props.id} title={this.props.text} />
+        <p>{this.props.text}</p>
+        <p>{this.props.url}</p>
       </div>
     );
   }
 }
 
-Soundcloud.propTypes = {
+Link.propTypes = {
   text: PropTypes.string,
-  id: PropTypes.string,
+  url: PropTypes.string,
 };
 
-Soundcloud.defaultProps = {
+Link.defaultProps = {
   text: '',
-  id: '',
+  url: '',
 };
 
-export default Soundcloud;
+export default Link;

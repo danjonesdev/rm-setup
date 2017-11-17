@@ -5,26 +5,23 @@ import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 
 // Export this for unit testing more easily
-export class QA extends PureComponent {
+export class Heading extends PureComponent {
   render() {
     console.log(this.props);
     return (
       <div>
-        <p><em>{this.props.question}</em></p>
-        <p>{this.props.answer}</p>
+        <h2>{this.props.text}</h2>
       </div>
     );
   }
 }
 
-QA.propTypes = {
-  question: PropTypes.string,
-  answer: PropTypes.string,
+Heading.propTypes = {
+  text: PropTypes.string,
 };
 
-QA.defaultProps = {
-  question: '',
-  answer: '',
+Heading.defaultProps = {
+  text: '',
 };
 
-export default QA;
+export default Heading;

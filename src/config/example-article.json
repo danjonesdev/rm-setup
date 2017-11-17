@@ -1,24 +1,40 @@
 {
-	"title": "Soundcloud Test",
+	"title": "new json layout v2",
 	"description": "",
-	"body": [{
+	"body": [
+		{
 			"section": {
-				"type": "Standard",
-				"title": "Head first into the Signs EP",
-				"content": "Lorem dolor sit amet, sed do eiusmod tempor incididunt ut et dolore magna. Ut enim ad veniam.",
-				"img": "ep-cover"
+				"type": "heading",
+				"text": "Head first into the Signs EP"
 			}
 		},
 		{
 			"section": {
-				"type": "Interview",
-				"question": "What inspired you to make this EP?",
-				"answer": "Lorem ipsum dolor sit amet, consectetur adipiscing eliore magna aliqua. Ut enim ad minim."
+				"type": "paragraph",
+				"text": "Head first into the Signs EP"
 			}
 		},
 		{
 			"section": {
-				"type": "BulletPoints",
+				"type": "img",
+				"img": "blah blah blah"
+			}
+		},
+		{
+			"section": {
+				"type": "question",
+				"text": "question"
+			}
+		},
+		{
+			"section": {
+				"type": "answer",
+				"text": "answer"
+			}
+		},
+		{
+			"section": {
+				"type": "bulletList",
 				"list": [
 					"Blah",
 					"Blah",
@@ -28,7 +44,7 @@
 		},
 		{
 			"section": {
-				"type": "NumberedList",
+				"type": "numberedList",
 				"list": [
 					"Blah",
 					"Blah",
@@ -38,25 +54,23 @@
 		},
 		{
 			"section": {
-				"type": "Soundcloud",
-				"soundcloudId": "313636877",
-				"title": "Aagentah - Babylon"
+				"type": "soundcloud",
+				"id": "313636877",
+				"text": "Aagentah - Babylon"
 			}
 		},
 		{
 			"section": {
-				"type": "YoutubeEmbed",
-				"ur": "www.youtube.com/blah"
+				"type": "youtube",
+				"url": "www.youtube.com/blah"
 			}
-		}
-	],
-	"links": [{
-			"text": "lorem",
-			"url": "ipsum"
 		},
 		{
-			"text": "lorem",
-			"url": "ipsum"
+			"section": {
+				"type": "link",
+				"text": "blah",
+				"url": "ww/blah"
+			}
 		}
 	],
 	"created": {

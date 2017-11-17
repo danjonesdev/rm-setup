@@ -4,14 +4,18 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 
-import Heading from '../Elements/Heading';
 import GetImage from '../Helpers/GetImage';
 
-import Standard from './Sections/Standard';
-import QA from './Sections/QA';
-import BulletPoints from './Sections/BulletPoints';
+// import Standard from './Sections/Standard';
+// import QA from './Sections/QA';
+import Heading from './Sections/Heading';
+import Paragraph from './Sections/Paragraph';
+import Question from './Sections/Question';
+import Answer from './Sections/Answer';
+import BulletList from './Sections/BulletList';
 import NumberedList from './Sections/NumberedList';
 import Soundcloud from './Sections/Soundcloud';
+import Link from './Sections/Link';
 
 // Export this for unit testing more easily
 export class ArticleCard extends PureComponent {
@@ -20,7 +24,7 @@ export class ArticleCard extends PureComponent {
 
     if (title) {
       return (
-        <Heading type="h1" color="black" text={title} />
+        <h1>{title}</h1>
       );
     }
     console.log('Not Returned: ArticleCard.heading');
@@ -30,37 +34,58 @@ export class ArticleCard extends PureComponent {
   sections = (item, i) => {
     if (item) {
       switch (item.section.type) {
-        case 'Standard':
+        case 'heading':
           return (
             <div className="pv2">
-              <Standard
+              <Heading
                 key={i}
-                title={item.section.title}
-                content={item.section.content}
-                img={item.section.img}
+                text={item.section.text}
               />
             </div>
           );
-        case 'Interview':
+        case 'paragraph':
           return (
             <div className="pv2">
-              <QA
+              <Paragraph
                 key={i}
-                question={item.section.question}
-                answer={item.section.answer}
+                text={item.section.text}
               />
             </div>
           );
-        case 'BulletPoints':
+        case 'img':
           return (
             <div className="pv2">
-              <BulletPoints
+              <p>img goes here</p>
+            </div>
+          );
+        case 'question':
+          return (
+            <div className="pv2">
+              <Question
+                key={i}
+                text={item.section.text}
+              />
+            </div>
+          );
+        case 'answer':
+          return (
+            <div className="pv2">
+              <Answer
+                key={i}
+                text={item.section.text}
+              />
+            </div>
+          );
+        case 'bulletList':
+          return (
+            <div className="pv2">
+              <BulletList
                 key={i}
                 list={item.section.list}
               />
             </div>
           );
-        case 'NumberedList':
+        case 'numberedList':
           return (
             <div className="pv2">
               <NumberedList
@@ -69,18 +94,31 @@ export class ArticleCard extends PureComponent {
               />
             </div>
           );
-        case 'Soundcloud':
+        case 'soundcloud':
           return (
             <div className="pv2">
               <Soundcloud
-                title={item.section.title}
-                soundcloudId={item.section.soundcloudId}
+                key={i}
+                text={item.section.text}
+                id={item.section.id}
               />
             </div>
           );
-        case 'YoutubeEmbed':
+        case 'youtube':
           return (
-            <p key={i}>{item.section.type}</p>
+            <div className="pv2">
+              <p>youtube embed</p>
+            </div>
+          );
+        case 'link':
+          return (
+            <div className="pv2">
+              <Link
+                key={i}
+                text={item.section.text}
+                url={item.section.url}
+              />
+            </div>
           );
         default:
           console.log('Not Returned: ArticleCard.section.switch');
