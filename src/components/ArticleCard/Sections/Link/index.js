@@ -11,7 +11,7 @@ export class Link extends PureComponent {
     return (
       <div>
         <p>{this.props.text}</p>
-        <p>{this.props.url}</p>
+        <a href={this.props.url}>{this.props.url}</a>
       </div>
     );
   }

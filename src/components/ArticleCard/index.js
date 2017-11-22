@@ -36,7 +36,7 @@ export class ArticleCard extends PureComponent {
       switch (item.section.type) {
         case 'heading':
           return (
-            <div className="pv2">
+            <div className="pv4">
               <Heading
                 key={i}
                 text={item.section.text}
@@ -45,7 +45,7 @@ export class ArticleCard extends PureComponent {
           );
         case 'paragraph':
           return (
-            <div className="pv2">
+            <div className="pv4">
               <Paragraph
                 key={i}
                 text={item.section.text}
@@ -54,13 +54,13 @@ export class ArticleCard extends PureComponent {
           );
         case 'img':
           return (
-            <div className="pv2">
+            <div className="pv4">
               <p>img goes here</p>
             </div>
           );
         case 'question':
           return (
-            <div className="pv2">
+            <div className="pv4">
               <Question
                 key={i}
                 text={item.section.text}
@@ -69,7 +69,7 @@ export class ArticleCard extends PureComponent {
           );
         case 'answer':
           return (
-            <div className="pv2">
+            <div className="pv4">
               <Answer
                 key={i}
                 text={item.section.text}
@@ -78,7 +78,7 @@ export class ArticleCard extends PureComponent {
           );
         case 'bulletList':
           return (
-            <div className="pv2">
+            <div className="pv4">
               <BulletList
                 key={i}
                 list={item.section.list}
@@ -87,7 +87,7 @@ export class ArticleCard extends PureComponent {
           );
         case 'numberedList':
           return (
-            <div className="pv2">
+            <div className="pv4">
               <NumberedList
                 key={i}
                 list={item.section.list}
@@ -96,7 +96,7 @@ export class ArticleCard extends PureComponent {
           );
         case 'soundcloud':
           return (
-            <div className="pv2">
+            <div className="pv4">
               <Soundcloud
                 key={i}
                 text={item.section.text}
@@ -106,13 +106,13 @@ export class ArticleCard extends PureComponent {
           );
         case 'youtube':
           return (
-            <div className="pv2">
+            <div className="pv4">
               <p>youtube embed</p>
             </div>
           );
         case 'link':
           return (
-            <div className="pv2">
+            <div className="pv4">
               <Link
                 key={i}
                 text={item.section.text}
