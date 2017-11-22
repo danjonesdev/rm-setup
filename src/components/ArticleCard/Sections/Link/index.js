@@ -10,8 +10,8 @@ export class Link extends PureComponent {
     console.log(this.props);
     return (
       <div>
-        <p>{this.props.text}</p>
-        <a href={this.props.url}>{this.props.url}</a>
+        <p className="pb1  fornt-normal-a  dark-grey">{this.props.text}</p>
+        <a className="font-normal-a" href={this.props.url}>{this.props.url}</a>
       </div>
     );
   }

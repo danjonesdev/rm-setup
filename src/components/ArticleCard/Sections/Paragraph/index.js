@@ -10,7 +10,7 @@ export class Paragraph extends PureComponent {
     console.log(this.props);
     return (
       <div>
-        <p>{this.props.text}</p>
+        <p className="font-normal-a  dark-grey">{this.props.text}</p>
       </div>
     );
   }

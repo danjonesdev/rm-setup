@@ -10,8 +10,10 @@ $serif: serif;
 // theme
 
 @import url('https://fonts.googleapis.com/css?family=Righteous');
+@import url('https://fonts.googleapis.com/css?family=Lato:400,400i,700,700i');
 
-$theme-font-a: 'Righteous', cursive;
+$font-title-a: 'Roboto', sans-serif;
+$font-normal-a: 'Lato', sans-serif;
 
 // Colors
 
@@ -29,14 +31,14 @@ $colors: (
   white:              #ffffff,
 
   // theme
-  theme-a:            #4d5d53, // #dark-sage
-  theme-a-light:      #738678, // #light-sage
-  theme-b:            #e0929e, // #pink
-  theme-b-light:      #f1b4bc, // #light-pink
-  theme-c:            #345766, // #teal
-  theme-c-light:      #6e8f9d, // #light-teal
-  theme-d:            #735a9c, // #purple
-  theme-d-light:      #6a6086  // #light-purple
+  color-a:            #4d5d53, // #dark-sage
+  color-a-light:      #738678, // #light-sage
+  color-b:            #e0929e, // #pink
+  color-b-light:      #f1b4bc, // #light-pink
+  color-c:            #345766, // #teal
+  color-c-light:      #6e8f9d, // #light-teal
+  color-d:            #735a9c, // #purple
+  color-d-light:      #6a6086  // #light-purple
 );
 
 

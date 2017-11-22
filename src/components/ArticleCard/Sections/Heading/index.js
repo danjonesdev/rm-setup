@@ -10,7 +10,7 @@ export class Heading extends PureComponent {
     console.log(this.props);
     return (
       <div>
-        <h2>{this.props.text}</h2>
+        <h2 className="font-title-a  dark-grey">{this.props.text}</h2>
       </div>
     );
   }

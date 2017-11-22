@@ -12,7 +12,7 @@ export class NumberedList extends PureComponent {
       <div>
         <ul>
           {this.props.list.map((item, i) => (
-            <li key={i}>{item}</li>
+            <li className="pv1  font-normal-a  dark-grey" key={i}><p>{item}</p></li>
           ))}
         </ul>
       </div>
