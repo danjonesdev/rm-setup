@@ -52,12 +52,12 @@ export class ArticleCard extends PureComponent {
               />
             </div>
           );
-        case 'img':
-          return (
-            <div className="pv3">
-              <p>img goes here</p>
-            </div>
-          );
+        // case 'img':
+        //   return (
+        //     <div className="pv3">
+        //       <p>img goes here</p>
+        //     </div>
+        //   );
         case 'question':
           return (
             <div className="pv3">

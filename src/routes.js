@@ -2,6 +2,7 @@
 
 import type { Dispatch } from './types';
 import { fetchLatestArticlesIfNeeded } from './containers/Fragments/LatestArticles/action';
+import { fetchExtraArticlesIfNeeded } from './containers/Fragments/ExtraArticles/action';
 import { fetchSearchArticlesIfNeeded } from './containers/Fragments/SearchArticles/action';
 import { fetchArticleIfNeeded } from './containers/Pages/ArticleInfo/action';
 import HomePage from './containers/Pages/Home';
@@ -15,7 +16,8 @@ export default [
     exact: true,
     component: HomePage, // Add your route here
     loadData: (dispatch: Dispatch) => Promise.all([
-      dispatch(fetchLatestArticlesIfNeeded()), // Register your server-side call action(s) here
+      dispatch(fetchLatestArticlesIfNeeded()),
+      dispatch(fetchExtraArticlesIfNeeded()), // Register your server-side call action(s) here
     ]),
   },
   {
