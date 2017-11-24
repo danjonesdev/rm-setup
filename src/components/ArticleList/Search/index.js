@@ -14,7 +14,7 @@ export class SearchArticleList extends PureComponent {
       <article>
         <div className="row">
           {this.props.list.map((article, i) => (
-            <Link className="link" to={`/ArticleInfo/${article._id}`}>
+            <Link className="link" to={`/Article/${article._id}`}>
               <div key={i} className="col-sm-24  pb4">
                 <div className="row">
                   <div className="col-sm-12">

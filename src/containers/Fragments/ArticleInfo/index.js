@@ -15,6 +15,9 @@ export class ArticleInfo extends PureComponent {
     const { fetchArticleIfNeeded, match: { params } } = this.props;
 
     fetchArticleIfNeeded(params.id);
+
+    const id = this.props.match.params.id;
+    this.props.fetchArticleIfNeeded(id);
   }
 
   renderArticleCard = () => {

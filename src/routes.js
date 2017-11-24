@@ -4,10 +4,10 @@ import type { Dispatch } from './types';
 import { fetchLatestArticlesIfNeeded } from './containers/Fragments/LatestArticles/action';
 import { fetchExtraArticlesIfNeeded } from './containers/Fragments/ExtraArticles/action';
 import { fetchSearchArticlesIfNeeded } from './containers/Fragments/SearchArticles/action';
-import { fetchArticleIfNeeded } from './containers/Pages/ArticleInfo/action';
+import { fetchArticleIfNeeded } from './containers/Fragments/ArticleInfo/action';
 import HomePage from './containers/Pages/Home';
 import SearchPage from './containers/Pages/Search';
-import ArticleInfoPage from './containers/Pages/ArticleInfo';
+import ArticlePage from './containers/Pages/Article';
 import NotFoundPage from './containers/Pages/NotFound';
 
 export default [
@@ -28,8 +28,8 @@ export default [
     ]),
   },
   {
-    path: '/ArticleInfo/:id',
-    component: ArticleInfoPage,
+    path: '/Article/:id',
+    component: ArticlePage,
     loadData: (dispatch: Dispatch, params: Object) => Promise.all([
       dispatch(fetchArticleIfNeeded(params.id)),
     ]),
