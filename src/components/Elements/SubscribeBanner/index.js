@@ -11,11 +11,11 @@ export class SubscribeBanner extends PureComponent {
     const randNum = Math.floor(Math.random() * 3) + 1;
     switch (randNum) {
       case 1:
-        return <p>Yo 1</p>;
+        return <p className="pt3  white  t5  tac">Yo 1</p>;
       case 2:
-        return <p>Yo 2</p>;
+        return <p className="pt3  white  t5  tac">Yo 2</p>;
       case 3:
-        return <p>Yo 3</p>;
+        return <p className="pt3  white  t5  tac">Yo 3</p>;
       default:
         console.log('Not Returned: SubscribeFrom.renderText');
         return false;
@@ -32,20 +32,20 @@ export class SubscribeBanner extends PureComponent {
         success: 'Subscribed',
         error: 'Oops, no can do...',
       },
-      // styles: {
-      //   sending: {
-      //     fontSize: 18,
-      //     color: 'auto',
-      //   },
-      //   success: {
-      //     fontSize: 18,
-      //     color: 'auto',
-      //   },
-      //   error: {
-      //     fontSize: 18,
-      //     color: 'auto',
-      //   },
-      // },
+      styles: {
+        sending: {
+          fontSize: 18,
+          color: 'white',
+        },
+        success: {
+          fontSize: 18,
+          color: 'white',
+        },
+        error: {
+          fontSize: 18,
+          color: 'white',
+        },
+      },
     };
 
     return <SubscribeFrom {...formProps} />;
@@ -53,9 +53,13 @@ export class SubscribeBanner extends PureComponent {
 
   render() {
     return (
-      <div className="pv3  SubscribeFrom">
-        {this.renderText()}
-        {this.renderForm()}
+      <div className="pv3  container-fluid  bg-color-a  SubscribeFrom">
+        <div className="container">
+          {this.renderText()}
+          <div className="pb3  container  SubscribeFrom__form">
+            {this.renderForm()}
+          </div>
+        </div>
       </div>
     );
   }
