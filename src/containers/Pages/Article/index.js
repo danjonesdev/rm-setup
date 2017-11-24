@@ -1,18 +1,26 @@
-/* eslint-disable react/sort-comp */
-/* eslint-disable import/no-named-as-default */
+/* eslint-disable import/no-named-as-default, react/no-array-index-key */
 
-
-import React from 'react';
+import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 
 import ArticleInfo from '../../../containers/Fragments/ArticleInfo';
+import ExtraArticles from '../../../containers/Fragments/ExtraArticles';
 
 // Export this for unit testing more easily
-const Article = ({ match }) => (
-  <main>
-    <ArticleInfo match={match} />
-  </main>
-);
+export class Article extends PureComponent {
+  componentDidUpdate() {
+    window.scrollTo(0, 0);
+  }
+
+  render() {
+    return (
+      <main>
+        <ArticleInfo match={this.props.match} />
+        <ExtraArticles />
+      </main>
+    );
+  }
+}
 
 Article.propTypes = {
   match: PropTypes.shape(),
