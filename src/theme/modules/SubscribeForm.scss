@@ -1,6 +1,13 @@
 /* stylelint-disable */
+.SubscribeForm {
+  background-image: url("https://d23sy9fe9womrt.cloudfront.net/0/27020_1_win-tickets-to-damian-lazarus-and-tale-of-us-mixmag-live-events_ban.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+}
+
 .SubscribeFrom__form {
-  // margin: 0 auto;
   p {
     margin: 0 auto;
     text-align: center;
@@ -43,7 +50,7 @@
     color: palette(white);
     border: 2px solid palette(white);
     margin-left: 3px;
-    background: palette(color-a);
+    background: transparent;
     border-top-right-radius: 50px;
     border-bottom-right-radius: 50px;
     cursor: pointer;
