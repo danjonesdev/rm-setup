@@ -89,9 +89,8 @@ app.get('/api/extra', (req, res) => {
     // console.log(indexLimit);
     // .limit(indexLimit)
 
-    db.collection('articles').find().limit( 2 ).skip(Math.round(Math.random() * 4)) 
-        // .find()
-        .sort("date", -1)
+    db.collection('articles')
+        .aggregate([{ $sample: { size: 4 } }])
         .toArray()
         .then(result => {
             articles = articles.concat(result);
