@@ -21,12 +21,36 @@
     text-align: center;
     width: 60%;
     margin-top: spacing(4);
+    height: 42px;
+    font-size: 1rem;
+    outline: none;
+    color: palette(black);
+    border: 2px solid palette(white);
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
   }
 
   button {
+    transition: all 0.3s ease-in-out;
+    font-weight: bold;
     margin: 0 auto;
     text-align: center;
-    width: 40%;
+    width: calc(40% - 3px);
     margin-bottom: spacing(4);
+    height: 42px;
+    font-size: 1rem;
+    outline: none;
+    color: palette(white);
+    border: 2px solid palette(white);
+    margin-left: 3px;
+    background: palette(color-a);
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    cursor: pointer;
+
+    &:hover {
+      background: palette(white);
+      color: palette(color-a);
+    }
   }
 }

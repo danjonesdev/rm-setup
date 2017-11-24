@@ -58,7 +58,7 @@ export class SubscribeBanner extends PureComponent {
       <div className="pt4  pb3  container-fluid  bg-color-a  SubscribeFrom">
         <div className="container">
           {this.renderText()}
-          <div className="pb3  container  SubscribeFrom__form">
+          <div className="pb3  container  w-100  SubscribeFrom__form">
             {this.renderForm()}
           </div>
         </div>
