@@ -8,6 +8,7 @@ import Helmet from 'react-helmet';
 
 import LatestArticles from '../../../containers/Fragments/LatestArticles';
 import ExtraArticles from '../../../containers/Fragments/ExtraArticles';
+import SubscribeBanner from '../../../components/Elements/SubscribeBanner';
 
 // Export this for unit testing more easily
 const Home = () => (
@@ -15,6 +16,7 @@ const Home = () => (
     <Helmet title="Home" />
     <LatestArticles />
     <ExtraArticles />
+    <SubscribeBanner />
   </main>
 
 );

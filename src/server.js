@@ -78,6 +78,32 @@ app.get('/api/articles', (req, res) => {
 
 });
 
+//GET ARTICLES_LATEST
+app.get('/api/extra', (req, res) => {
+
+  console.log('/api/articles');
+  console.log(req.query.searchQuery);
+
+    //var indexLimit = parseInt(req.query.indexLimit, 10);
+    var articles = [];
+    // console.log(indexLimit);
+    // .limit(indexLimit)
+
+    db.collection('articles').find().limit( 2 ).skip(Math.round(Math.random() * 4)) 
+        // .find()
+        .sort("date", -1)
+        .toArray()
+        .then(result => {
+            articles = articles.concat(result);
+        }).then(() => {
+            // console.log(articles);
+            res.send(articles);
+        }).catch(e => {
+            console.error(e);
+        });
+
+});
+
 //GET SEARCH
 app.get('/api/search', (req, res) => {
 
