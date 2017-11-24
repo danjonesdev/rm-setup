@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
 import Heading from '../../Elements/Heading';
-import GetImage from '../../Helpers/GetImage';
+// import GetImage from '../../Helpers/GetImage';
 
 // Export this for unit testing more easily
 export class SearchArticleList extends PureComponent {
@@ -20,7 +20,7 @@ export class SearchArticleList extends PureComponent {
                   <div className="col-sm-12">
                     <figure className="rel">
                       <span className="abs  pv1  ph2  t8  white searchArticleList__label">Latest</span>
-                      <img className="mb3  searchArticleList__img" alt="" src={GetImage(article._id)} />
+                      <img className="mb3  searchArticleList__img" alt="" src={article.img} />
                     </figure>
                   </div>
                   <div className="col-sm-12">

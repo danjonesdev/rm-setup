@@ -8,14 +8,16 @@ import SubscribeFrom from 'react-mailchimp-subscribe';
 // Export this for unit testing more easily
 export class SubscribeBanner extends PureComponent {
   renderText = () => {
-    const randNum = Math.floor(Math.random() * 3) + 1;
+    const randNum = Math.floor(Math.random() * 4) + 1;
     switch (randNum) {
       case 1:
-        return <p className="pt3  white  t5  tac">Yo 1</p>;
+        return <p className="pt3  white  t5  tac">Subscribe to Rendah for weekly updates</p>;
       case 2:
-        return <p className="pt3  white  t5  tac">Yo 2</p>;
+        return <p className="pt3  white  t5  tac">Fresh Articles, Straight in yo inbox</p>;
       case 3:
-        return <p className="pt3  white  t5  tac">Yo 3</p>;
+        return <p className="pt3  white  t5  tac">Free shit? Probably not... But you should Subscribe anyway</p>;
+      case 4:
+        return <p className="pt3  white  t5  tac">We ll keep you in the loop, Subscribe maaa man</p>;
       default:
         console.log('Not Returned: SubscribeFrom.renderText');
         return false;
@@ -53,7 +55,7 @@ export class SubscribeBanner extends PureComponent {
 
   render() {
     return (
-      <div className="pv3  container-fluid  bg-color-a  SubscribeFrom">
+      <div className="pt4  pb3  container-fluid  bg-color-a  SubscribeFrom">
         <div className="container">
           {this.renderText()}
           <div className="pb3  container  SubscribeFrom__form">

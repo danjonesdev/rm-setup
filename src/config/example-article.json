@@ -1,6 +1,7 @@
 {
 	"title": "new json layout v2",
-	"description": "",
+	"description": "Ivy Lab's new release is set to shake the scene blah bla",
+	"img": "https://lh3.googleusercontent.com/gxOopD-DxSXBFj2NT4ZlXhxZcKuHdeCIn8DRJt2DoZzizPsmGDsKw9460VKsW58Iy815J5mb_1974Mtc13HvEB20We2T_PDlWI-HCXNVXasYocoI0Oci-0npRjjwlP8nsJFXNVE1Ipk9B--HncNiZBJknvBDwl1Wt2Me890lydjgZEdfWMzDbbA9nAV14f2AoaQhbzOFhxD4tzeihawRoXcI5gl9Wx3_M0ZVI9xIM4OHpYwFqK3pSEdMlqEa-hwLaom4AcccbkebJwq1DpXyEXtM0n_oifOCJ4jVL2JpOHxL5Efi5eqIAPUrNPmFcT97Fz_H4dMvorUbA7gqwZGOKtoUiGmlQeWFXPgn2jr4_KNSky2mZlCee2ka5U6j36nO13B5NKcYkpsX6at2OzsnrQHV44FhweKQg80zqv_BrSmRGjCe_VGvepcnXlLTcOdqrqvoAMvI_HTXeusm0T5jSEoj-gn7rZclyL2w7NUcC9vL3k3bs53pxqMiBZ5-MKQrpZPz7_IsQF5prk9oCuJjvJmggARJ82AKz_4i1XKFOPVbaXgHEb2wqkHtTyTpd_KlulZXIADekPxs4OMhANDAp6_CaYH-wH76__Nzk0kuWg=s625-no",
 	"body": [
 		{
 			"section": {
@@ -11,7 +12,7 @@
 		{
 			"section": {
 				"type": "paragraph",
-				"text": "Head first into the Signs EP"
+				"text": "Lorem ipsum dolor sit amet, quo an veniam convenire expetendis, nec ad reque porro menandri, eos ad erant errem. Ne per adhuc rebum utamur. Sea an detracto convenire. Dolores abhorreant qui ad. Ex vel alia epicurei maiestatis, ne pri dicit congue virtute, vis fugit tritani eu. Cibo iuvaret percipit ius ut, vix iusto vulputate ad."
 			}
 		},
 		{
@@ -23,22 +24,22 @@
 		{
 			"section": {
 				"type": "question",
-				"text": "question"
+				"text": "Mei an veet oporteat sit ex. At intellegam interesset duo, saepe quodsi eos ea."
 			}
 		},
 		{
 			"section": {
 				"type": "answer",
-				"text": "answer"
+				"text": "Mei, augue laoreet oporeresset duo, saepe quodsi eos ea."
 			}
 		},
 		{
 			"section": {
 				"type": "bulletList",
 				"list": [
-					"Blah",
-					"Blah",
-					"Blah"
+					"acimates eleifend, augue laoreet oporteat sit ex. At intellegam interesset duo, saepe quodsi eos ea.",
+					"Mei aeleifend, augue laoreet oporteat sit ex. At intellegam interesset duo, saepe quodsi eos ea.",
+					"Mei an vivendum tacimates eleifend, augue laoree interesset duo, saepe quodsi eos ea."
 				]
 			}
 		},
@@ -46,9 +47,9 @@
 			"section": {
 				"type": "numberedList",
 				"list": [
-					"Blah",
-					"Blah",
-					"Blah"
+					"Mei an vivenaugue laoreet oporteat sit ex. At intellegam interesset duo, saepe quodsi eos ea.",
+					"Mei an vivendum augue laoreet oporteat sit ex. At intellegam interesset duo, saepe quodsi eos ea.",
+					"Meue laoreet oporteat sit ex. At intellegam interesset duo, saepe quodsi eos ea."
 				]
 			}
 		},
@@ -68,8 +69,8 @@
 		{
 			"section": {
 				"type": "link",
-				"text": "blah",
-				"url": "ww/blah"
+				"text": "Find it here:",
+				"url": "ww/blahyoyoyoyoy"
 			}
 		}
 	],

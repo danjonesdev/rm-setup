@@ -4,7 +4,7 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 
-import GetImage from '../Helpers/GetImage';
+// import GetImage from '../Helpers/GetImage';
 
 // import Standard from './Sections/Standard';
 // import QA from './Sections/QA';
@@ -134,10 +134,10 @@ export class ArticleCard extends PureComponent {
     return (
       <div>
         <div className="cont">
-          <section id="hero-1" style={{ backgroundImage: `url(${GetImage(this.props.info._id)})` }}></section>
+          <section id="hero-1" style={{ backgroundImage: `url(${this.props.info.img})` }}></section>
         </div>
         <section className="rel">
-          <img className="img  shadow3" alt="yo" src={GetImage(this.props.info._id)} />
+          <img className="img  shadow3" alt="yo" src={this.props.info.img} />
           <article className="container  article">
             <div className="row">
               <div className="col-sm-4"></div>
