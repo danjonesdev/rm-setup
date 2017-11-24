@@ -7,9 +7,24 @@ import SubscribeFrom from 'react-mailchimp-subscribe';
 
 // Export this for unit testing more easily
 export class SubscribeBanner extends PureComponent {
+  renderText = () => {
+    const randNum = Math.floor(Math.random() * 3) + 1;
+    switch (randNum) {
+      case 1:
+        return <p>Yo 1</p>;
+      case 2:
+        return <p>Yo 2</p>;
+      case 3:
+        return <p>Yo 3</p>;
+      default:
+        console.log('Not Returned: SubscribeFrom.renderText');
+        return false;
+    }
+  };
+
   renderForm = () => {
     const formProps = {
-      action: 'https://prizoners.us9.list-manage.com/subscribe/post?u=d66d8c5d1ef09114cf8c27ccb&id=3c7edc9b14',
+      action: 'https://rendahmag.us17.list-manage.com/subscribe/post?u=df0d549f92845c8dfc4d99dde&amp;id=2904b740be',
       messages: {
         inputPlaceholder: 'Enter yooo email...',
         btnLabel: 'Subscribe',
@@ -38,7 +53,8 @@ export class SubscribeBanner extends PureComponent {
 
   render() {
     return (
-      <div>
+      <div className="pv3  SubscribeFrom">
+        {this.renderText()}
         {this.renderForm()}
       </div>
     );

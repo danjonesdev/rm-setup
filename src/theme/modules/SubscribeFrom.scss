@@ -1,0 +1,25 @@
+/* stylelint-disable */
+.SubscribeFrom {
+  width: 500px;
+  max-width: 80%;
+  margin: 0 auto;
+
+  p {
+    margin: 0 auto;
+    text-align: center;
+    padding-top: spacing(2);
+    padding-bottom: spacing(2);
+  }
+
+  input {
+    margin: 0 auto;
+    text-align: center;
+    width: 300px;
+  }
+
+  button {
+    margin: 0 auto;
+    text-align: center;
+    width: 200px;
+  }
+}

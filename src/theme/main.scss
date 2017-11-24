@@ -11,6 +11,7 @@
 @import 'functions/breakpoints';
 @import 'functions/colors';
 @import 'functions/easing';
+@import 'functions/spacings';
 
 // Mixins
 @import 'mixins/box-shadow';
@@ -74,6 +75,7 @@
 @import 'modules/SearchArticleList';
 @import 'modules/Header';
 @import "modules/SearchInput";
+@import "modules/SubscribeFrom";
 
 header {
   height: 80px;
