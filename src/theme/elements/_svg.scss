@@ -11,12 +11,12 @@
   svg {
     height: 30px;
     width: 30px;
-    fill: palette(color-a);
+    fill: palette(black);
     transition: fill 0.3s ease-in-out;
 
     &:hover, &:active {
       cursor: pointer;
-      fill: palette(color-a-light);
+      fill: red;
     }
   }
 }

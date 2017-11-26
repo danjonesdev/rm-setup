@@ -11,7 +11,7 @@ import config from '../../config';
 import routes from '../../routes';
 import '../../theme/main.scss';
 
-// import Header from './Header';
+import Header from './Header';
 
 const App = (): Element<'div'> => {
   // Use it when sub routes are added to any route it'll work
@@ -30,9 +30,8 @@ const App = (): Element<'div'> => {
   return (
     <div>
       <Helmet {...config.app} />
-
       <input type="checkbox" id="navigation" />
-      <label htmlFor="navigation">+</label>
+      <label htmlFor="navigation"><span /></label>
       <nav>
         <ul>
           <li>
@@ -54,6 +53,7 @@ const App = (): Element<'div'> => {
       </nav>
 
       <div className="yo">
+        <Header />
         <Switch>{routes.map(route => routeWithSubRoutes(route))}</Switch>
       </div>
 
