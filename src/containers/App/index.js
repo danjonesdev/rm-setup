@@ -1,5 +1,5 @@
 /* @flow */
-/* eslint-disable import/no-named-as-default */
+/* eslint-disable import/no-named-as-default, , jsx-a11y/label-has-for */
 
 import React from 'react';
 import type { Element } from 'react';
@@ -11,7 +11,7 @@ import config from '../../config';
 import routes from '../../routes';
 import '../../theme/main.scss';
 
-import Header from './Header';
+// import Header from './Header';
 
 const App = (): Element<'div'> => {
   // Use it when sub routes are added to any route it'll work
@@ -30,8 +30,34 @@ const App = (): Element<'div'> => {
   return (
     <div>
       <Helmet {...config.app} />
-      <Header />
-      <Switch>{routes.map(route => routeWithSubRoutes(route))}</Switch>
+
+      <input type="checkbox" id="navigation" />
+      <label htmlFor="navigation">+</label>
+      <nav>
+        <ul>
+          <li>
+            <a href="/">Home</a>
+          </li>
+          <li>
+            <a href="/">Latest News</a>
+          </li>
+          <li>
+            <a href="/">What We Do</a>
+          </li>
+          <li>
+            <a href="/">Another Link</a>
+          </li>
+          <li>
+            <a href="/">Contact</a>
+          </li>
+        </ul>
+      </nav>
+
+      <div className="yo">
+        <Switch>{routes.map(route => routeWithSubRoutes(route))}</Switch>
+      </div>
+
+
     </div>
   );
 };
