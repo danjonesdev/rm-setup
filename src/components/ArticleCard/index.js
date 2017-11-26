@@ -140,16 +140,12 @@ export class ArticleCard extends PureComponent {
           <img className="img  shadow3" alt="yo" src={this.props.info.img} />
           <article className="container  article">
             <div className="row">
-              <div className="col-sm-4"></div>
-              <div className="col-sm-16">
-                <div className="col-sm-24">
-                  {this.heading()}
-                  {this.props.info.body.map((item, i) => (
-                    sections(item, i)
-                  ))}
-                </div>
+              <div className="col-sm-16 col-sm-offset-4  ph5">
+                {this.heading()}
+                {this.props.info.body.map((item, i) => (
+                  sections(item, i)
+                ))}
               </div>
-              <div className="col-sm-4"></div>
             </div>
           </article>
         </section>

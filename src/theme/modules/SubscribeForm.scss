@@ -1,63 +1,65 @@
 /* stylelint-disable */
+
 .SubscribeForm {
-  background-image: url("https://d23sy9fe9womrt.cloudfront.net/0/27020_1_win-tickets-to-damian-lazarus-and-tale-of-us-mixmag-live-events_ban.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  width: 100%;
-}
+  background: palette(black);
 
-.SubscribeFrom__form {
-  p {
-    margin: 0 auto;
-    text-align: center;
-    font-family: $font-title-a;
-    color: palette(white);
-    font-size: 1.5rem;
-  }
+  .SubscribeForm__form {
+    p {
+      margin: 0 auto;
+      text-align: center;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      width: 200px;
+      font-family: $font-title-a;
+      color: palette(white);
+      font-size: 1.5rem;
+    }
 
-  form {
-    margin: 0 auto;
-    text-align: center;
-    width: 500px;
-    max-width: 90%;
-  }
+    form {
+      margin: 0 auto;
+      text-align: center;
+      width: 500px;
+      max-width: 90%;
+    }
 
-  input {
-    margin: 0 auto;
-    text-align: center;
-    width: 60%;
-    margin-top: spacing(4);
-    height: 42px;
-    font-size: 1rem;
-    outline: none;
-    color: palette(black);
-    border: 2px solid palette(white);
-    border-top-left-radius: 50px;
-    border-bottom-left-radius: 50px;
-  }
+    input {
+      margin: 0 auto;
+      text-align: center;
+      width: 60%;
+      margin-top: spacing(4);
+      height: 42px;
+      font-size: 1rem;
+      outline: none;
+      color: palette(black);
+      border: 2px solid palette(white);
+      border-top-left-radius: 50px;
+      border-bottom-left-radius: 50px;
+    }
 
-  button {
-    transition: all 0.3s ease-in-out;
-    font-weight: bold;
-    margin: 0 auto;
-    text-align: center;
-    width: calc(40% - 3px);
-    margin-bottom: spacing(4);
-    height: 42px;
-    font-size: 1rem;
-    outline: none;
-    color: palette(white);
-    border: 2px solid palette(white);
-    margin-left: 3px;
-    background: transparent;
-    border-top-right-radius: 50px;
-    border-bottom-right-radius: 50px;
-    cursor: pointer;
+    button {
+      transition: all 0.3s ease-in-out;
+      font-weight: bold;
+      margin: 0 auto;
+      text-align: center;
+      width: calc(40% - 3px);
+      margin-bottom: spacing(4);
+      height: 42px;
+      font-size: 1rem;
+      outline: none;
+      color: palette(white);
+      border: 2px solid palette(white);
+      margin-left: 3px;
+      background: transparent;
+      border-top-right-radius: 50px;
+      border-bottom-right-radius: 50px;
+      cursor: pointer;
 
-    &:hover {
-      background: palette(white);
-      color: palette(color-a);
+      &:hover {
+        background: palette(white);
+        color: palette(color-a);
+      }
     }
   }
 }

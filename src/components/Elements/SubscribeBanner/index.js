@@ -13,11 +13,11 @@ export class SubscribeBanner extends PureComponent {
       case 1:
         return <p className="pt3  white  t5  tac">Subscribe to Rendah for weekly updates</p>;
       case 2:
-        return <p className="pt3  white  t5  tac">Fresh Articles, Straight in yo inbox</p>;
+        return <p className="pt3  white  t5  tac">Fresh Articles, Straight in yo&#39; inbox</p>;
       case 3:
         return <p className="pt3  white  t5  tac">Free shit? Probably not... But you should Subscribe anyway</p>;
       case 4:
-        return <p className="pt3  white  t5  tac">We ll keep you in the loop, Subscribe maaa man</p>;
+        return <p className="pt3  white  t5  tac">We&#39;ll keep you in the loop, Subscribe maaa&#39; man</p>;
       default:
         console.log('Not Returned: SubscribeFrom.renderText');
         return false;
@@ -58,7 +58,7 @@ export class SubscribeBanner extends PureComponent {
       <div className="pt4  pb4  container-fluid  SubscribeForm">
         <div className="container">
           {this.renderText()}
-          <div className="pb3  container  w-100  SubscribeFrom__form">
+          <div className="pb3  container  w-100  rel  SubscribeForm__form">
             {this.renderForm()}
           </div>
         </div>
