@@ -51,7 +51,6 @@ const getPlugins = () => {
       options: {
         // Javascript lint
         eslint: { failOnError: eslint },
-        context: '/', // Required for the sourceMap of css/sass loader
         debug: isDev,
         minimize: !isDev,
       },
@@ -161,7 +160,7 @@ module.exports = {
                 // "context" and "localIdentName" need to be the same with server config,
                 // or the style will flick when page first loaded
                 context: path.join(process.cwd(), './src'),
-                localIdentName: isDev ? '[name]__[local].[hash:base64:5]' : '[hash:base64:5]',
+                localIdentName: '[name]__[local]___[hash:base64:5]',
                 minimize: !isDev,
               },
             },
@@ -181,7 +180,7 @@ module.exports = {
                 sourceMap: true,
                 modules: CSSModules,
                 context: path.join(process.cwd(), './src'),
-                localIdentName: isDev ? '[name]__[local].[hash:base64:5]' : '[hash:base64:5]',
+                localIdentName: '[name]__[local]___[hash:base64:5]',
                 minimize: !isDev,
               },
             },
