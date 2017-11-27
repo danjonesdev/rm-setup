@@ -21,13 +21,8 @@ export const fetchLatestArticles = (axios: any, URL: string = API_URL) =>
 const shouldFetchLatestArticles = (state): boolean => {
   // In development, we will allow action dispatching
   // or your reducer hot reloading won't updated on the view
-  if (__DEV__) return true;
-
-  const latestArticles = state.latestArticles;
-
-  // Prevent double fetch data
-  if (latestArticles.readyStatus === LATESTARTICLES_SUCCESS) return false;
-
+  if (__DEV__) return true; // Next line = Preventing double fetching data
+  if (state.latestArticles.readyStatus === LATESTARTICLES_SUCCESS) return false;
   return true;
 };
 

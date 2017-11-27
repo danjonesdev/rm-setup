@@ -22,12 +22,9 @@ const shouldFetchArticle = (state, articleId: string): boolean => {
   // In development, we will allow action dispatching
   // or your reducer hot reloading won't updated on the view
   if (__DEV__) return true;
-
   const articleInfo = state.articleInfo[articleId];
-
   // Preventing dobule fetching data in production
   if (articleInfo && articleInfo.readyStatus === ARTICLE_SUCCESS) return false;
-
   return true;
 };
 
