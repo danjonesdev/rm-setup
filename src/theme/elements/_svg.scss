@@ -14,9 +14,40 @@
     fill: palette(black);
     transition: fill 0.3s ease-in-out;
 
-    &:hover, &:active {
+    &:active,
+    &:hover {
       cursor: pointer;
       fill: red;
+    }
+  }
+}
+
+[data-svg="Logo"] {
+  svg {
+    height: 80px;
+    width: 80px;
+    transition: fill 0.3s ease-in-out;
+
+    &:active,
+    &:hover {
+      cursor: pointer;
+      fill: red;
+    }
+
+    // .st0 {
+    //   fill: #fff;
+    // }
+
+    .st1 {
+      fill: none;
+      stroke: #000000;
+      stroke-miterlimit: 10;
+    }
+
+    .st2 {
+      fill: #fff;
+      stroke: #000000;
+      stroke-miterlimit: 10;
     }
   }
 }
