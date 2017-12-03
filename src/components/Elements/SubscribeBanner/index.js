@@ -55,7 +55,7 @@ export class SubscribeBanner extends PureComponent {
 
   render() {
     return (
-      <div className="pt4  pb4  container-fluid  SubscribeForm">
+      <div className="mv4  pv4  container-fluid  SubscribeForm">
         <div className="container">
           {this.renderText()}
           <div className="pb3  container  w-100  rel  SubscribeForm__form">

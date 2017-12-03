@@ -17,11 +17,12 @@ const Home = () => (
     <Helmet title="Home" />
     <LatestArticles />
     <SubscribeBanner />
+    <h2 className="tac  mb4">More articles</h2>
     <ExtraArticles />
-    <h2 className="tac  pv3">Insta Feed</h2>
-    <div id="yo" className="container">
+    <h2 className="tac  mb4">Insta Feed</h2>
+    <div id="yo" className="container  mb4">
       <Instafeed
-        limit="5"
+        limit="12"
         resolution="standard_resolution"
         sortBy="most-recent"
         target="yo"

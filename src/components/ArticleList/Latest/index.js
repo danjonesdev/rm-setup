@@ -8,7 +8,7 @@ import PropTypes from 'prop-types';
 export class LatestArticleList extends PureComponent {
   render() {
     return (
-      <div className="container  pv3">
+      <div className="container  mv4">
         <div className="row">
           {this.props.list.map((article, i) => (
             <Link className="link" to={`/Article/${article._id}`}>
