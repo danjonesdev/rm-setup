@@ -34,7 +34,7 @@ LatestArticleList.propTypes = {
 };
 
 LatestArticleList.defaultProps = {
-  list: {},
+  list: [],
 };
 
 export default LatestArticleList;

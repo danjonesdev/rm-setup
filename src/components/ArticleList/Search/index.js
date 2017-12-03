@@ -43,7 +43,7 @@ SearchArticleList.propTypes = {
 };
 
 SearchArticleList.defaultProps = {
-  list: {},
+  list: [],
 };
 
 export default SearchArticleList;
