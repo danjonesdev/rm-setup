@@ -17,8 +17,6 @@ const Home = () => (
     <Helmet title="Home" />
     <LatestArticles />
     <SubscribeBanner />
-    <h2 className="tac  mb4">More articles</h2>
-    <ExtraArticles />
     <h2 className="tac  mb4">Insta Feed</h2>
     <div id="yo" className="container  mb4">
       <Instafeed
@@ -32,6 +30,8 @@ const Home = () => (
         accessToken="6646546960.1677ed0.8eb1d2cceba64706aed91890d352c904"
       />
     </div>
+    <h2 className="tac  mb4">More articles</h2>
+    <ExtraArticles />
   </main>
 
 );
