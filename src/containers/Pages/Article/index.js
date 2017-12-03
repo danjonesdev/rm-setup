@@ -3,6 +3,7 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import Instafeed from 'react-instafeed';
+import FacebookProvider, { Comments } from 'react-facebook';
 
 import ArticleInfo from '../../../containers/Fragments/ArticleInfo';
 import ExtraArticles from '../../../containers/Fragments/ExtraArticles';
@@ -17,6 +18,11 @@ export class Article extends PureComponent {
     return (
       <main>
         <ArticleInfo match={this.props.match} />
+        <div className="container  tac">
+          <FacebookProvider appId="154881868603516">
+            <Comments href="http://www.facebook.com" numPosts="3" width="100%" />
+          </FacebookProvider>
+        </div>
         <h2 className="tac  mb4">More articles</h2>
         <ExtraArticles />
         <h2 className="tac  mb4">Insta Feed</h2>
