@@ -12,6 +12,7 @@ import routes from '../../routes';
 import '../../theme/main.scss';
 
 import Header from './Header';
+import Cross from './Cross';
 
 const App = (): Element<'div'> => {
   // Use it when sub routes are added to any route it'll work
@@ -31,7 +32,7 @@ const App = (): Element<'div'> => {
     <div>
       <Helmet {...config.app} />
       <input type="checkbox" id="navigation" />
-      <label htmlFor="navigation"><span /></label>
+      <Cross />
       <nav className="bg-black  tac  pt4">
         <ul>
           <li>

@@ -1,5 +1,4 @@
 /* stylelint-disable */
-
 body,
 html {
   height: 100%;
@@ -54,6 +53,25 @@ nav li {
   margin: 0;
 }
 
+input[type="checkbox"] {
+  display: none;
+}
+
+input[type="checkbox"]:checked ~ nav {
+  margin: 0;
+}
+
+input[type="checkbox"]:checked ~ label {
+  left: calc(250px + 15px);
+}
+
+input[type="checkbox"]:checked ~ .yo {
+  -webkit-transform: translate3d(250px, 0, 0);
+  -moz-transform: translate3d(250px, 0, 0);
+  -o-transform: translate3d(250px, 0, 0);
+  transform: translate3d(250px, 0, 0);
+}
+
 label {
   span {
     position: relative;
@@ -61,7 +79,7 @@ label {
     width: 20px;
     height: 4px;
     background: #222;
-    transition: all 0.2s ease-in-out-out;
+    transition: all 0.4s ease-in-out;
     top: 10px;
 
     &:after,
@@ -71,7 +89,7 @@ label {
       content: '';
       width: 20px;
       height: 4px;
-      transition: all 0.2s ease-in-out-out;
+      transition: all 0.4s ease-in-out;
     }
 
     &:before {
@@ -95,21 +113,16 @@ label {
   z-index: 2000;
 }
 
-input[type="checkbox"] {
-  display: none;
-}
+label.btn-pressed {
+  span {
+    background: transparent;
 
-input[type="checkbox"]:checked ~ nav {
-  margin: 0;
-}
+    &:before {
+      transform: rotate(45deg) translate(5px, 6px);
+    }
 
-input[type="checkbox"]:checked ~ label {
-  left: calc(250px + 15px);
-}
-
-input[type="checkbox"]:checked ~ .yo {
-  -webkit-transform: translate3d(250px, 0, 0);
-  -moz-transform: translate3d(250px, 0, 0);
-  -o-transform: translate3d(250px, 0, 0);
-  transform: translate3d(250px, 0, 0);
+    &:after {
+      transform: rotate(-45deg) translate(5px, -6px);
+    }
+  }
 }
