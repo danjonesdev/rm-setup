@@ -18,6 +18,7 @@ const Home = () => (
     <LatestArticles />
     <SubscribeBanner />
     <ExtraArticles />
+    <h2 className="tac  pv3">Insta Feed</h2>
     <div id="yo" className="container">
       <Instafeed
         limit="5"

@@ -17,9 +17,9 @@ export class LatestArticleList extends PureComponent {
                   <span className="abs  pv1  ph2  t8  white latestArticleList__label">Latest</span>
                   <img className="mb3  latestArticleList__img" alt="" src={article.img} />
                 </figure>
-                <span className="grey  t8">10/17/09</span>
-                <h2 className="t7  pv2  black  latestArticleList__title">{article.title}</h2>
-                <p className="t8  font-normal-a  dark-grey  latestArticleList__intro">{article.description}</p>
+                <span className="grey  t8  lh-solid">10/17/09</span>
+                <h2 className="t8  pv2  black  latestArticleList__title">{article.title}</h2>
+                <p className="t8  pv2  font-normal-a  dark-grey  latestArticleList__intro">{article.description}</p>
               </article>
             </Link>
           ))}

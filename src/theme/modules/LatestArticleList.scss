@@ -5,6 +5,7 @@
 }
 
 .latestArticleList__title {
+  height: 42px;
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
@@ -13,7 +14,7 @@
 }
 
 .latestArticleList__intro {
-  height: 62px;
+  height: 55px;
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
