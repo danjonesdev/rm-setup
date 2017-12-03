@@ -32,28 +32,30 @@ const App = (): Element<'div'> => {
       <Helmet {...config.app} />
       <input type="checkbox" id="navigation" />
       <label htmlFor="navigation"><span /></label>
-      <img width="50" src={require('./assets/Rendah-Logo-Medium.png')} alt="Logo" role="presentation" />
-      <nav>
+      <nav className="bg-black  tac  pt4">
         <ul>
           <li>
-            <a href="/">Home</a>
+            <a className="white  dib  pb2  t5  link" href="/">Home</a>
           </li>
           <li>
-            <a href="/">Latest News</a>
+            <a className="white  dib  pb2  t5  link" href="/">Latest News</a>
           </li>
           <li>
-            <a href="/">What We Do</a>
+            <a className="white  dib  pb2  t5  link" href="/">What We Do</a>
           </li>
           <li>
-            <a href="/">Another Link</a>
+            <a className="white  dib  pb2  t5  link" href="/">Another Link</a>
           </li>
           <li>
-            <a href="/">Contact</a>
+            <a className="white  dib  pb2  t5  link" href="/">Contact</a>
           </li>
         </ul>
       </nav>
 
       <div className="yo">
+        <a href="/">
+          <img className="logo" width="50" src={require('./assets/Rendah-Logo-Medium.png')} alt="Logo" role="presentation" />
+        </a>
         <Header />
         <Switch>{routes.map(route => routeWithSubRoutes(route))}</Switch>
       </div>

@@ -6,13 +6,12 @@ import type { Element } from 'react';
 // import config from '../../../config';
 
 import { Fb, Tw, Insta, Sc } from '../../../components/Elements/Svg';
-import SearchInput from '../../../components/Helpers/SearchInput';
+// import SearchInput from '../../../components/Helpers/SearchInput';
 
 const Header = (): Element<'div'> => (
-  <div className="rel  shadow1  z9">
+  <div className="rel  bb  bw1  z9">
     <header role="banner">
       <div className="fn  fr-sm   tac  tal-sm  header__social">
-        <SearchInput />
         <Fb />
         <Tw />
         <Insta />
