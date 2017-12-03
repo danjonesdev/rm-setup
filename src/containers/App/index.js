@@ -32,7 +32,7 @@ const App = (): Element<'div'> => {
       <Helmet {...config.app} />
       <input type="checkbox" id="navigation" />
       <label htmlFor="navigation"><span /></label>
-      <img src={require('./assets/Rendah-Logo-Medium.png')} alt="Logo" role="presentation" />
+      <img width="50" src={require('./assets/Rendah-Logo-Medium.png')} alt="Logo" role="presentation" />
       <nav>
         <ul>
           <li>
