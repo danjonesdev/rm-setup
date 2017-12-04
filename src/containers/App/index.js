@@ -12,7 +12,8 @@ import routes from '../../routes';
 import '../../theme/main.scss';
 
 import Header from './Header';
-import Cross from './Cross';
+import Nav from './Nav';
+import BurgerIco from './BurgerIco';
 
 const App = (): Element<'div'> => {
   // Use it when sub routes are added to any route it'll work
@@ -32,31 +33,9 @@ const App = (): Element<'div'> => {
     <div>
       <Helmet {...config.app} />
       <input type="checkbox" id="navigation" />
-      <Cross />
-      <nav className="bg-black  tac  pt4">
-        <ul>
-          <li>
-            <a className="white  dib  pb2  t5  link" href="/">Home</a>
-          </li>
-          <li>
-            <a className="white  dib  pb2  t5  link" href="/">Latest News</a>
-          </li>
-          <li>
-            <a className="white  dib  pb2  t5  link" href="/">What We Do</a>
-          </li>
-          <li>
-            <a className="white  dib  pb2  t5  link" href="/">Another Link</a>
-          </li>
-          <li>
-            <a className="white  dib  pb2  t5  link" href="/">Contact</a>
-          </li>
-        </ul>
-      </nav>
-
+      <BurgerIco />
+      <Nav />
       <div className="App">
-        <a href="/">
-          <img className="logo" width="50" src={require('./assets/Rendah-Logo-Medium.png')} alt="Logo" role="presentation" />
-        </a>
         <Header />
         <Switch>{routes.map(route => routeWithSubRoutes(route))}</Switch>
       </div>

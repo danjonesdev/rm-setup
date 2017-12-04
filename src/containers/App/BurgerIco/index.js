@@ -4,7 +4,7 @@ import React, { PureComponent } from 'react';
 import classNames from 'classnames';
 
 // Export this for unit testing more easily
-export class Cross extends PureComponent {
+export class BurgerIco extends PureComponent {
   constructor() {
     super();
     this.state = {
@@ -31,4 +31,4 @@ export class Cross extends PureComponent {
   }
 }
 
-export default Cross;
+export default BurgerIco;
