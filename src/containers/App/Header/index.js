@@ -11,12 +11,12 @@ import SearchInput from '../../../components/Helpers/SearchInput';
 const Header = (): Element<'div'> => (
   <div className="rel  bb  bw1  z9">
     <header role="banner">
-      <SearchInput />
-      <div className="dn-sm  header__social--cont  pr2">
-        <a className="header__social  ph1" href="/"><Fb /></a>
-        <a className="header__social  ph1" href="/"><Tw /></a>
-        <a className="header__social  ph1" href="/"><Insta /></a>
-        <a className="header__social  ph1" href="/"><Sc /></a>
+      <div className="header__social--cont  pr2">
+        <SearchInput />
+        <a className="header__social  ph1  dn-sm" href="/"><Fb /></a>
+        <a className="header__social  ph1  dn-sm" href="/"><Tw /></a>
+        <a className="header__social  ph1  dn-sm" href="/"><Insta /></a>
+        <a className="header__social  ph1  dn-sm" href="/"><Sc /></a>
       </div>
     </header>
   </div>

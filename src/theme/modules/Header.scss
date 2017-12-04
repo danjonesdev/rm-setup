@@ -1,13 +1,8 @@
 /* stylelint-disable */
-body,
-html {
-  height: 100%;
-}
-
-body {
-  padding: 0;
-  margin: 0;
-  overflow-x: hidden;
+header {
+  height: 90px;
+  z-index: 1000;
+  background: white;
 }
 
 .logo {
@@ -16,20 +11,12 @@ body {
   position: absolute;
   z-index: 2000;
   top: 15px;
-  left: 50px;
-  @media only screen and (max-width: $sm) {
-    left: 0;
-    right: 0;
-    margin: 0 auto;
-  }
-}
-
-.yo {
-  // border-left: 2px solid black;
-  -moz-transition: all 200ms ease-in-out;
-  -webkit-transition: all 200ms ease-in-out;
-  -o-transition: all 200ms ease-in-out;
-  transition: all 200ms ease-in-out;
+  left: 55px;
+  // @media only screen and (max-width: $sm) {
+  //   left: 0;
+  //   right: 0;
+  //   margin: 0 auto;
+  // }
 }
 
 nav {
@@ -70,7 +57,7 @@ input[type="checkbox"]:checked ~ label {
   left: calc(250px + 15px);
 }
 
-input[type="checkbox"]:checked ~ .yo {
+input[type="checkbox"]:checked ~ .App {
   -webkit-transform: translate3d(250px, 0, 0);
   -moz-transform: translate3d(250px, 0, 0);
   -o-transform: translate3d(250px, 0, 0);

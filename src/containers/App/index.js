@@ -53,7 +53,7 @@ const App = (): Element<'div'> => {
         </ul>
       </nav>
 
-      <div className="yo">
+      <div className="App">
         <a href="/">
           <img className="logo" width="50" src={require('./assets/Rendah-Logo-Medium.png')} alt="Logo" role="presentation" />
         </a>

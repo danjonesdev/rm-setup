@@ -2,7 +2,8 @@
 .searchInput {
   line-height: 80px;
   width: 180px;
-  display: inline-block;
+  align-self: center;
+  padding-top: 8px;
 }
 
 .searchInput__form {
@@ -13,17 +14,15 @@
 .searchInput__input {
   width: 180px;
   display: inline-block;
-  border-left: none;
-  border-top: none;
-  border-right: none;
+  border: 0;
   line-height: 25px;
-
-  //reset
   -webkit-appearance: none;
   outline: none;
+  text-align: right;
 
   &:focus {
     outline: none;
+    // border-bottom: 2px solid black;
   }
 
   &::-moz-focus-inner {

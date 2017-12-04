@@ -71,6 +71,8 @@
 @import 'elements/svg';
 
 // Modules
+@import 'modules/App';
+@import "modules/ArticleCard";
 @import 'modules/LatestArticleList';
 @import 'modules/SearchArticleList';
 @import 'modules/Header';
@@ -78,43 +80,8 @@
 @import "modules/SubscribeForm";
 @import "modules/InstaFeed";
 
-header {
-  height: 90px;
-  z-index: 1000;
-  background: white;
-}
 
 
-
-#hero-1 {
-  height: 50vh;
-  width: 100%;
-  filter: blur(8px);
-  background-position: center;
-  transform: scale(2);
-}
-
-.cont{
-  height: 50vh;
-  width: 100%;
-  overflow: hidden;
-}
-
-
-.img{
-  margin: 0 auto;
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  width: auto;
-  object-fit: cover;
-  height: 50vh;
-}
-
-.article{
-  margin-top: 50px;
-}
 
 
 
