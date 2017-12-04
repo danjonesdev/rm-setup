@@ -1,10 +1,14 @@
 /* stylelint-disable */
-
 #yo {
   text-align: center;
-  padding: 0;
-  padding-left: 5px;
-  padding-right: 5px;
+  padding: 0 5px;
+  width: 50%;
+  @media only screen and (max-width: $md) {
+    width: 75%;
+  }
+  @media only screen and (max-width: $sm) {
+    width: 100%;
+  }
 }
 
 .instafeed__item {
@@ -16,5 +20,4 @@
   margin: 0 auto;
   text-align: center;
   margin: 0;
-
 }
