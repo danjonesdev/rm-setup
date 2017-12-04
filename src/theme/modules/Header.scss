@@ -11,12 +11,17 @@ body {
 }
 
 .logo {
-  width: 75px;
+  width: 60px;
   height: auto;
   position: absolute;
   z-index: 2000;
-  top: 8px;
+  top: 15px;
   left: 50px;
+  @media only screen and (max-width: $sm) {
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+  }
 }
 
 .yo {
@@ -125,4 +130,15 @@ label.btn-pressed {
       transform: rotate(-45deg) translate(5px, -6px);
     }
   }
+}
+
+.header__social--cont {
+  float: right;
+  display: flex;
+  justify-content: center;
+  height: 90px;
+}
+
+.header__social {
+  align-self: center;
 }

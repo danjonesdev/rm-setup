@@ -14,7 +14,6 @@ export class LatestArticleList extends PureComponent {
             <Link className="link" to={`/Article/${article._id}`}>
               <article key={i} className="col-sm-6  pv3  latestArticleList__col">
                 <figure className="rel">
-                  <span className="abs  pv1  ph2  t8  white latestArticleList__label">Latest</span>
                   <img className="mb3  latestArticleList__img" alt="" src={article.img} />
                 </figure>
                 <span className="grey  t8  lh-solid">10/17/09</span>

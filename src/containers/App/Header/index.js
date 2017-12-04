@@ -11,11 +11,11 @@ import { Fb, Tw, Insta, Sc } from '../../../components/Elements/Svg';
 const Header = (): Element<'div'> => (
   <div className="rel  bb  bw1  z9">
     <header role="banner">
-      <div className="fn  fr-sm   tac  tal-sm  header__social">
-        <Fb />
-        <Tw />
-        <Insta />
-        <Sc />
+      <div className="dn-sm  header__social--cont  pr2">
+        <a className="header__social  ph1" href="/"><Fb /></a>
+        <a className="header__social  ph1" href="/"><Tw /></a>
+        <a className="header__social  ph1" href="/"><Insta /></a>
+        <a className="header__social  ph1" href="/"><Sc /></a>
       </div>
     </header>
   </div>

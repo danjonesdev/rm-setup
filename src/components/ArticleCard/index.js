@@ -133,14 +133,14 @@ export class ArticleCard extends PureComponent {
     const sections = this.sections;
     return (
       <div>
-        <div className="cont">
+        <div className="cont  rel">
           <section id="hero-1" style={{ backgroundImage: `url(${this.props.info.img})` }}></section>
+          <img className="img  shadow3" alt="yo" src={this.props.info.img} />
         </div>
         <section className="rel">
-          <img className="img  shadow3" alt="yo" src={this.props.info.img} />
-          <article className="container  article  mv4">
+          <article className="container  article">
             <div className="row">
-              <div className="col-md-16 col-md-offset-4  pt3">
+              <div className="col-md-16 col-md-offset-4">
                 {this.heading()}
                 {this.props.info.body.map((item, i) => (
                   sections(item, i)
