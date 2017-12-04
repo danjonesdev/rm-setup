@@ -26,18 +26,22 @@ export class SearchInput extends PureComponent {
     this.setState({ fireRedirect: true });
   }
 
-  render() {
+  redir = () => {
     const { from } = this.props.location.state || '/';
-    const { fireRedirect } = this.state;
+    if (this.state.fireRedirect) {
+      this.setState({ fireRedirect: false });
+      return <Redirect push to={from || `/search/${this.state.inputValue}`} />;
+    }
+    return false;
+  }
 
+  render() {
     return (
       <div className="searchInput">
         <form className="searchInput__form" onSubmit={this.submitForm}>
           <input className="bb  bw1  bc-black  ph2  searchInput__input" type="search" placeholder="search by keyword..." value={this.state.inputValue} onChange={evt => this.updateInputValue(evt)} />
         </form>
-        {fireRedirect && (
-          <Redirect push to={from || `/search/${this.state.inputValue}`} />
-        )}
+        {this.redir()}
       </div>
     );
   }
