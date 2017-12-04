@@ -5,13 +5,13 @@ import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
 // Export this for unit testing more easily
-export class LatestArticleList extends PureComponent {
+export class LatestArticleListLoaded extends PureComponent {
   render() {
     return (
       <div className="container  mv4">
         <div className="row">
           {this.props.list.map((article, i) => (
-            <Link className="link" to={`/Article/${article._id}`}>
+            <Link className="link  latestArticleList__col--cont" to={`/Article/${article._id}`}>
               <article key={i} className="col-sm-6  pv3  latestArticleList__col">
                 <figure className="rel">
                   <img className="mb3  latestArticleList__img" alt="" src={article.img} />
@@ -28,12 +28,12 @@ export class LatestArticleList extends PureComponent {
   }
 }
 
-LatestArticleList.propTypes = {
+LatestArticleListLoaded.propTypes = {
   list: PropTypes.object, // eslint-disable-line react/forbid-prop-types
 };
 
-LatestArticleList.defaultProps = {
+LatestArticleListLoaded.defaultProps = {
   list: [],
 };
 
-export default LatestArticleList;
+export default LatestArticleListLoaded;

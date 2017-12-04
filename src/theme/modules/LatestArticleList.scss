@@ -1,7 +1,78 @@
 /* stylelint-disable */
+.latestArticleList__loading {
+  height: 100vh;
+}
 
 .latestArticleList__col {
   height: 320px;
+}
+
+.latestArticleList__col--cont {
+  opacity: 0;
+  animation: appear 0.5s ease both;
+  animation-delay: 0.4s;
+
+  &:nth-child(2) {
+    animation-delay: 0.4s;
+  }
+
+  &:nth-child(3) {
+    animation-delay: 0.4s;
+  }
+
+  &:nth-child(4) {
+    animation-delay: 0.4s;
+  }
+
+  &:nth-child(5) {
+    animation-delay: 0.8s;
+  }
+
+  &:nth-child(6) {
+    animation-delay: 0.8s;
+  }
+
+  &:nth-child(7) {
+    animation-delay: 0.8s;
+  }
+
+  &:nth-child(8) {
+    animation-delay: 0.8s;
+  }
+
+  &:nth-child(9) {
+    animation-delay: 1.2s;
+  }
+
+  &:nth-child(10) {
+    animation-delay: 1.2s;
+  }
+
+  &:nth-child(11) {
+    animation-delay: 1.2s;
+  }
+
+  &:nth-child(12) {
+    animation-delay: 11.2;
+  }
+}
+@-webkit-keyframes appear {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
 
 .latestArticleList__title {
@@ -28,7 +99,7 @@
   object-fit: cover;
 }
 
-.latestArticleList__label{
+.latestArticleList__label {
   height: auto;
   width: auto;
   top: 10px;
