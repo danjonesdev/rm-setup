@@ -3,6 +3,7 @@
 
 import React from 'react';
 import type { Element } from 'react';
+import { Link } from 'react-router-dom';
 // import config from '../../../config';
 
 import { Fb, Tw, Insta, Sc } from '../../../components/Elements/Svg';
@@ -11,9 +12,9 @@ import SearchInput from '../../../components/Helpers/SearchInput';
 const Header = (): Element<'div'> => (
   <div className="rel  bb  bw1  z9">
     <header role="banner">
-      <a href="/">
+      <Link className="link  latestArticleList__cont" to={'/'}>
         <img className="logo" width="50" src={require('../assets/Rendah-Logo-Medium.png')} alt="Logo" role="presentation" />
-      </a>
+      </Link>
       <div className="header__social--cont  pr2">
         <SearchInput />
         <a className="header__social  ph1  dn-sm" href="/"><Fb /></a>
