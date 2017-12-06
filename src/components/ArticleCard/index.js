@@ -134,8 +134,8 @@ export class ArticleCard extends PureComponent {
     return (
       <div className="ArticleCard__cont">
         <div className="cont  rel">
-          <section id="hero-1" style={{ backgroundImage: `url(${this.props.info.img})` }}></section>
-          <img className="img  shadow3" alt="yo" src={this.props.info.img} />
+          <section className="ArticleCard__background" style={{ backgroundImage: `url(${this.props.info.img})` }}></section>
+          <img className="ArticleCard__img  shadow3" alt="yo" src={this.props.info.img} />
         </div>
         <section className="rel">
           <article className="container  article">
