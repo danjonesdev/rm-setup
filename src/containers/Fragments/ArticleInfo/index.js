@@ -24,7 +24,7 @@ export class ArticleInfo extends PureComponent {
     const articleInfoById = articleInfo[params.id];
 
     if (!articleInfoById || articleInfoById.readyStatus === action.ARTICLE_REQUESTING) {
-      return <p>Loading...</p>;
+      return <div className="latestArticleList__loading" />;
     }
 
     if (articleInfoById.readyStatus === action.ARTICLE_FAILURE) {

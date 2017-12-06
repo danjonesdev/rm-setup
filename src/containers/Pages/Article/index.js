@@ -10,8 +10,11 @@ import ExtraArticles from '../../../containers/Fragments/ExtraArticles';
 
 // Export this for unit testing more easily
 export class Article extends PureComponent {
+  componentDidMount() {
+    window.scrollTo(0, 0);
+  }
   componentDidUpdate() {
-    // window.scrollTo(0, 0);
+    window.scrollTo(0, 0);
   }
 
   render() {
