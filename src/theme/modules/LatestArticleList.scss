@@ -98,10 +98,10 @@
   transition: all 0.5s ease-in-out;
 }
 
-.latestArticleList__date {}
 
 .latestArticleList__title {
-  height: 42px;
+  height: auto;
+  max-height: 46px;
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
@@ -110,7 +110,7 @@
 }
 
 .latestArticleList__intro {
-  height: 55px;
+  height: 58px;
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
