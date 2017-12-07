@@ -15,6 +15,7 @@ import Answer from './Sections/Answer';
 import BulletList from './Sections/BulletList';
 import NumberedList from './Sections/NumberedList';
 // import Soundcloud from './Sections/Soundcloud';
+import Youtube from './Sections/Youtube';
 import Link from './Sections/Link';
 
 // Export this for unit testing more easily
@@ -107,7 +108,10 @@ export class ArticleCard extends PureComponent {
         case 'youtube':
           return (
             <div className="pv3">
-              <p>youtube embed</p>
+              <Youtube
+                key={i}
+                videoId="XxVg_s8xAms"
+              />
             </div>
           );
         case 'link':
