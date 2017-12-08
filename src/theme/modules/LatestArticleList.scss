@@ -6,78 +6,33 @@
 
 .latestArticleList__cont {
   opacity: 0;
-  animation: appear 0.4s ease both;
+  animation: latestArticleList__cont--fadeIn 0.4s ease both;
 
-  &:nth-child(1),
-  &:nth-child(2),
-  &:nth-child(3),
-  &:nth-child(4) {
+  &:nth-child(1), &:nth-child(2), &:nth-child(3), &:nth-child(4) {
     animation-delay: 0s;
 
     .latestArticleList__img {
-      animation: img-appear 0.6s ease both;
+      animation: latestArticleList__img--zoomAppear 0.6s ease both;
       animation-delay: 0s;
     }
   }
 
-  &:nth-child(5),
-  &:nth-child(6),
-  &:nth-child(7),
-  &:nth-child(8) {
+  &:nth-child(5), &:nth-child(6), &:nth-child(7), &:nth-child(8) {
     animation-delay: 0.4s;
 
     .latestArticleList__img {
-      animation: img-appear 0.6s ease both;
+      animation: latestArticleList__img--zoomAppear 0.6s ease both;
       animation-delay: 0.4s;
     }
   }
 
-  &:nth-child(10),
-  &:nth-child(11),
-  &:nth-child(12),
-  &:nth-child(9) {
+  &:nth-child(10), &:nth-child(11), &:nth-child(12), &:nth-child(9) {
     animation-delay: 0.8s;
 
     .latestArticleList__img {
-      animation: img-appear 0.6s ease both;
+      animation: latestArticleList__img--zoomAppear 0.6s ease both;
       animation-delay: 0.8s;
     }
-  }
-}
-@-webkit-keyframes appear {
-  0% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
-  }
-}
-@keyframes appear {
-  0% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
-  }
-}
-@-webkit-keyframes img-appear {
-  0% {
-    transform: scale(1.5);
-  }
-
-  100% {
-    transform: scale(1);
-  }
-}
-@keyframes img-appear {
-  0% {
-    transform: scale(1.5);
-  }
-
-  100% {
-    transform: scale(1);
   }
 }
 
@@ -97,7 +52,6 @@
   object-fit: cover;
   transition: all 0.5s ease-in-out;
 }
-
 
 .latestArticleList__title {
   height: auto;
@@ -126,4 +80,26 @@
   top: 10px;
   left: -10px;
   background: palette(color-a-light);
+}
+
+// anims
+
+@keyframes latestArticleList__cont--fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes latestArticleList__img--zoomAppear {
+  0% {
+    transform: scale(1.5);
+  }
+
+  100% {
+    transform: scale(1);
+  }
 }

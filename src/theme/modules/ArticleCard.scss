@@ -1,66 +1,27 @@
 /* stylelint-disable */
 
-.ArticleCard {
-  opacity: 0;
-  animation: ArticleCard 0.4s ease both;
-
-  @keyframes ArticleCard {
-    0% {
-      opacity: 0;
-    }
-
-    100% {
-      opacity: 1;
-    }
+  .articleCard {
+    opacity: 0;
+    animation: articleCard 0.4s ease both;
   }
 
-  @-webkit-keyframes ArticleCard {
-    0% {
-      opacity: 0;
-    }
-
-    100% {
-      opacity: 1;
-    }
-  }
-
-  .hero {
+  .articleCard__hero {
     height: 50vh;
     width: 100%;
     overflow: hidden;
   }
 
-  .hero__background {
+  .articleCard__hero--background {
     height: 50vh;
     width: 100%;
     filter: blur(8px);
     background-position: center;
     animation-delay: 0s;
     transform: scale(1.5);
-    animation: hero__background 0.6s ease both;
+    animation: articleCard__hero--background--zoomIn 0.6s ease both;
   }
 
-  @-webkit-keyframes hero__background {
-    0% {
-      transform: scale(1.1);
-    }
-
-    100% {
-      transform: scale(1.2);
-    }
-  }
-
-  @keyframes hero__background {
-    0% {
-      transform: scale(1.1);
-    }
-
-    100% {
-      transform: scale(1.2);
-    }
-  }
-
-  .hero__img {
+  .articleCard__hero--img {
     margin: 0 auto;
     position: absolute;
     left: 0;
@@ -68,36 +29,48 @@
     top: 0;
     object-fit: cover;
     height: 50vh;
-    animation: hero__img 0.6s ease both;
+    animation: articleCard__hero--img--zoomIn 0.6s ease both;
   }
 
-  @-webkit-keyframes hero__img {
-    0% {
-      transform: scale(1.1);
-    }
-
-    100% {
-      transform: scale(1);
-    }
-  }
-
-  @keyframes hero__img {
-    0% {
-      transform: scale(1.1);
-    }
-
-    100% {
-      transform: scale(1);
-    }
-  }
-
-  .article {
+  .articleCard__content {
     margin-top: 40px;
-    animation: article 0.4s ease both;
+    animation: articleCard__content--appear 0.4s ease both;
     animation-delay: 0.4s;
   }
 
-  @keyframes article {
+  // anims
+
+  @keyframes articleCard__hero--background--zoomIn {
+    0% {
+      transform: scale(1.1);
+    }
+
+    100% {
+      transform: scale(1.2);
+    }
+  }
+
+  @keyframes articleCard__hero--img--zoomIn {
+    0% {
+      transform: scale(1.1);
+    }
+
+    100% {
+      transform: scale(1);
+    }
+  }
+
+  @keyframes articleCard {
+    0% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @keyframes articleCard__content--appear {
       0% {
         opacity: 0;
       }
@@ -106,15 +79,3 @@
         opacity: 1;
       }
     }
-
-  @-webkit-keyframes article {
-      0% {
-        opacity: 0;
-      }
-
-      100% {
-        opacity: 1;
-      }
-    }
-
-}

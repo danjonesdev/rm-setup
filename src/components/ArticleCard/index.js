@@ -136,16 +136,25 @@ export class ArticleCard extends PureComponent {
   render() {
     const sections = this.sections;
     return (
-      <div className="ArticleCard">
-        <div className="hero  rel">
-          <section className="hero__background" style={{ backgroundImage: `url(${this.props.info.img})` }}></section>
-          <img className="hero__img  shadow3" alt="yo" src={this.props.info.img} />
-        </div>
+      <div className="articleCard">
+
+        <figure className="rel  articleCard__hero">
+          <div className="articleCard__hero--background" style={{ backgroundImage: `url(${this.props.info.img})` }}></div>
+          <img className="articleCard__hero--img" alt="yo" src={this.props.info.img} />
+        </figure>
+
         <section className="rel">
-          <article className="container  article">
+          <article className="container  articleCard__content">
             <div className="row">
-              <div className="col-md-16 col-md-offset-4">
-                <span className="db  grey  t8  pb2">10/17/09 | {this.props.info.author}</span>
+              <div className="col-md-16  col-md-offset-4">
+                <div className="row">
+                  <div className="col-sm-12">
+                    <span className="db  grey  t8  pb2">10/17/09 | {this.props.info.author}</span>
+                  </div>
+                  <div className="col-sm-12">
+                    <span className="fr  tar  db  grey  t8  pb2">10/17/09 | {this.props.info.author}</span>
+                  </div>
+                </div>
                 {this.heading()}
                 {this.props.info.body.map((item, i) => (
                   sections(item, i)
@@ -154,6 +163,7 @@ export class ArticleCard extends PureComponent {
             </div>
           </article>
         </section>
+
       </div>
     );
   }

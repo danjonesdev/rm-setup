@@ -18,12 +18,12 @@ const Home = () => (
     <LatestArticles />
     <SubscribeBanner />
     <h2 className="tac  mb4">Insta Feed</h2>
-    <div id="yo" className="container  mb4">
+    <div id="instaFeed" className="container  mb4">
       <Instafeed
         limit="12"
         resolution="standard_resolution"
         sortBy="most-recent"
-        target="yo"
+        target="instaFeed"
         template=""
         userId="6646546960"
         clientId="1375f42790124e1ba319055cd4f93ec5"
