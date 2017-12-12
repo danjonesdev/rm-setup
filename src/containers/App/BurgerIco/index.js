@@ -3,7 +3,6 @@
 import React, { PureComponent } from 'react';
 import classNames from 'classnames';
 
-// Export this for unit testing more easily
 export class BurgerIco extends PureComponent {
   constructor() {
     super();
@@ -24,9 +23,8 @@ export class BurgerIco extends PureComponent {
     }
   }
   render() {
-    const btnClass = classNames({
-      'btn-pressed': this.state.isPressed,
-    });
+    const btnClass = classNames({ 'btn-pressed': this.state.isPressed });
+
     return <label className={btnClass} htmlFor="navigation" onClick={this.isPressed}><span /></label>;
   }
 }
