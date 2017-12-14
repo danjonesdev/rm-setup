@@ -18,8 +18,6 @@ import NumberedList from './Sections/NumberedList';
 import Youtube from './Sections/Youtube';
 import Link from './Sections/Link';
 
-import LoadImage from '../Helpers/LoadImage';
-
 // Export this for unit testing more easily
 export class ArticleCard extends PureComponent {
   heading = () => {
@@ -141,8 +139,8 @@ export class ArticleCard extends PureComponent {
       <div className="articleCard">
 
         <figure className="rel  articleCard__hero">
-          <div className="articleCard__hero--background" style={{ backgroundImage: 'url(http://res.cloudinary.com/dzz8ji5lj/image/upload/e_blur:500,q_0/v1513159094/articles/2014_2F10_2F24_2F46_2FRave.8824e.jpg)' }}></div>
-          <LoadImage styles={'articleCard__hero--img'} alt={this.props.info.title} imgSrc={this.props.info.img} />
+          <div className="articleCard__hero--background" style={{ backgroundImage: `url(http://res.cloudinary.com/dzz8ji5lj/image/upload/${this.props.info.img})` }}></div>
+          <img className="articleCard__hero--img" alt={this.props.info.title} src={`http://res.cloudinary.com/dzz8ji5lj/image/upload/${this.props.info.img}`} />
         </figure>
 
         <section className="rel">
