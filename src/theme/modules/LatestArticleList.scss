@@ -36,8 +36,12 @@
   }
 }
 
-.latestArticleList__col {
-  height: 320px;
+.latestArticleList__col--latest {
+  height: 305px;
+}
+
+.latestArticleList__col--search {
+  height: auto;
 }
 
 .latestArticleList__col--leaving {
@@ -55,10 +59,6 @@
   width: 100%;
   object-fit: cover;
   cursor: pointer;
-}
-
-.latestArticleList__date-author {
-  bottom: 0;
 }
 
 .latestArticleList__title {
