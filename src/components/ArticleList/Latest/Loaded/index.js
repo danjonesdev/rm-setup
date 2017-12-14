@@ -9,6 +9,8 @@ import { Redirect } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
+import LoadImage from '../../../Helpers/LoadImage';
+
 export class LatestArticleListLoaded extends PureComponent {
   constructor() {
     super();
@@ -40,10 +42,11 @@ export class LatestArticleListLoaded extends PureComponent {
               <article className={`col-sm-6  pv3  latestArticleList__col  ${isLeavingClass}`}>
 
                 <figure className="rel  pb3">
-                  <div className="latestArticleList__img--cont">
-                    <img onClick={() => this.handleClick(article._id)} className="mb3  latestArticleList__img" alt="" src={article.img} />
+                  <div onClick={() => this.handleClick(article._id)} className="latestArticleList__img--cont onClick={() => this.handleClick(article._id)}">
+                    <LoadImage styles={'mb3  latestArticleList__img'} alt={article.title} imgSrc={article.img} />
                   </div>
                 </figure>
+
 
                 <span className="grey  t8">10/17/09 | {article.author}</span>
                 <h2 onClick={() => this.handleClick(article._id)} className="black  t7  pt2  latestArticleList__title">{article.title}</h2>
