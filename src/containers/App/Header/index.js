@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 // import config from '../../../config';
 
 import { Fb, Tw, Insta, Sc } from '../../../components/Elements/Svg';
-import SearchInput from '../../../components/Helpers/SearchInput';
+import SearchInput from '../../../components/SearchInput';
 
 const Header = (): Element<'div'> => (
   <div className="rel  bb  bw1  z9">

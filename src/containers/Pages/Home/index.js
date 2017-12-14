@@ -8,7 +8,7 @@ import Helmet from 'react-helmet';
 import Instafeed from 'react-instafeed';
 
 import LatestArticles from '../../../containers/Fragments/LatestArticles';
-import SubscribeBanner from '../../../components/Elements/SubscribeBanner';
+import SubscribeBanner from '../../../components/SubscribeBanner';
 import ExtraArticles from '../../../containers/Fragments/ExtraArticles';
 
 // Export this for unit testing more easily
