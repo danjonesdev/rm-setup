@@ -116,7 +116,7 @@ app.get('/api/search', (req, res) => {
 
     db.collection('articles')
         .find({"title" : {$regex : ".*" + req.query.searchQuery + ".*"}})
-        // .limit(2)
+        .limit(12)
         .sort("date", -1)
         .toArray()
         .then(result => {

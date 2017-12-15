@@ -25,7 +25,7 @@ export class ArticleCard extends PureComponent {
 
     if (title) {
       return (
-        <h1 className="pb4">{title}</h1>
+        <h1 className="pb4  pt2">{title}</h1>
       );
     }
     console.log('Not Returned: ArticleCard.heading');
@@ -147,14 +147,7 @@ export class ArticleCard extends PureComponent {
           <article className="container  articleCard__content">
             <div className="row">
               <div className="col-md-16  col-md-offset-4">
-                <div className="row">
-                  <div className="col-sm-12">
-                    <span className="db  grey  t8  pb2">10/17/09 | {this.props.info.author}</span>
-                  </div>
-                  <div className="col-sm-12">
-                    <span className="fr  tar  db  grey  t8  pb2">10/17/09 | {this.props.info.author}</span>
-                  </div>
-                </div>
+                <span className="grey  t8"><time dateTime="10/17/09">10/17/09</time> | {this.props.info.author}</span>
                 {this.heading()}
                 {this.props.info.body.map((item, i) => (
                   sections(item, i)

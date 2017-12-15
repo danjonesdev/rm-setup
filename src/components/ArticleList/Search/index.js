@@ -33,7 +33,7 @@ export class SearchArticleList extends PureComponent {
     const fireRedirect = this.state.fireRedirect;
 
     return (
-      <div className="container  mv4">
+      <div className="container  mv5">
         {this.props.list.map((article, i) => (
           <div className="row">
             <div className="col-sm-4" />
