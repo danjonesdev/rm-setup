@@ -103,6 +103,34 @@ app.get('/api/extra', (req, res) => {
 
 });
 
+//GET AUTHORS
+app.get('/api/authors', (req, res) => {
+
+  console.log('/api/authors');
+
+    //var indexLimit = parseInt(req.query.indexLimit, 10);
+    var authors = [];
+    // console.log(indexLimit);
+    // .limit(indexLimit)
+
+    db.collection('authors')
+        .find()
+        .toArray()
+        .then(result => {
+            // console.log(result);
+            authors = authors.concat(result);
+        }).then(() => {
+            console.log('sending');
+            console.log(authors);
+            res.send(authors);
+        }).catch(e => {
+            console.log('fail');
+            console.error(e);
+        });
+
+});
+
+
 //GET SEARCH
 app.get('/api/search', (req, res) => {
 

@@ -5,10 +5,12 @@ import { fetchLatestArticlesIfNeeded } from './containers/Fragments/LatestArticl
 import { fetchExtraArticlesIfNeeded } from './containers/Fragments/ExtraArticles/action';
 import { fetchSearchArticlesIfNeeded } from './containers/Fragments/SearchArticles/action';
 import { fetchArticleIfNeeded } from './containers/Fragments/ArticleInfo/action';
+import { fetchAuthorsIfNeeded } from './containers/Fragments/Authors/action';
 import HomePage from './containers/Pages/Home';
 import SearchPage from './containers/Pages/Search';
 import ArticlePage from './containers/Pages/Article';
 import NotFoundPage from './containers/Pages/NotFound';
+import AuthorsPage from './containers/Pages/Authors';
 
 export default [
   {
@@ -32,6 +34,13 @@ export default [
     component: ArticlePage,
     loadData: (dispatch: Dispatch, params: Object) => Promise.all([
       dispatch(fetchArticleIfNeeded(params.id)),
+    ]),
+  },
+  {
+    path: '/Authors',
+    component: AuthorsPage,
+    loadData: (dispatch: Dispatch) => Promise.all([
+      dispatch(fetchAuthorsIfNeeded()),
     ]),
   },
   {

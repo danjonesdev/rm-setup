@@ -7,11 +7,13 @@ import latestArticles from '../containers/Fragments/LatestArticles/reducer';
 import extraArticles from '../containers/Fragments/ExtraArticles/reducer';
 import searchArticles from '../containers/Fragments/SearchArticles/reducer';
 import articleInfo from '../containers/Fragments/ArticleInfo/reducer';
+import authors from '../containers/Fragments/Authors/reducer';
 
 export default combineReducers({
   latestArticles,
   extraArticles,
   searchArticles,
   articleInfo,
+  authors,
   router,
 });
