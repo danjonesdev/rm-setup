@@ -3,24 +3,22 @@
 
 import React from 'react';
 import type { Element } from 'react';
+import { Link } from 'react-router-dom';
 
 const Nav = (): Element<'div'> => (
   <nav className="bg-black  tac  pt4">
     <ul>
       <li>
-        <a className="white  dib  pb2  t5  link" href="/">Home</a>
+        <Link className="title-font  white  dib  pb2  t5  link" to={'/'}>Home</Link>
       </li>
       <li>
-        <a className="white  dib  pb2  t5  link" href="/">Latest News</a>
+        <Link className="title-font  white  dib  pb2  t5  link" to={'/Authors'}>Authors</Link>
       </li>
       <li>
-        <a className="white  dib  pb2  t5  link" href="/">What We Do</a>
+        <Link className="title-font  white  dib  pb2  t5  link" to={'/About'}>About Us</Link>
       </li>
       <li>
-        <a className="white  dib  pb2  t5  link" href="/">Another Link</a>
-      </li>
-      <li>
-        <a className="white  dib  pb2  t5  link" href="/">Contact</a>
+        <Link className="title-font  white  dib  pb2  t5  link" to={'/Contact'}>Contact</Link>
       </li>
     </ul>
   </nav>
