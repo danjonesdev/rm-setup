@@ -5,8 +5,7 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
 import * as action from './action';
-import LatestArticleListLoaded from '../../../components/ArticleList/Latest/Loaded';
-import LatestArticleListLoading from '../../../components/ArticleList/Latest/Loading';
+import LatestArticleList from '../../../components/ArticleList/Latest';
 
 // Export this for unit testing more easily
 export class LatestArticles extends PureComponent {
@@ -22,14 +21,14 @@ export class LatestArticles extends PureComponent {
       latestArticles.readyStatus === action.LATESTARTICLES_INVALID ||
       latestArticles.readyStatus === action.LATESTARTICLES_REQUESTING
     ) {
-      return <LatestArticleListLoading />;
+      return <div />;
     }
 
     if (latestArticles.readyStatus === action.LATESTARTICLES_FAILURE) {
       return <div />;
     }
 
-    return <LatestArticleListLoaded list={latestArticles.list} />;
+    return <LatestArticleList list={latestArticles.list} />;
   };
 
   render() {

@@ -11,7 +11,7 @@ import SearchArticles from '../../../containers/Fragments/SearchArticles';
 // Export this for unit testing more easily
 const Home = ({ match }) => (
   <main>
-    <Helmet title="Home" />
+    <Helmet title="Search" />
     <div className="container">
       <div className="row">
         <div className="col-sm-12">

@@ -5,8 +5,7 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
 import * as action from './action';
-import LatestAuthorListLoaded from '../../../components/AuthorList/Latest/Loaded';
-import LatestAuthorListLoading from '../../../components/AuthorList/Latest/Loading';
+import LatestAuthorList from '../../../components/AuthorList';
 
 // Export this for unit testing more easily
 export class Authors extends PureComponent {
@@ -22,14 +21,14 @@ export class Authors extends PureComponent {
       authors.readyStatus === action.AUTHORS_INVALID ||
       authors.readyStatus === action.AUTHORS_REQUESTING
     ) {
-      return <LatestAuthorListLoading />;
+      return <div />;
     }
 
     if (authors.readyStatus === action.AUTHORS_FAILURE) {
       return <div />;
     }
 
-    return <LatestAuthorListLoaded list={authors.list} />;
+    return <LatestAuthorList list={authors.list} />;
   };
 
   render() {

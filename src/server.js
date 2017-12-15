@@ -120,11 +120,8 @@ app.get('/api/authors', (req, res) => {
             // console.log(result);
             authors = authors.concat(result);
         }).then(() => {
-            console.log('sending');
-            console.log(authors);
             res.send(authors);
         }).catch(e => {
-            console.log('fail');
             console.error(e);
         });
 
