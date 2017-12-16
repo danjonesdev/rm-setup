@@ -28,7 +28,7 @@ export class AuthorList extends PureComponent {
   }
 
   render() {
-    const isLeavingClass = classNames({ 'latestAuthorList__col--leaving': this.state.isLeaving });
+    const isLeavingClass = classNames({ 'latestArticleList__col--leaving': this.state.isLeaving });
     const { from } = this.props.location.state || '/';
     const fireRedirect = this.state.fireRedirect;
 
@@ -37,7 +37,7 @@ export class AuthorList extends PureComponent {
         <div className="row">
           {this.props.list.map((author, i) => (
             <div key={i} className="link  w-100  latestAuthorList__cont">
-              <div className={`col-sm-12  col-md-6  pv3  latestAuthorList__col--latest  ${isLeavingClass}`}>
+              <div className={`col-sm-12  col-md-6  pv3  latestArticleList__col--latest  ${isLeavingClass}`}>
 
                 <figure className="rel  pb3">
                   <div onClick={() => this.handleClick(author.name)} className="latestArticleList__img--cont">
