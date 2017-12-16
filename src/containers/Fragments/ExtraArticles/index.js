@@ -21,7 +21,7 @@ export class ExtraArticles extends PureComponent {
       extraArticles.readyStatus === action.EXTRAARTICLES_INVALID ||
       extraArticles.readyStatus === action.EXTRAARTICLES_REQUESTING
     ) {
-      return <div />;
+      return <div className="vh-100" />;
     }
 
     if (extraArticles.readyStatus === action.EXTRAARTICLES_FAILURE) {

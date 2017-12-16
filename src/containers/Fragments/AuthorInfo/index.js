@@ -24,7 +24,7 @@ export class AuthorInfo extends PureComponent {
     const authorInfoById = authorInfo[params.id];
 
     if (!authorInfoById || authorInfoById.readyStatus === action.AUTHOR_REQUESTING) {
-      return <div className="latestAuthorList__loading" />;
+      return <div className="vh-100" />;
     }
 
     if (authorInfoById.readyStatus === action.AUTHOR_FAILURE) {

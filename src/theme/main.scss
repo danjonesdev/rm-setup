@@ -52,6 +52,8 @@
 @import 'utilities/theme/link';
 @import 'utilities/theme/opacity';
 @import 'utilities/theme/hover';
+@import 'utilities/theme/anims';
+
 
 @import 'utilities/typography/font-familiy';
 @import 'utilities/typography/font-size';
@@ -74,6 +76,7 @@
 @import 'modules/App';
 @import "modules/ArticleCard";
 @import 'modules/LatestArticleList';
+@import 'modules/AuthorList';
 @import 'modules/SearchArticleList';
 @import 'modules/Header';
 @import "modules/SearchInput";

@@ -36,15 +36,15 @@ export class AuthorList extends PureComponent {
       <div className="container  mv4">
         <div className="row">
           {this.props.list.map((author, i) => (
-            <div key={i} className="link  w-100  latestAuthorList__cont">
+            <div key={i} className="link  w-100    zoom-in-fade-in-iteration--cont">
               <div className={`col-sm-12  col-md-6  pv3  latestArticleList__col--latest  ${isLeavingClass}`}>
 
                 <figure className="rel  pb3">
-                  <div onClick={() => this.handleClick(author.name)} className="latestArticleList__img--cont">
-                    <img className="mb3  center  br-100  w5  latestArticleList__img" alt={author.name} src={`http://res.cloudinary.com/dzz8ji5lj/image/upload/${author.img}`} />
+                  <div onClick={() => this.handleClick(author.name)} className="br-100  authorList__img--cont">
+                    <img className="mb3  center  w5  zoom-in-fade-in-iteration--item  authorList__img" alt={author.name} src={`http://res.cloudinary.com/dzz8ji5lj/image/upload/${author.img}`} />
                   </div>
                 </figure>
-                <h2 onClick={() => this.handleClick(author.name)} className="black  t7  pt2  tac  latestArticleList__title">{author.name}</h2>
+                <h2 onClick={() => this.handleClick(author.name)} className="black  t7  pt2  tac  cp">{author.name}</h2>
 
               </div>
             </div>

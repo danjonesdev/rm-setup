@@ -36,16 +36,16 @@ export class LatestArticleListLoaded extends PureComponent {
       <div className="container  mv4">
         <div className="row">
           {this.props.list.map((article, i) => (
-            <div key={i} className="link  w-100  latestArticleList__cont">
+            <div key={i} className="link  w-100  zoom-in-fade-in-iteration--cont">
               <article className={`col-sm-12  col-md-6  tac-sm  pv3  latestArticleList__col--latest  ${isLeavingClass}`}>
 
                 <figure className="rel  pb3">
                   <div onClick={() => this.handleClick(article.title)} className="latestArticleList__img--cont onClick={() => this.handleClick(article._id)}">
-                    <img className="mb3  w-100  latestArticleList__img" alt={article.title} src={`http://res.cloudinary.com/dzz8ji5lj/image/upload/${article.img}`} />
+                    <img className="mb3  w-100  zoom-in-fade-in-iteration--item  cp  latestArticleList__img" alt={article.title} src={`http://res.cloudinary.com/dzz8ji5lj/image/upload/${article.img}`} />
                   </div>
                 </figure>
                 <span className="grey  t8"><time dateTime="10/17/09">10/17/09</time> | {article.author}</span>
-                <h2 onClick={() => this.handleClick(article.title)} className="black  t7  pt2  latestArticleList__title">{article.title}</h2>
+                <h2 onClick={() => this.handleClick(article.title)} className="black  t7  pt2  cp  latestArticleList__title">{article.title}</h2>
                 <p className="grey  t8  pv2  latestArticleList__intro">{article.description}</p>
 
               </article>

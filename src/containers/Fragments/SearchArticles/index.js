@@ -22,7 +22,7 @@ export class SearchArticles extends PureComponent {
       searchArticles.readyStatus === action.SEARCHARTICLES_INVALID ||
       searchArticles.readyStatus === action.SEARCHARTICLES_REQUESTING
     ) {
-      return <div />;
+      return <div className="vh-100" />;
     }
 
     if (searchArticles.readyStatus === action.SEARCHARTICLES_FAILURE) {

@@ -21,7 +21,7 @@ export class Authors extends PureComponent {
       authors.readyStatus === action.AUTHORS_INVALID ||
       authors.readyStatus === action.AUTHORS_REQUESTING
     ) {
-      return <div />;
+      return <div className="vh-100" />;
     }
 
     if (authors.readyStatus === action.AUTHORS_FAILURE) {
