@@ -157,6 +157,27 @@ app.get('/api/article', (req, res) => {
 
 });
 
+//GET AUTHOR
+app.get('/api/author', (req, res) => {
+    console.log('/api/author');
+
+    var ObjectId = require('mongodb').ObjectID;
+    var article = {};
+    var param = req.query.title;
+    param = param.replace(/-/g, ' ');
+
+    db.collection('authors')
+        .findOne({"name": param})
+        .then(result => {
+            article = result;
+        }).then(() => {
+            res.send(article);
+        }).catch(e => {
+            console.error(e);
+        });
+
+});
+
 // Register server-side rendering middleware
 app.get('*', (req, res) => {
   if (__DEV__) webpackIsomorphicTools.refresh();

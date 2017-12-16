@@ -22,7 +22,7 @@ export class AuthorList extends PureComponent {
   handleClick = (name) => {
     this.setState({ isLeaving: true });
     setTimeout(() => {
-      this.setState({ authorName: name });
+      this.setState({ authorName: name.replace(/\s+/g, '-') });
       this.setState({ fireRedirect: true });
     }, 200);
   }
