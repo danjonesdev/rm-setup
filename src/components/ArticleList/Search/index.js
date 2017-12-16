@@ -37,14 +37,14 @@ export class SearchArticleList extends PureComponent {
         {this.props.list.map((article, i) => (
           <div className="row">
             <div className="col-sm-4" />
-            <div key={i} className="link  latestArticleList__cont">
+            <div key={i} className="link  w-100  latestArticleList__cont">
               <article className={`col-sm-16  tac-sm  pv3  latestArticleList__col--search  ${isLeavingClass}`}>
 
                 <div className="row">
                   <div className="col-sm-12">
                     <figure className="rel  pb3">
                       <div onClick={() => this.handleClick(article.title)} className="latestArticleList__img--cont onClick={() => this.handleClick(article._id)}">
-                        <img className="mb3  latestArticleList__img" alt={article.title} src={`http://res.cloudinary.com/dzz8ji5lj/image/upload/${article.img}`} />
+                        <img className="mb3  w-100  latestArticleList__img" alt={article.title} src={`http://res.cloudinary.com/dzz8ji5lj/image/upload/${article.img}`} />
                       </div>
                     </figure>
                   </div>
