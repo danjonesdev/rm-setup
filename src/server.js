@@ -159,22 +159,15 @@ app.get('/api/search', (req, res) => {
 app.get('/api/article', (req, res) => {
 
     var ObjectId = require('mongodb').ObjectID;
-    // var articleId = req.query.id;
     var article = {};
-
-    console.log('/api/article');
-    //console.log(articleId);
-    //console.log(articleId);
+    var param = req.query.title;
+    param = param.replace(/-/g, ' ');
 
     db.collection('articles')
-        // .findOne("id": articleId)
-        .findOne({"_id": new ObjectId(req.query.id)})
-        // .sort("date", -1)
-        // .toArray()
+        .findOne({"title": param})
         .then(result => {
             article = result;
         }).then(() => {
-            // console.log(article);
             res.send(article);
         }).catch(e => {
             console.error(e);

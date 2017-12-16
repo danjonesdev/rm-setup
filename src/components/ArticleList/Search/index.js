@@ -14,15 +14,15 @@ export class SearchArticleList extends PureComponent {
     super();
     this.state = {
       fireRedirect: false,
-      articleId: null,
+      articleTitle: null,
       isLeaving: false,
     };
   }
 
-  handleClick = (id) => {
+  handleClick = (title) => {
     this.setState({ isLeaving: true });
     setTimeout(() => {
-      this.setState({ articleId: id });
+      this.setState({ articleTitle: title.replace(/\s+/g, '-').toLowerCase() });
       this.setState({ fireRedirect: true });
     }, 200);
   }
@@ -43,14 +43,14 @@ export class SearchArticleList extends PureComponent {
                 <div className="row">
                   <div className="col-sm-12">
                     <figure className="rel  pb3">
-                      <div onClick={() => this.handleClick(article._id)} className="latestArticleList__img--cont onClick={() => this.handleClick(article._id)}">
+                      <div onClick={() => this.handleClick(article.title)} className="latestArticleList__img--cont onClick={() => this.handleClick(article._id)}">
                         <img className="mb3  latestArticleList__img" alt={article.title} src={`http://res.cloudinary.com/dzz8ji5lj/image/upload/${article.img}`} />
                       </div>
                     </figure>
                   </div>
                   <div className="col-sm-12">
                     <span className="grey  t8"><time dateTime="10/17/09">10/17/09</time> | {article.author}</span>
-                    <h2 onClick={() => this.handleClick(article._id)} className="black  t7  pt2  latestArticleList__title">{article.title}</h2>
+                    <h2 onClick={() => this.handleClick(article.title)} className="black  t7  pt2  latestArticleList__title">{article.title}</h2>
                     <p className="grey  t8  pv2  latestArticleList__intro">{article.description}</p>
                   </div>
                 </div>
@@ -61,7 +61,7 @@ export class SearchArticleList extends PureComponent {
           </div>
         ))}
         {fireRedirect ? (
-          <Redirect push to={from || `/Article/${this.state.articleId}`} />
+          <Redirect push to={from || `/Article/${this.state.articleTitle}`} />
         ) : (
           false
         )}
