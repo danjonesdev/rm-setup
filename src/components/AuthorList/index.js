@@ -28,7 +28,7 @@ export class AuthorList extends PureComponent {
   }
 
   render() {
-    const isLeavingClass = classNames({ 'latestArticleList__col--leaving': this.state.isLeaving });
+    const isLeavingClass = classNames({ 'zoom-out-fade-out': this.state.isLeaving });
     const { from } = this.props.location.state || '/';
     const fireRedirect = this.state.fireRedirect;
 
@@ -41,7 +41,7 @@ export class AuthorList extends PureComponent {
 
                 <figure className="rel  pb3">
                   <div onClick={() => this.handleClick(author.name)} className="br-100  authorList__img--cont">
-                    <img className="mb3  center  w5  zoom-in-fade-in-iteration--item  authorList__img" alt={author.name} src={`http://res.cloudinary.com/dzz8ji5lj/image/upload/${author.img}`} />
+                    <img className="mb3  center  w5  br-100  zoom-in-fade-in-iteration--item  authorList__img" alt={author.name} src={`http://res.cloudinary.com/dzz8ji5lj/image/upload/${author.img}`} />
                   </div>
                 </figure>
                 <h2 onClick={() => this.handleClick(author.name)} className="black  t7  pt2  tac  cp">{author.name}</h2>

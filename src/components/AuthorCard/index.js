@@ -17,7 +17,7 @@ export class ArticleCard extends PureComponent {
             <div className="row">
               <div className="col-md-16  col-md-offset-4">
                 <figure className="rel  pb3">
-                  <img className="mb3  center  br-100  w5  latestArticleList__img" alt={author.name} src={`http://res.cloudinary.com/dzz8ji5lj/image/upload/${author.img}`} />
+                  <img className="mb3  center  br-100  w5  authorCard__img" alt={author.name} src={`http://res.cloudinary.com/dzz8ji5lj/image/upload/${author.img}`} />
                 </figure>
                 <h1 className="grey  t8  tac">{author.name}</h1>
               </div>

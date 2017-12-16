@@ -28,7 +28,7 @@ export class LatestArticleListLoaded extends PureComponent {
   }
 
   render() {
-    const isLeavingClass = classNames({ 'latestArticleList__col--leaving': this.state.isLeaving });
+    const isLeavingClass = classNames({ 'zoom-out-fade-out': this.state.isLeaving });
     const { from } = this.props.location.state || '/';
     const fireRedirect = this.state.fireRedirect;
 

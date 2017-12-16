@@ -50,28 +50,3 @@
   left: -10px;
   background: palette(color-a-light);
 }
-
-// anims
-
-
-@keyframes latestArticleList__cont--fadeOut {
-  0% {
-    opacity: 1;
-  }
-
-  100% {
-    opacity: 0;
-  }
-}
-
-
-
-@keyframes latestArticleList__img--zoomOut {
-  0% {
-    transform: scale(1);
-  }
-
-  100% {
-    transform: scale(0.95);
-  }
-}
