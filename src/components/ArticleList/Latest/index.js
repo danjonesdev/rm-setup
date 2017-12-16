@@ -13,24 +13,36 @@ export class LatestArticleListLoaded extends PureComponent {
   constructor() {
     super();
     this.state = {
-      fireRedirect: false,
+      fireArticleRedirect: false,
+      fireAuthorRedirect: false,
       articleTitle: null,
+      authorName: null,
       isLeaving: false,
     };
   }
 
-  handleClick = (title) => {
-    this.setState({ isLeaving: true });
-    setTimeout(() => {
-      this.setState({ articleTitle: title.replace(/\s+/g, '-') });
-      this.setState({ fireRedirect: true });
-    }, 200);
+  handleClick = (attr, type) => {
+    if (type === 'article') {
+      this.setState({ isLeaving: true });
+      setTimeout(() => {
+        this.setState({ articleTitle: attr.replace(/\s+/g, '-') });
+        this.setState({ fireArticleRedirect: true });
+      }, 200);
+    }
+    if (type === 'author') {
+      this.setState({ isLeaving: true });
+      setTimeout(() => {
+        this.setState({ authorName: attr.replace(/\s+/g, '-') });
+        this.setState({ fireAuthorRedirect: true });
+      }, 200);
+    }
   }
 
   render() {
     const isLeavingClass = classNames({ 'zoom-out-fade-out': this.state.isLeaving });
     const { from } = this.props.location.state || '/';
-    const fireRedirect = this.state.fireRedirect;
+    const fireArticleRedirect = this.state.fireArticleRedirect;
+    const fireAuthorRedirect = this.state.fireAuthorRedirect;
 
     return (
       <div className="container  mv4">
@@ -40,20 +52,26 @@ export class LatestArticleListLoaded extends PureComponent {
               <article className={`col-sm-12  col-md-6  tac-sm  pv3  latestArticleList__col--latest  ${isLeavingClass}`}>
 
                 <figure className="rel  pb3">
-                  <div onClick={() => this.handleClick(article.title)} className="latestArticleList__img--cont onClick={() => this.handleClick(article._id)}">
+                  <div onClick={() => this.handleClick(article.title, 'article')} className="latestArticleList__img--cont onClick={() => this.handleClick(article._id, 'article')}">
                     <img className="mb3  w-100  zoom-in-fade-in-iteration--item  cp  latestArticleList__img" alt={article.title} src={`http://res.cloudinary.com/dzz8ji5lj/image/upload/${article.img}`} />
                   </div>
                 </figure>
-                <span className="grey  t8"><time dateTime="10/17/09">10/17/09</time> | {article.author}</span>
-                <h2 onClick={() => this.handleClick(article.title)} className="black  t7  pt2  cp  latestArticleList__title">{article.title}</h2>
+                <span className="grey  t8"><time dateTime="10/17/09">10/17/09</time> | </span>
+                <span className="grey  t8  cp" onClick={() => this.handleClick(article.author, 'author')}>{article.author}</span>
+                <h2 onClick={() => this.handleClick(article.title, 'article')} className="black  t7  pt2  cp  latestArticleList__title">{article.title}</h2>
                 <p className="grey  t8  pv2  latestArticleList__intro">{article.description}</p>
 
               </article>
             </div>
           ))}
         </div>
-        {fireRedirect ? (
+        {fireArticleRedirect ? (
           <Redirect push to={from || `/Article/${this.state.articleTitle}`} />
+        ) : (
+          false
+        )}
+        {fireAuthorRedirect ? (
+          <Redirect push to={from || `/Author/${this.state.authorName}`} />
         ) : (
           false
         )}
