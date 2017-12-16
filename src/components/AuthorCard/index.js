@@ -10,7 +10,7 @@ export class ArticleCard extends PureComponent {
     const author = this.props.info;
 
     return (
-      <div className="articleCard">
+      <div className="mb4  articleCard">
 
         <section className="rel">
           <article className="container  articleCard__content">
