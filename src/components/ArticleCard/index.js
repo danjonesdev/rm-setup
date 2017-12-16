@@ -134,22 +134,24 @@ export class ArticleCard extends PureComponent {
   }
 
   render() {
+    const article = this.props.info;
     const sections = this.sections;
+
     return (
       <div className="articleCard">
 
         <figure className="rel  articleCard__hero">
-          <div className="articleCard__hero--background" style={{ backgroundImage: `url(http://res.cloudinary.com/dzz8ji5lj/image/upload/${this.props.info.img})` }}></div>
-          <img className="articleCard__hero--img" alt={this.props.info.title} src={`http://res.cloudinary.com/dzz8ji5lj/image/upload/${this.props.info.img}`} />
+          <div className="articleCard__hero--background" style={{ backgroundImage: `url(http://res.cloudinary.com/dzz8ji5lj/image/upload/${article.img})` }}></div>
+          <img className="articleCard__hero--img" alt={article.title} src={`http://res.cloudinary.com/dzz8ji5lj/image/upload/${article.img}`} />
         </figure>
 
         <section className="rel">
           <article className="container  articleCard__content">
             <div className="row">
               <div className="col-md-16  col-md-offset-4">
-                <span className="grey  t8"><time dateTime="10/17/09">10/17/09</time> | {this.props.info.author}</span>
+                <span className="grey  t8"><time dateTime="10/17/09">10/17/09</time> | {article.author}</span>
                 {this.heading()}
-                {this.props.info.body.map((item, i) => (
+                {article.body.map((item, i) => (
                   sections(item, i)
                 ))}
               </div>
