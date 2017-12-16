@@ -19,7 +19,9 @@ export class ArticleCard extends PureComponent {
                 <figure className="rel  pb3">
                   <img className="mb3  center  br-100  w5  authorCard__img" alt={author.name} src={`http://res.cloudinary.com/dzz8ji5lj/image/upload/${author.img}`} />
                 </figure>
-                <h1 className="grey  t8  tac">{author.name}</h1>
+                <h1 className="black  t7  pb2  cp  tac">{author.name}</h1>
+                <p className="grey  t8  pv2  tac">{author.description}</p>
+
               </div>
             </div>
           </article>
