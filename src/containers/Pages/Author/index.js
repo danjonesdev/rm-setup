@@ -4,6 +4,7 @@ import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 
 import AuthorInfo from '../../../containers/Fragments/AuthorInfo';
+import AuthorArticles from '../../../containers/Fragments/AuthorArticles';
 
 // Export this for unit testing more easily
 export class Author extends PureComponent {
@@ -18,6 +19,7 @@ export class Author extends PureComponent {
     return (
       <main>
         <AuthorInfo match={this.props.match} />
+        <AuthorArticles match={this.props.match} />
       </main>
     );
   }

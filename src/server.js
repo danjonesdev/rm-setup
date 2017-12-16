@@ -73,6 +73,33 @@ app.get('/api/articles', (req, res) => {
 
 });
 
+//GET AUTHOR_ARTICLES
+app.get('/api/authorArticles', (req, res) => {
+    console.log('/api/authorArticles');
+
+    var articles = [];
+
+    var ObjectId = require('mongodb').ObjectID;
+    var author = {};
+    var param = req.query.authorQuery;
+    param = param.replace(/-/g, ' ');
+
+    db.collection('articles')
+        // .find()
+        .find({"author" : {$regex : ".*" + param + ".*"}})
+        .sort("date", -1)
+        .toArray()
+        .then(result => {
+            articles = articles.concat(result);
+        }).then(() => {
+            // console.log(articles);
+            res.send(articles);
+        }).catch(e => {
+            console.error(e);
+        });
+
+});
+
 //GET ARTICLES_LATEST
 app.get('/api/extra', (req, res) => {
     console.log('/api/articles');

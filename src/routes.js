@@ -4,6 +4,7 @@ import type { Dispatch } from './types';
 import { fetchLatestArticlesIfNeeded } from './containers/Fragments/LatestArticles/action';
 import { fetchExtraArticlesIfNeeded } from './containers/Fragments/ExtraArticles/action';
 import { fetchSearchArticlesIfNeeded } from './containers/Fragments/SearchArticles/action';
+import { fetchAuthorArticlesIfNeeded } from './containers/Fragments/AuthorArticles/action';
 import { fetchArticleIfNeeded } from './containers/Fragments/ArticleInfo/action';
 import { fetchAuthorIfNeeded } from './containers/Fragments/AuthorInfo/action';
 import { fetchAuthorsIfNeeded } from './containers/Fragments/Authors/action';
@@ -36,6 +37,7 @@ export default [
     component: ArticlePage,
     loadData: (dispatch: Dispatch, params: Object) => Promise.all([
       dispatch(fetchArticleIfNeeded(params.id)),
+      dispatch(fetchAuthorArticlesIfNeeded(params.id)),
     ]),
   },
   {

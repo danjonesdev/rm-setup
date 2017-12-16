@@ -6,6 +6,7 @@ import { routerReducer as router } from 'react-router-redux';
 import latestArticles from '../containers/Fragments/LatestArticles/reducer';
 import extraArticles from '../containers/Fragments/ExtraArticles/reducer';
 import searchArticles from '../containers/Fragments/SearchArticles/reducer';
+import authorArticles from '../containers/Fragments/AuthorArticles/reducer';
 import articleInfo from '../containers/Fragments/ArticleInfo/reducer';
 import authorInfo from '../containers/Fragments/AuthorInfo/reducer';
 import authors from '../containers/Fragments/Authors/reducer';
@@ -14,6 +15,7 @@ export default combineReducers({
   latestArticles,
   extraArticles,
   searchArticles,
+  authorArticles,
   articleInfo,
   authorInfo,
   authors,
