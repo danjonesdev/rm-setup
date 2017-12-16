@@ -62,7 +62,7 @@ export class SearchArticleList extends PureComponent {
                   </div>
                   <div className="col-sm-12">
                     <span className="grey  t8"><time dateTime="10/17/09">10/17/09</time> | </span>
-                    <span className="grey  t8  cp" onClick={() => this.handleClick(article.author, 'author')}>{article.author}</span>
+                    <span className="grey  t8  cp  link" onClick={() => this.handleClick(article.author, 'author')}>{article.author}</span>
                     <h2 onClick={() => this.handleClick(article.title, 'article')} className="black  t7  pt2  cp  latestArticleList__title">{article.title}</h2>
                     <p className="grey  t8  pv2  latestArticleList__intro">{article.description}</p>
                   </div>
