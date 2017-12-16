@@ -36,7 +36,7 @@ export class AuthorList extends PureComponent {
       <div className="container  mv4">
         <div className="row">
           {this.props.list.map((author, i) => (
-            <div key={i} className="link  w-100    zoom-in-fade-in-iteration--cont">
+            <div key={i} className="link  w-100  zoom-in-fade-in-iteration--cont">
               <div className={`col-sm-12  col-md-6  pv3  latestArticleList__col--latest  ${isLeavingClass}`}>
 
                 <figure className="rel  pb3">

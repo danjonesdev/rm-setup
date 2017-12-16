@@ -10,23 +10,22 @@ export class ArticleCard extends PureComponent {
     const author = this.props.info;
 
     return (
-      <div className="mb4  articleCard">
+      <div className="container  mv4">
+        <div className="row">
+          <div className="link  w-100  zoom-in-fade-in-iteration--cont">
+            <div className="center  tac  pv3  latestArticleList__col--latest">
 
-        <section className="rel">
-          <article className="container  articleCard__content">
-            <div className="row">
-              <div className="col-md-16  col-md-offset-4">
-                <figure className="rel  pb3">
-                  <img className="mb3  center  br-100  w5  authorCard__img" alt={author.name} src={`http://res.cloudinary.com/dzz8ji5lj/image/upload/${author.img}`} />
-                </figure>
-                <h1 className="black  t7  pb2  cp  tac">{author.name}</h1>
-                <p className="grey  t8  pv2  tac">{author.description}</p>
+              <figure className="rel  pb3  w5  center">
+                <div className="br-100  authorList__img--cont">
+                  <img className="mb3  center  w5  br-100  zoom-in-fade-in-iteration--item  authorList__img" alt={author.name} src={`http://res.cloudinary.com/dzz8ji5lj/image/upload/${author.img}`} />
+                </div>
+              </figure>
+              <h2 className="black  t7  pt2  tac  cp">{author.name}</h2>
+              <p className="grey  t8  pv2  latestArticleList__intro">{author.description}</p>
 
-              </div>
             </div>
-          </article>
-        </section>
-
+          </div>
+        </div>
       </div>
     );
   }
