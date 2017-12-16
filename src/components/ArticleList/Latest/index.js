@@ -63,7 +63,7 @@ export class LatestArticleListLoaded extends PureComponent {
 }
 
 LatestArticleListLoaded.propTypes = {
-  list: PropTypes.object, // eslint-disable-line react/forbid-prop-types
+  list: PropTypes.array, // eslint-disable-line react/forbid-prop-types
   location: PropTypes.shape(),
 };
 

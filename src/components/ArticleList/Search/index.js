@@ -71,7 +71,7 @@ export class SearchArticleList extends PureComponent {
 }
 
 SearchArticleList.propTypes = {
-  list: PropTypes.object, // eslint-disable-line react/forbid-prop-types
+  list: PropTypes.array, // eslint-disable-line react/forbid-prop-types
   location: PropTypes.shape(),
 };
 

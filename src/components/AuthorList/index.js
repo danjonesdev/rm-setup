@@ -9,7 +9,7 @@ import { Redirect } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
-export class LatestAuthorListLoaded extends PureComponent {
+export class AuthorList extends PureComponent {
   constructor() {
     super();
     this.state = {
@@ -38,7 +38,14 @@ export class LatestAuthorListLoaded extends PureComponent {
           {this.props.list.map((author, i) => (
             <div key={i} className="link  latestAuthorList__cont">
               <div className={`col-sm-12  col-md-6  tac-sm  pv3  latestAuthorList__col--latest  ${isLeavingClass}`}>
+
+                <figure className="rel  pb3">
+                  <div onClick={() => this.handleClick(author._id)} className="latestArticleList__img--cont onClick={() => this.handleClick(author._id)}">
+                    <img className="mb3  latestArticleList__img" alt={author.name} src={`http://res.cloudinary.com/dzz8ji5lj/image/upload/${author.img}`} />
+                  </div>
+                </figure>
                 <p className="grey  t8  pv2  latestAuthorList__intro">{author.name}</p>
+
               </div>
             </div>
           ))}
@@ -53,14 +60,14 @@ export class LatestAuthorListLoaded extends PureComponent {
   }
 }
 
-LatestAuthorListLoaded.propTypes = {
-  list: PropTypes.object, // eslint-disable-line react/forbid-prop-types
+AuthorList.propTypes = {
+  list: PropTypes.array, // eslint-disable-line react/forbid-prop-types
   location: PropTypes.shape(),
 };
 
-LatestAuthorListLoaded.defaultProps = {
+AuthorList.defaultProps = {
   list: [],
   location: {},
 };
 
-export default LatestAuthorListLoaded;
+export default AuthorList;
