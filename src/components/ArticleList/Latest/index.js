@@ -22,7 +22,7 @@ export class LatestArticleListLoaded extends PureComponent {
   handleClick = (title) => {
     this.setState({ isLeaving: true });
     setTimeout(() => {
-      this.setState({ articleTitle: title.replace(/\s+/g, '-').toLowerCase() });
+      this.setState({ articleTitle: title.replace(/\s+/g, '-') });
       this.setState({ fireRedirect: true });
     }, 200);
   }

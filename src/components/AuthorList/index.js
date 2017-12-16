@@ -14,15 +14,15 @@ export class AuthorList extends PureComponent {
     super();
     this.state = {
       fireRedirect: false,
-      authorId: null,
+      authorName: null,
       isLeaving: false,
     };
   }
 
-  handleClick = (id) => {
+  handleClick = (name) => {
     this.setState({ isLeaving: true });
     setTimeout(() => {
-      this.setState({ authorId: id });
+      this.setState({ authorName: name });
       this.setState({ fireRedirect: true });
     }, 200);
   }
@@ -40,18 +40,18 @@ export class AuthorList extends PureComponent {
               <div className={`col-sm-12  col-md-6  tac-sm  pv3  latestAuthorList__col--latest  ${isLeavingClass}`}>
 
                 <figure className="rel  pb3">
-                  <div onClick={() => this.handleClick(author._id)} className="latestArticleList__img--cont onClick={() => this.handleClick(author._id)}">
+                  <div onClick={() => this.handleClick(author.name)} className="latestArticleList__img--cont onClick={() => this.handleClick(author._id)}">
                     <img className="mb3  latestArticleList__img" alt={author.name} src={`http://res.cloudinary.com/dzz8ji5lj/image/upload/${author.img}`} />
                   </div>
                 </figure>
-                <p className="grey  t8  pv2  latestAuthorList__intro">{author.name}</p>
+                <h2 onClick={() => this.handleClick(author.name)} className="black  t7  pt2  latestArticleList__title">{author.name}</h2>
 
               </div>
             </div>
           ))}
         </div>
         {fireRedirect ? (
-          <Redirect push to={from || `/Author/${this.state.authorId}`} />
+          <Redirect push to={from || `/Author/${this.state.authorName}`} />
         ) : (
           false
         )}

@@ -54,14 +54,9 @@ if (__DEV__) {
 
 //GET ARTICLES_LATEST
 app.get('/api/articles', (req, res) => {
+    console.log('/api/articles');
 
-  console.log('/api/articles');
-  console.log(req.query.searchQuery);
-
-    //var indexLimit = parseInt(req.query.indexLimit, 10);
     var articles = [];
-    // console.log(indexLimit);
-    // .limit(indexLimit)
 
     db.collection('articles')
         .find()
@@ -80,14 +75,9 @@ app.get('/api/articles', (req, res) => {
 
 //GET ARTICLES_LATEST
 app.get('/api/extra', (req, res) => {
+    console.log('/api/articles');
 
-  console.log('/api/articles');
-  console.log(req.query.searchQuery);
-
-    //var indexLimit = parseInt(req.query.indexLimit, 10);
     var articles = [];
-    // console.log(indexLimit);
-    // .limit(indexLimit)
 
     db.collection('articles')
         .aggregate([{ $sample: { size: 4 } }])
@@ -105,13 +95,9 @@ app.get('/api/extra', (req, res) => {
 
 //GET AUTHORS
 app.get('/api/authors', (req, res) => {
+    console.log('/api/authors');
 
-  console.log('/api/authors');
-
-    //var indexLimit = parseInt(req.query.indexLimit, 10);
     var authors = [];
-    // console.log(indexLimit);
-    // .limit(indexLimit)
 
     db.collection('authors')
         .find()
@@ -130,14 +116,9 @@ app.get('/api/authors', (req, res) => {
 
 //GET SEARCH
 app.get('/api/search', (req, res) => {
+    console.log('/api/articles');
 
-  console.log('/api/articles');
-  console.log(req.query.searchQuery);
-
-    //var indexLimit = parseInt(req.query.indexLimit, 10);
     var articles = [];
-    // console.log(indexLimit);
-    //
 
     db.collection('articles')
         .find({"title" : {$regex : ".*" + req.query.searchQuery + ".*"}})
@@ -157,6 +138,7 @@ app.get('/api/search', (req, res) => {
 
 //GET ARTICLE
 app.get('/api/article', (req, res) => {
+    console.log('/api/articles');
 
     var ObjectId = require('mongodb').ObjectID;
     var article = {};
