@@ -28,7 +28,7 @@ export class AuthorList extends PureComponent {
   }
 
   render() {
-    const isLeavingClass = classNames({ 'zoom-out-fade-out': this.state.isLeaving });
+    const isLeavingClass = classNames({ 'fade-out': this.state.isLeaving });
     const { from } = this.props.location.state || '/';
     const fireRedirect = this.state.fireRedirect;
 

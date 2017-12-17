@@ -39,7 +39,7 @@ export class LatestArticleListLoaded extends PureComponent {
   }
 
   render() {
-    const isLeavingClass = classNames({ 'zoom-out-fade-out': this.state.isLeaving });
+    const isLeavingClass = classNames({ 'fade-out': this.state.isLeaving });
     const { from } = this.props.location.state || '/';
     const fireArticleRedirect = this.state.fireArticleRedirect;
     const fireAuthorRedirect = this.state.fireAuthorRedirect;
@@ -56,7 +56,7 @@ export class LatestArticleListLoaded extends PureComponent {
                     <img className="mb3  w-100  zoom-in-fade-in-iteration--item  cp  latestArticleList__img" alt={article.title} src={`http://res.cloudinary.com/dzz8ji5lj/image/upload/${article.img}`} />
                   </div>
                 </figure>
-                <span className="grey  t8"><time dateTime="10/17/09">10/17/09</time> | </span>
+                <span className="grey  t8">{article.created} | </span>
                 <span className="grey  t8  cp  link" onClick={() => this.handleClick(article.author, 'author')}>{article.author}</span>
                 <h2 onClick={() => this.handleClick(article.title, 'article')} className="black  t7  pt2  cp  latestArticleList__title">{article.title}</h2>
                 <p className="grey  t8  pv2  latestArticleList__intro">{article.description}</p>

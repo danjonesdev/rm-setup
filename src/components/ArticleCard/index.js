@@ -1,8 +1,11 @@
 /* @flow */
-/* eslint-disable import/no-named-as-default, react/no-array-index-key, react/self-closing-comp */
+/* eslint-disable import/no-named-as-default, react/no-array-index-key, react/self-closing-comp,
+jsx-a11y/no-static-element-interactions */
 
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
+import { Redirect } from 'react-router-dom';
+import classNames from 'classnames';
 
 // import GetImage from '../Helpers/GetImage';
 
@@ -20,6 +23,15 @@ import Link from './Sections/Link';
 
 // Export this for unit testing more easily
 export class ArticleCard extends PureComponent {
+  constructor() {
+    super();
+    this.state = {
+      fireAuthorRedirect: false,
+      authorName: null,
+      isLeaving: false,
+    };
+  }
+
   heading = () => {
     const title = this.props.info.title;
 
@@ -133,32 +145,53 @@ export class ArticleCard extends PureComponent {
     return false;
   }
 
+  handleClick = (attr, type) => {
+    if (type === 'author') {
+      this.setState({ isLeaving: true });
+      setTimeout(() => {
+        this.setState({ authorName: attr.replace(/\s+/g, '-') });
+        this.setState({ fireAuthorRedirect: true });
+      }, 200);
+    }
+  }
+
   render() {
+    const isLeavingClass = classNames({ 'fade-out': this.state.isLeaving });
+    const { from } = this.props.location.state || '/';
+    const fireAuthorRedirect = this.state.fireAuthorRedirect;
+
     const article = this.props.info;
     const sections = this.sections;
 
     return (
-      <div className="articleCard">
+      <div className={isLeavingClass}>
+        <div className="articleCard">
 
-        <figure className="rel  articleCard__hero">
-          <div className="articleCard__hero--background" style={{ backgroundImage: `url(http://res.cloudinary.com/dzz8ji5lj/image/upload/${article.img})` }}></div>
-          <img className="articleCard__hero--img" alt={article.title} src={`http://res.cloudinary.com/dzz8ji5lj/image/upload/${article.img}`} />
-        </figure>
+          <figure className="rel  articleCard__hero">
+            <div className="articleCard__hero--background" style={{ backgroundImage: `url(http://res.cloudinary.com/dzz8ji5lj/image/upload/${article.img})` }}></div>
+            <img className="articleCard__hero--img" alt={article.title} src={`http://res.cloudinary.com/dzz8ji5lj/image/upload/${article.img}`} />
+          </figure>
 
-        <section className="rel">
-          <article className="container  articleCard__content">
-            <div className="row">
-              <div className="col-md-16  col-md-offset-4">
-                <span className="grey  t8"><time dateTime="10/17/09">10/17/09</time> | {article.author}</span>
-                {this.heading()}
-                {article.body.map((item, i) => (
-                  sections(item, i)
-                ))}
+          <section className="rel">
+            <article className="container  articleCard__content">
+              <div className="row">
+                <div className="col-md-16  col-md-offset-4">
+                  <span className="grey  t8">{article.created} | </span>
+                  <span className="grey  t8  cp  link" onClick={() => this.handleClick(article.author, 'author')}>{article.author}</span>
+                  {this.heading()}
+                  {article.body.map((item, i) => (
+                    sections(item, i)
+                  ))}
+                </div>
               </div>
-            </div>
-          </article>
-        </section>
-
+            </article>
+          </section>
+        </div>
+        {fireAuthorRedirect ? (
+          <Redirect push to={from || `/Author/${this.state.authorName}`} />
+        ) : (
+          false
+        )}
       </div>
     );
   }
@@ -166,10 +199,12 @@ export class ArticleCard extends PureComponent {
 
 ArticleCard.propTypes = {
   info: PropTypes.shape(),
+  location: PropTypes.shape(),
 };
 
 ArticleCard.defaultProps = {
   info: {},
+  location: {},
 };
 
 export default ArticleCard;

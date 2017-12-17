@@ -55,8 +55,8 @@
   }
 }
 
-.zoom-out-fade-out {
-  animation: zoomOut 0.2s ease both, fadeOut 0.2s ease both;
+.fade-out {
+  animation: fadeOut 0.2s ease both;
 }
 
 @keyframes fadeOut {

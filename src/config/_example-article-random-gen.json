@@ -8,6 +8,7 @@
 	"created": "10/20/2017",
 	"author": '{{firstName()}} {{surname()}}',
 	"img": "articles/clubbing.jpg",
+	"type": "Interview",
 	"body": [
 		{
 			"section": {
