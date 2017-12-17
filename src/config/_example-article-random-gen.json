@@ -5,7 +5,7 @@
 	"created": "10/20/2017",
 	"author": '{{firstName()}} {{surname()}}',
 	"img": "articles/clubbing.jpg",
-	"category": "Interview, Mix, Release, Event, Track",
+	"category": "Interviews, Mixes, Releases, Events, Tracks, Artists",
 	"body": [
 		{
 			"section": {

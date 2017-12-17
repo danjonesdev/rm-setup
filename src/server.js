@@ -168,6 +168,30 @@ app.get('/api/search', (req, res) => {
 
 });
 
+//GET CATEGORY
+app.get('/api/category', (req, res) => {
+    console.log('/api/category');
+
+    var articles = [];
+
+    db.collection('articles')
+        .find({$or:[
+                {category: {$regex : ".*" + req.query.categoryQuery + ".*"}}
+              ]})
+        .limit(12)
+        .sort("date", -1)
+        .toArray()
+        .then(result => {
+            articles = articles.concat(result);
+        }).then(() => {
+            // console.log(articles);
+            res.send(articles);
+        }).catch(e => {
+            console.error(e);
+        });
+
+});
+
 //GET ARTICLE
 app.get('/api/article', (req, res) => {
     console.log('/api/articles');

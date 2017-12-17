@@ -4,12 +4,14 @@ import type { Dispatch } from './types';
 import { fetchLatestArticlesIfNeeded } from './containers/Fragments/LatestArticles/action';
 import { fetchExtraArticlesIfNeeded } from './containers/Fragments/ExtraArticles/action';
 import { fetchSearchArticlesIfNeeded } from './containers/Fragments/SearchArticles/action';
+import { fetchCategoryArticlesIfNeeded } from './containers/Fragments/CategoryArticles/action';
 import { fetchAuthorArticlesIfNeeded } from './containers/Fragments/AuthorArticles/action';
 import { fetchArticleIfNeeded } from './containers/Fragments/ArticleInfo/action';
 import { fetchAuthorIfNeeded } from './containers/Fragments/AuthorInfo/action';
 import { fetchAuthorsIfNeeded } from './containers/Fragments/Authors/action';
 import HomePage from './containers/Pages/Home';
 import SearchPage from './containers/Pages/Search';
+import CategoryPage from './containers/Pages/Category';
 import ArticlePage from './containers/Pages/Article';
 import AuthorPage from './containers/Pages/Author';
 import NotFoundPage from './containers/Pages/NotFound';
@@ -30,6 +32,13 @@ export default [
     component: SearchPage,
     loadData: (dispatch: Dispatch, params: Object) => Promise.all([
       dispatch(fetchSearchArticlesIfNeeded(params.query)),
+    ]),
+  },
+  {
+    path: '/Category/:query',
+    component: CategoryPage,
+    loadData: (dispatch: Dispatch, params: Object) => Promise.all([
+      dispatch(fetchCategoryArticlesIfNeeded(params.query)),
     ]),
   },
   {
