@@ -23,7 +23,7 @@ export class ArticleCard extends PureComponent {
               <h2 className="black  t7  pt2  tac  cp">{author.name}</h2>
               <p className="grey  t8  pv2  latestArticleList__intro">{author.description}</p>
               {author.links.map((link, i) => (
-                <div key={i} className="row">
+                <div key={i} className="row  pv2">
                   <p className="pb1  fornt-normal-a  dark-grey">{link.text}</p>
                   <a className="normal-font" href={link.url}>{link.url}</a>
                 </div>
