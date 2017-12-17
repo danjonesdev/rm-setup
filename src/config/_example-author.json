@@ -2,14 +2,14 @@
   "name": "Dan Jones",
   "description": "Commodo proident mollit ex esse qui aliquip excepteur voluptate cupidatat qui voluptate.",
   "img": "authors/clubbing.jpg",
-  "section": {
-    "type": "link",
-    "text": "Soundcloud",
-    "url": "ww/blahyoyoyoyoy"
-  },
-  "section": {
-    "type": "link",
-    "text": "Youtube",
-    "url": "ww/blahyoyoyoyoy"
-  }
+  "links": [
+    {
+      "text": "Soundcloud",
+      "url": "ww/blahyoyoyoyoy"
+    },
+    {
+      "text": "Soundcloud",
+      "url": "ww/blahyoyoyoyoy"
+    }
+  ]
 }

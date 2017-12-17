@@ -13,7 +13,7 @@ export class ArticleCard extends PureComponent {
       <div className="container  mv4">
         <div className="row">
           <div className="link  w-100  zoom-in-fade-in-iteration--cont">
-            <div className="center  tac  pv3  latestArticleList__col--latest">
+            <div className="center  tac  pv3">
 
               <figure className="rel  pb3  w5  center">
                 <div className="br-100  authorList__img--cont">
@@ -22,6 +22,12 @@ export class ArticleCard extends PureComponent {
               </figure>
               <h2 className="black  t7  pt2  tac  cp">{author.name}</h2>
               <p className="grey  t8  pv2  latestArticleList__intro">{author.description}</p>
+              {author.links.map((link, i) => (
+                <div key={i} className="row">
+                  <p className="pb1  fornt-normal-a  dark-grey">{link.text}</p>
+                  <a className="normal-font" href={link.url}>{link.url}</a>
+                </div>
+              ))}
 
             </div>
           </div>
