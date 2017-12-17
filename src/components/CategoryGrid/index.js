@@ -19,9 +19,9 @@ export class CategoryGrid extends PureComponent {
               </Link>
             </div>
             <div className="col-sm-12  col-md-8">
-              <Link className="link" to={'/Category/Djs'}>
+              <Link className="link" to={'/Category/DJs'}>
                 <div className="mv3  CategoryGrid__bg" style={{ backgroundImage: 'url(http://res.cloudinary.com/dzz8ji5lj/image/upload/e_contrast:-100,o_100/articles/es-0909-981683-962153-back.jpg)' }}>
-                  <h4 className="rel  tac  white  t5  title-font  CategoryGrid__title">Djs</h4>
+                  <h4 className="rel  tac  white  t5  title-font  CategoryGrid__title">DJs</h4>
                 </div>
               </Link>
             </div>
