@@ -20,7 +20,7 @@ export class ArticleCard extends PureComponent {
                   <img className="mb3  center  w5  br-100  zoom-in-fade-in-iteration--item  authorList__img" alt={author.name} src={`http://res.cloudinary.com/dzz8ji5lj/image/upload/${author.img}`} />
                 </div>
               </figure>
-              <h2 className="black  t7  pt2  tac  cp">{author.name}</h2>
+              <h2 className="black  t7  pt2  tac  cp  title-font">{author.name}</h2>
               <p className="grey  t8  pv2  latestArticleList__intro">{author.description}</p>
               {author.links.map((link, i) => (
                 <div key={i} className="row  pv2">
