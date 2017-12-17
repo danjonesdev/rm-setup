@@ -1,9 +1,10 @@
 /* @flow */
 /* eslint-disable import/no-named-as-default, react/no-array-index-key, react/self-closing-comp,
-jsx-a11y/no-static-element-interactions */
+jsx-a11y/no-static-element-interactions, react/no-unknown-property */
 
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
+import Helmet from 'react-helmet';
 import { Redirect } from 'react-router-dom';
 import classNames from 'classnames';
 
@@ -164,28 +165,60 @@ export class ArticleCard extends PureComponent {
     const sections = this.sections;
 
     return (
-      <div className={isLeavingClass}>
-        <div className="articleCard">
+      <div>
+        <Helmet>
+          <title>{article.title}</title>
+          <meta name="description" content={article.description} />
 
-          <figure className="rel  articleCard__hero">
-            <div className="articleCard__hero--background" style={{ backgroundImage: `url(http://res.cloudinary.com/dzz8ji5lj/image/upload/${article.img})` }}></div>
-            <img className="articleCard__hero--img" alt={article.title} src={`http://res.cloudinary.com/dzz8ji5lj/image/upload/${article.img}`} />
-          </figure>
+          {/* Google+ */}
+          <meta itemprop="name" content={article.title} />
+          <meta itemprop="description" content={article.description} />
+          <meta itemprop="image" content={`http://res.cloudinary.com/dzz8ji5lj/image/upload/${article.img}`} />
 
-          <section className="rel">
-            <article className="container  articleCard__content">
-              <div className="row">
-                <div className="col-md-16  col-md-offset-4">
-                  <span className="grey  t8">{article.created} | </span>
-                  <span className="grey  t8  cp  link" onClick={() => this.handleClick(article.author, 'author')}>{article.author}</span>
-                  {this.heading()}
-                  {article.body.map((item, i) => (
-                    sections(item, i)
-                  ))}
+          {/* Twitter Card */}
+          <meta name="twitter:card" content="summary_large_image" />
+          <meta name="twitter:site" content="@publisher_handle" />
+          <meta name="twitter:title" content={article.title} />
+          <meta name="twitter:description" content={article.description} />
+          <meta name="twitter:creator" content="@author_handle" />
+          <meta name="twitter:image:src" content={`http://res.cloudinary.com/dzz8ji5lj/image/upload/${article.img}`} />
+
+          {/* Open Graph data */}
+          <meta property="og:title" content={article.title} />
+          <meta property="og:type" content="article" />
+          <meta property="og:url" content="http://www.RendahMag.com/" />
+          <meta property="og:image" content={`http://res.cloudinary.com/dzz8ji5lj/image/upload/${article.img}`} />
+          <meta property="og:description" content={article.description} />
+          <meta property="og:site_name" content="Rendah Mag, i.e. Moz" />
+          <meta property="article:published_time" content="2013-09-17T05:59:00+01:00" />
+          <meta property="article:modified_time" content="2013-09-16T19:08:47+01:00" />
+          <meta property="article:section" content="Article Section" />
+          <meta property="article:tag" content="Article Tag" />
+          <meta property="fb:admins" content="Facebook numberic ID" />
+        </Helmet>
+        <div className={isLeavingClass}>
+          <div className="articleCard">
+
+            <figure className="rel  articleCard__hero">
+              <div className="articleCard__hero--background" style={{ backgroundImage: `url(http://res.cloudinary.com/dzz8ji5lj/image/upload/${article.img})` }}></div>
+              <img className="articleCard__hero--img" alt={article.title} src={`http://res.cloudinary.com/dzz8ji5lj/image/upload/${article.img}`} />
+            </figure>
+
+            <section className="rel">
+              <article className="container  articleCard__content">
+                <div className="row">
+                  <div className="col-md-16  col-md-offset-4">
+                    <span className="grey  t8">{article.created} | </span>
+                    <span className="grey  t8  cp  link" onClick={() => this.handleClick(article.author, 'author')}>{article.author}</span>
+                    {this.heading()}
+                    {article.body.map((item, i) => (
+                      sections(item, i)
+                    ))}
+                  </div>
                 </div>
-              </div>
-            </article>
-          </section>
+              </article>
+            </section>
+          </div>
         </div>
         {fireAuthorRedirect ? (
           <Redirect push to={from || `/Author/${this.state.authorName}`} />
