@@ -45,7 +45,7 @@ export class SearchArticleList extends PureComponent {
     const fireAuthorRedirect = this.state.fireAuthorRedirect;
 
     return (
-      <div className="container  mv5">
+      <div className="container  mv4">
         {this.props.list.map((article, i) => (
           <div className="row">
             <div className="col-sm-4" />

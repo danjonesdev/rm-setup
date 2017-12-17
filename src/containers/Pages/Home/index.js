@@ -16,7 +16,7 @@ const Home = () => (
     <Helmet title="Home" />
     <LatestArticles />
     <CategoryGrid />
-    <p className="pt4  t6  black  tac  title-font">Search the site for more</p>
+    <p className="pt4  t6  fw6  black  tac  title-font">Search the site for more</p>
     <div className="pt1  pb4"><SearchInput /></div>
   </main>
 

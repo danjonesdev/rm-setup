@@ -12,13 +12,7 @@ import SearchArticles from '../../../containers/Fragments/SearchArticles';
 const Home = ({ match }) => (
   <main>
     <Helmet title="Search" />
-    <div className="container">
-      <div className="row">
-        <div className="col-sm-12">
-          <SearchArticles match={match} />
-        </div>
-      </div>
-    </div>
+    <SearchArticles match={match} />
   </main>
 );
 
