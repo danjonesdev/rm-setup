@@ -148,7 +148,12 @@ app.get('/api/search', (req, res) => {
     var articles = [];
 
     db.collection('articles')
-        .find({"title" : {$regex : ".*" + req.query.searchQuery + ".*"}})
+        .find({$or:[
+                {title: {$regex : ".*" + req.query.searchQuery + ".*"}},
+                {description: {$regex : ".*" + req.query.searchQuery + ".*"}},
+                {author: {$regex : ".*" + req.query.searchQuery + ".*"}},
+                {keywords: {$regex : ".*" + req.query.searchQuery + ".*"}}
+              ]})
         .limit(12)
         .sort("date", -1)
         .toArray()

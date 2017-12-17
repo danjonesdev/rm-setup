@@ -1,10 +1,7 @@
 {
 	"title": '{{lorem(1, "words")}} {{lorem(1, "words")}} {{lorem(1, "words")}} {{lorem(1, "words")}} {{lorem(1, "words")}} {{lorem(1, "words")}} {{lorem(1, "words")}}',
 	"description": '{{lorem(1, "sentences")}}',
-	"keywords": [
-      '{{repeat(7)}}',
-      '{{lorem(1, "words")}}'
-    ],
+	"keywords": "Noisia, Drum & Bass, Halftime, Article, Interview",
 	"created": "10/20/2017",
 	"author": '{{firstName()}} {{surname()}}',
 	"img": "articles/clubbing.jpg",
