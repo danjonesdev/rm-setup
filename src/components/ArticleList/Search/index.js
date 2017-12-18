@@ -48,19 +48,18 @@ export class SearchArticleList extends PureComponent {
       <div className="container  mv4">
         {this.props.list.map((article, i) => (
           <div className="row">
-            <div className="col-sm-4" />
             <div key={i} className="link  w-100  zoom-in-fade-in-iteration--cont">
-              <article className={`col-sm-16  tac-sm  pv3  latestArticleList__col--search  ${isLeavingClass}`}>
+              <article className={`col-sm-24  tac-sm  pv3  latestArticleList__col--search  ${isLeavingClass}`}>
 
                 <div className="row">
-                  <div className="col-sm-12">
+                  <div className="col-sm-6">
                     <figure className="rel  pb3">
                       <div onClick={() => this.handleClick(article.title, 'article')} className="latestArticleList__img--cont onClick={() => this.handleClick(article._id, 'article')}">
                         <img className="mb3  w-100  zoom-in-fade-in-iteration--item  cp  latestArticleList__img" alt={article.title} src={`http://res.cloudinary.com/dzz8ji5lj/image/upload/${article.img}`} />
                       </div>
                     </figure>
                   </div>
-                  <div className="col-sm-12">
+                  <div className="col-sm-6">
                     <span className="grey  t8"><time dateTime="10/17/09">10/17/09</time> | </span>
                     <span className="grey  t8  cp  link" onClick={() => this.handleClick(article.author, 'author')}>{article.author}</span>
                     <h2 onClick={() => this.handleClick(article.title, 'article')} className="black  t7  pt2  cp  title-font  latestArticleList__title">{article.title}</h2>
@@ -70,7 +69,6 @@ export class SearchArticleList extends PureComponent {
 
               </article>
             </div>
-            <div className="col-sm-4" />
           </div>
         ))}
         {fireArticleRedirect ? (

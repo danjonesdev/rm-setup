@@ -3,12 +3,36 @@ module.exports = {
   port: process.env.PORT,
   app: {
     htmlAttributes: { lang: 'en' },
-    title: 'React Cool Starter',
-    titleTemplate: 'rm-setup - %s',
+    title: 'Rendah',
+    titleTemplate: 'Rendah - %s',
     meta: [
       {
         name: 'description',
-        content: 'The best react universal starter boilerplate in the world.',
+        content: 'Beats culture magazine',
+      },
+      {
+        name: 'apple-mobile-web-app-title',
+        content: 'Vernacare',
+      },
+      {
+        name: 'apple-mobile-web-app-capable',
+        content: 'yes',
+      },
+      {
+        name: 'apple-mobile-web-app-status-bar-style',
+        content: 'black',
+      },
+      {
+        name: 'theme-color',
+        content: '#ffffff',
+      },
+      {
+        name: 'mobile-web-app-capable',
+        content: 'yes',
+      },
+      {
+        name: 'theme-color',
+        content: '#fff',
       },
     ],
   },
