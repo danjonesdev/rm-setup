@@ -11,7 +11,8 @@ import CategoryArticles from '../../../containers/Fragments/CategoryArticles';
 // Export this for unit testing more easily
 const Category = ({ match }) => (
   <main>
-    <Helmet title="Category" />
+    <Helmet title={match.params.query} />
+    <h1 className="tac  black  title-font  t5  pt4">{match.params.query}</h1>
     <CategoryArticles match={match} />
   </main>
 );
