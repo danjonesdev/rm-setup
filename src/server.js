@@ -45,7 +45,8 @@ if (__DEV__) {
     publicPath: webpackConfig.output.publicPath,
     hot: true,
     noInfo: true,
-    stats: 'errors-only',
+    stats: { colors: true },
+    serverSideRender: true,
   }));
 
   app.use(require('webpack-hot-middleware')(compiler));

@@ -160,7 +160,7 @@ module.exports = {
                 // "context" and "localIdentName" need to be the same with server config,
                 // or the style will flick when page first loaded
                 context: path.join(process.cwd(), './src'),
-                localIdentName: '[name]__[local]___[hash:base64:5]',
+                localIdentName: '[name]__[local]--[hash:base64:5]',
                 minimize: !isDev,
               },
             },
@@ -180,7 +180,7 @@ module.exports = {
                 sourceMap: true,
                 modules: CSSModules,
                 context: path.join(process.cwd(), './src'),
-                localIdentName: '[name]__[local]___[hash:base64:5]',
+                localIdentName: '[name]__[local]--[hash:base64:5]',
                 minimize: !isDev,
               },
             },
