@@ -45,21 +45,21 @@ export class LatestArticleListLoaded extends PureComponent {
     const fireAuthorRedirect = this.state.fireAuthorRedirect;
 
     return (
-      <div className="container  mv4">
+      <div className="container  mb4">
         <div className="row">
           {this.props.list.map((article, i) => (
             <div key={i} className="link  w-100  zoom-in-fade-in-iteration--cont">
               <article className={`col-sm-12  col-md-6  tac-sm  pv3  latestArticleList__col--latest  ${isLeavingClass}`}>
 
                 <figure className="rel  pb3">
-                  <div onClick={() => this.handleClick(article.title, 'article')} className="latestArticleList__img--cont onClick={() => this.handleClick(article._id, 'article')}">
+                  <div onClick={() => this.handleClick(article.title, 'article')} className="over-hidden  latestArticleList__img--cont onClick={() => this.handleClick(article._id, 'article')}">
                     <img className="mb3  w-100  zoom-in-fade-in-iteration--item  cp  latestArticleList__img" alt={article.title} src={`http://res.cloudinary.com/dzz8ji5lj/image/upload/${article.img}`} />
                   </div>
                 </figure>
                 <span className="grey  t8">{article.created} | </span>
                 <span className="grey  t8  cp  link" onClick={() => this.handleClick(article.author, 'author')}>{article.author}</span>
-                <h2 onClick={() => this.handleClick(article.title, 'article')} className="black  t7  pt2  cp  title-font  latestArticleList__title">{article.title}</h2>
-                <p className="grey  t8  pv2  latestArticleList__intro">{article.description}</p>
+                <h2 onClick={() => this.handleClick(article.title, 'article')} className="black  t7  pt2  cp  title-font  over-hidden  latestArticleList__title">{article.title}</h2>
+                <p className="grey  t8  pv2  over-hidden  latestArticleList__intro">{article.description}</p>
 
               </article>
             </div>

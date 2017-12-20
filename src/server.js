@@ -52,15 +52,15 @@ if (__DEV__) {
   app.use(require('webpack-hot-middleware')(compiler));
 }
 
-
-//GET ARTICLES_LATEST
-app.get('/api/articles', (req, res) => {
-    console.log('/api/articles');
+//GET week
+app.get('/api/week', (req, res) => {
+    console.log('week');
 
     var articles = [];
 
     db.collection('articles')
         .find()
+        .limit(2)
         .sort("date", -1)
         .toArray()
         .then(result => {
@@ -74,9 +74,31 @@ app.get('/api/articles', (req, res) => {
 
 });
 
-//GET AUTHOR_ARTICLES
+//GET articles
+app.get('/api/articles', (req, res) => {
+    console.log('articles');
+
+    var articles = [];
+
+    db.collection('articles')
+        .find()
+        .limit(12)
+        .sort("date", -1)
+        .toArray()
+        .then(result => {
+            articles = articles.concat(result);
+        }).then(() => {
+            // console.log(articles);
+            res.send(articles);
+        }).catch(e => {
+            console.error(e);
+        });
+
+});
+
+//GET authorArticles
 app.get('/api/authorArticles', (req, res) => {
-    console.log('/api/authorArticles');
+    console.log('authorArticles');
 
     var articles = [];
 
@@ -88,6 +110,7 @@ app.get('/api/authorArticles', (req, res) => {
     db.collection('articles')
         // .find()
         .find({"author" : {$regex : ".*" + param + ".*"}})
+        .limit(12)
         .sort("date", -1)
         .toArray()
         .then(result => {
@@ -101,9 +124,9 @@ app.get('/api/authorArticles', (req, res) => {
 
 });
 
-//GET ARTICLES_LATEST
+//GET extra
 app.get('/api/extra', (req, res) => {
-    console.log('/api/articles');
+    console.log('extra');
 
     var articles = [];
 
@@ -121,14 +144,15 @@ app.get('/api/extra', (req, res) => {
 
 });
 
-//GET AUTHORS
+//GET authors
 app.get('/api/authors', (req, res) => {
-    console.log('/api/authors');
+    console.log('authors');
 
     var authors = [];
 
     db.collection('authors')
         .find()
+        .limit(24)
         .toArray()
         .then(result => {
             // console.log(result);
@@ -141,10 +165,9 @@ app.get('/api/authors', (req, res) => {
 
 });
 
-
-//GET SEARCH
+//GET search
 app.get('/api/search', (req, res) => {
-    console.log('/api/articles');
+    console.log('/api/search');
 
     var articles = [];
 
@@ -155,7 +178,7 @@ app.get('/api/search', (req, res) => {
                 {author: {$regex : ".*" + req.query.searchQuery + ".*"}},
                 {keywords: {$regex : ".*" + req.query.searchQuery + ".*"}}
               ]})
-        .limit(12)
+        .limit(24)
         .sort("date", -1)
         .toArray()
         .then(result => {
@@ -169,9 +192,9 @@ app.get('/api/search', (req, res) => {
 
 });
 
-//GET CATEGORY
+//GET category
 app.get('/api/category', (req, res) => {
-    console.log('/api/category');
+    console.log('category');
 
     var articles = [];
 
@@ -193,9 +216,9 @@ app.get('/api/category', (req, res) => {
 
 });
 
-//GET ARTICLE
+//GET article
 app.get('/api/article', (req, res) => {
-    console.log('/api/articles');
+    console.log('article');
 
     var ObjectId = require('mongodb').ObjectID;
     var article = {};
@@ -214,9 +237,9 @@ app.get('/api/article', (req, res) => {
 
 });
 
-//GET AUTHOR
+//GET author
 app.get('/api/author', (req, res) => {
-    console.log('/api/author');
+    console.log('author');
 
     var ObjectId = require('mongodb').ObjectID;
     var article = {};
