@@ -7,45 +7,28 @@ import SubscribeFrom from 'react-mailchimp-subscribe';
 
 // Export this for unit testing more easily
 export class SubscribeBanner extends PureComponent {
-  renderText = () => {
-    const randNum = Math.floor(Math.random() * 4) + 1;
-    switch (randNum) {
-      case 1:
-        return <p className="pt3  white  t5  tac">Subscribe to Rendah for weekly updates</p>;
-      case 2:
-        return <p className="pt3  white  t5  tac">Fresh Articles, Straight in yo&#39; inbox</p>;
-      case 3:
-        return <p className="pt3  white  t5  tac">Free shit? Probably not... But you should Subscribe anyway</p>;
-      case 4:
-        return <p className="pt3  white  t5  tac">We&#39;ll keep you in the loop, Subscribe maaa&#39; man</p>;
-      default:
-        console.log('Not Returned: SubscribeFrom.renderText');
-        return false;
-    }
-  };
-
   renderForm = () => {
     const formProps = {
       action: 'https://rendahmag.us17.list-manage.com/subscribe/post?u=df0d549f92845c8dfc4d99dde&amp;id=2904b740be',
       messages: {
-        inputPlaceholder: 'Enter yooo email...',
+        inputPlaceholder: 'Enter your email...',
         btnLabel: 'Subscribe',
         sending: 'Subscribing',
         success: 'Subscribed',
-        error: 'Oops, no can do...',
+        error: 'Not a valid email...',
       },
       styles: {
         sending: {
-          fontSize: 18,
-          color: 'white',
+          fontSize: 16,
+          color: 'black',
         },
         success: {
-          fontSize: 18,
-          color: 'white',
+          fontSize: 16,
+          color: 'black',
         },
         error: {
-          fontSize: 18,
-          color: 'white',
+          fontSize: 16,
+          color: 'black',
         },
       },
     };
@@ -55,13 +38,8 @@ export class SubscribeBanner extends PureComponent {
 
   render() {
     return (
-      <div className="mv4  pv4  container-fluid  SubscribeForm">
-        <div className="container">
-          {this.renderText()}
-          <div className="pb3  container  w-100  rel  SubscribeForm__form">
-            {this.renderForm()}
-          </div>
-        </div>
+      <div className="subscribeBanner">
+        {this.renderForm()}
       </div>
     );
   }
