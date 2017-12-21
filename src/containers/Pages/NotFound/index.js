@@ -1,14 +1,22 @@
-/* @flow */
-
-import React from 'react';
-import type { Element } from 'react';
+import React, { PureComponent } from 'react';
 import Helmet from 'react-helmet';
 
-const NotFound = (): Element<'div'> => (
-  <div>
-    <Helmet title="Oops" />
-    <p>Oops, Page was not found!</p>
-  </div>
-);
+export class NotFound extends PureComponent {
+  componentDidMount() {
+    window.scrollTo(0, 0);
+  }
+  componentDidUpdate() {
+    window.scrollTo(0, 0);
+  }
+
+  render() {
+    return (
+      <main>
+        <Helmet title="Oops" />
+        <p>Oops, Page was not found!</p>
+      </main>
+    );
+  }
+}
 
 export default NotFound;

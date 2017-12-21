@@ -2,36 +2,26 @@
 /* eslint-disable import/no-named-as-default */
 
 
-import React from 'react';
-// import PropTypes from 'prop-types';
+import React, { PureComponent } from 'react';
 import Helmet from 'react-helmet';
 import AuthorsFragment from '../../../containers/Fragments/Authors';
 
-// Export this for unit testing more easily
-const Authors = () => (
-  <main>
-    <Helmet title="Authors" />
-    <AuthorsFragment />
-  </main>
+export class Authors extends PureComponent {
+  componentDidMount() {
+    window.scrollTo(0, 0);
+  }
+  componentDidUpdate() {
+    window.scrollTo(0, 0);
+  }
 
-);
-
-// Authors.propTypes = {
-//   home: PropTypes.shape({
-//     readyStatus: PropTypes.string,
-//     err: PropTypes.any,
-//     list: PropTypes.arrayOf(PropTypes.object),
-//   }),
-//   fetchArticlesIfNeeded: PropTypes.func,
-// };
-//
-// Authors.defaultProps = {
-//   home: {
-//     readyStatus: '',
-//     err: '',
-//     list: [{}],
-//   },
-//   fetchArticlesIfNeeded: () => {},
-// };
+  render() {
+    return (
+      <main>
+        <Helmet title="Authors" />
+        <AuthorsFragment />
+      </main>
+    );
+  }
+}
 
 export default Authors;

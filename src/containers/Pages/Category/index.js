@@ -2,20 +2,30 @@
 /* eslint-disable import/no-named-as-default */
 
 
-import React from 'react';
+import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 
 import CategoryArticles from '../../../containers/Fragments/CategoryArticles';
 
-// Export this for unit testing more easily
-const Category = ({ match }) => (
-  <main>
-    <Helmet title={match.params.query} />
-    <h1 className="tac  black  title-font  t5  pt4">{match.params.query}</h1>
-    <CategoryArticles match={match} />
-  </main>
-);
+export class Category extends PureComponent {
+  componentDidMount() {
+    window.scrollTo(0, 0);
+  }
+  componentDidUpdate() {
+    window.scrollTo(0, 0);
+  }
+
+  render() {
+    return (
+      <main>
+        <Helmet title={this.props.match.params.query} />
+        <h1 className="tac  black  title-font  t5  pt4">{this.props.match.params.query}</h1>
+        <CategoryArticles match={this.props.match} />
+      </main>
+    );
+  }
+}
 
 Category.propTypes = {
   match: PropTypes.shape(),

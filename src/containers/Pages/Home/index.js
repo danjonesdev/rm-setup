@@ -2,8 +2,7 @@
 /* eslint-disable import/no-named-as-default */
 
 
-import React from 'react';
-// import PropTypes from 'prop-types';
+import React, { PureComponent } from 'react';
 import Helmet from 'react-helmet';
 
 import WeekArticles from '../../../containers/Fragments/WeekArticles';
@@ -12,37 +11,28 @@ import CategoryGrid from '../../../components/CategoryGrid';
 import SearchInput from '../../../components/SearchInput';
 import SubscribeBanner from '../../../components/SubscribeBanner';
 
-// Export this for unit testing more easily
-const Home = () => (
-  <main>
-    <Helmet title="Home" />
-    <WeekArticles />
-    <p className="pt3  t6  fw6  black  tac  title-font">Subscribe to Rendah</p>
-    <div className="pt1  pb4"><SubscribeBanner /></div>
-    <LatestArticles />
-    <CategoryGrid />
-    <p className="pt4  t6  fw6  black  tac  title-font">Search the site for more</p>
-    <div className="pt1  pb4"><SearchInput /></div>
-  </main>
+export class Home extends PureComponent {
+  componentDidMount() {
+    window.scrollTo(0, 0);
+  }
+  componentDidUpdate() {
+    window.scrollTo(0, 0);
+  }
 
-);
-
-// Home.propTypes = {
-//   home: PropTypes.shape({
-//     readyStatus: PropTypes.string,
-//     err: PropTypes.any,
-//     list: PropTypes.arrayOf(PropTypes.object),
-//   }),
-//   fetchArticlesIfNeeded: PropTypes.func,
-// };
-//
-// Home.defaultProps = {
-//   home: {
-//     readyStatus: '',
-//     err: '',
-//     list: [{}],
-//   },
-//   fetchArticlesIfNeeded: () => {},
-// };
+  render() {
+    return (
+      <main>
+        <Helmet title="Home" />
+        <WeekArticles />
+        <p className="pt3  t6  fw6  black  tac  title-font">Subscribe to Rendah</p>
+        <div className="pt1  pb4"><SubscribeBanner /></div>
+        <LatestArticles />
+        <CategoryGrid />
+        <p className="pt4  t6  fw6  black  tac  title-font">Search the site for more</p>
+        <div className="pt1  pb4"><SearchInput /></div>
+      </main>
+    );
+  }
+}
 
 export default Home;
