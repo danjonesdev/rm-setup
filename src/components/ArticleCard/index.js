@@ -4,8 +4,7 @@ jsx-a11y/no-static-element-interactions */
 
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
-import { Redirect } from 'react-router-dom';
-import classNames from 'classnames';
+import { Link } from 'react-router-dom';
 
 // import GetImage from '../Helpers/GetImage';
 
@@ -21,21 +20,12 @@ import BulletList from './Sections/BulletList';
 import NumberedList from './Sections/NumberedList';
 // import Soundcloud from './Sections/Soundcloud';
 import Youtube from './Sections/Youtube';
-import Link from './Sections/Link';
+import ArticleLink from './Sections/Link';
 
 import AuthorInfo from '../../containers/Fragments/AuthorInfo';
 
 // Export this for unit testing more easily
 export class ArticleCard extends PureComponent {
-  constructor() {
-    super();
-    this.state = {
-      fireAuthorRedirect: false,
-      authorName: null,
-      isLeaving: false,
-    };
-  }
-
   heading = () => {
     const title = this.props.info.title;
 
@@ -133,7 +123,7 @@ export class ArticleCard extends PureComponent {
         case 'link':
           return (
             <div className="pv3">
-              <Link
+              <ArticleLink
                 key={i}
                 text={item.section.text}
                 url={item.section.url}
@@ -149,21 +139,7 @@ export class ArticleCard extends PureComponent {
     return false;
   }
 
-  handleClick = (attr, type) => {
-    if (type === 'author') {
-      this.setState({ isLeaving: true });
-      setTimeout(() => {
-        this.setState({ authorName: attr.replace(/\s+/g, '-') });
-        this.setState({ fireAuthorRedirect: true });
-      }, 200);
-    }
-  }
-
   render() {
-    const isLeavingClass = classNames({ 'fade-out': this.state.isLeaving });
-    const { from } = this.props.location.state || '/';
-    const fireAuthorRedirect = this.state.fireAuthorRedirect;
-
     const article = this.props.info;
     const sections = this.sections;
     const authorInfoMatch = { params: { id: article.author } };
@@ -171,7 +147,7 @@ export class ArticleCard extends PureComponent {
     return (
       <div>
         <Seo article={article} />
-        <div className={isLeavingClass}>
+        <div>
           <div className="articleCard">
 
             <figure className="rel  articleCard__hero">
@@ -184,7 +160,7 @@ export class ArticleCard extends PureComponent {
                 <div className="row">
                   <div className="col-md-16  col-md-offset-4">
                     <span className="grey  t8">{article.created} | </span>
-                    <span className="grey  t8  cp  link" onClick={() => this.handleClick(article.author, 'author')}>{article.author}</span>
+                    <Link to={`/Article/${article.author.replace(/\s+/g, '-')}`}><span className="grey  t8  cp  link">{article.author}</span></Link>
                     {this.heading()}
                     {article.body.map((item, i) => (
                       sections(item, i)
@@ -197,11 +173,6 @@ export class ArticleCard extends PureComponent {
             <AuthorInfo match={authorInfoMatch} />
           </div>
         </div>
-        {fireAuthorRedirect ? (
-          <Redirect push to={from || `/Author/${this.state.authorName}`} />
-        ) : (
-          false
-        )}
       </div>
     );
   }
@@ -209,12 +180,10 @@ export class ArticleCard extends PureComponent {
 
 ArticleCard.propTypes = {
   info: PropTypes.shape(),
-  location: PropTypes.shape(),
 };
 
 ArticleCard.defaultProps = {
   info: {},
-  location: {},
 };
 
 export default ArticleCard;
