@@ -18,7 +18,7 @@ export class WeekArticleListLoaded extends PureComponent {
               <article className="col-sm-12  col-md-12  pv3  weekArticleList__col--week">
 
                 <figure className="rel  pb3">
-                  <Link to={`/Article/${article.title.replace(/\s+/g, '-')}`} className="db  over-hidden  weekArticleList__img--cont onClick={() => this.handleClick(article._id, 'article')}">
+                  <Link to={`/Article/${article.title.replace(/\s+/g, '-')}`} className="db  over-hidden  weekArticleList__img--cont">
                     <img className="mb3  w-100  zoom-in-fade-in-iteration--item  cp  weekArticleList__img" alt={article.title} src={`http://res.cloudinary.com/dzz8ji5lj/image/upload/${article.img}`} />
                   </Link>
                 </figure>
