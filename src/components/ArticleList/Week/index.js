@@ -49,7 +49,7 @@ export class WeekArticleListLoaded extends PureComponent {
         <div className="row">
           {this.props.list.map((article, i) => (
             <div key={i} className="link  w-100  zoom-in-fade-in-iteration--cont">
-              <article className={`col-sm-12  col-md-12  tac-sm  pv3  weekArticleList__col--week  ${isLeavingClass}`}>
+              <article className={`col-sm-12  col-md-12  pv3  weekArticleList__col--week  ${isLeavingClass}`}>
 
                 <figure className="rel  pb3">
                   <div onClick={() => this.handleClick(article.title, 'article')} className="over-hidden  weekArticleList__img--cont onClick={() => this.handleClick(article._id, 'article')}">
@@ -59,7 +59,7 @@ export class WeekArticleListLoaded extends PureComponent {
                 <div className="abs  weekArticleList__title--cont">
                   <span className="white  bg-black  pv1  pl2  mv2  t8">{article.created} | </span>
                   <span className="white  bg-black  pv1  pr2  mv2  t8  cp  link" onClick={() => this.handleClick(article.author, 'author')}>{article.author}</span>
-                  <h2 onClick={() => this.handleClick(article.title, 'article')} className="white  bg-black  pv1  ph2  mv2  t7  pt2  cp  title-font  over-hidden  weekArticleList__title">{article.title}</h2>
+                  <h2 onClick={() => this.handleClick(article.title, 'article')} className="white  bg-black  pv1  ph2  mv2  t7  pt2  cp  title-font  over-hidden  w-90  weekArticleList__title">{article.title}</h2>
                 </div>
 
               </article>

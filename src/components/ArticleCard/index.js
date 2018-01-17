@@ -23,6 +23,8 @@ import NumberedList from './Sections/NumberedList';
 import Youtube from './Sections/Youtube';
 import Link from './Sections/Link';
 
+import AuthorInfo from '../../containers/Fragments/AuthorInfo';
+
 // Export this for unit testing more easily
 export class ArticleCard extends PureComponent {
   constructor() {
@@ -164,6 +166,7 @@ export class ArticleCard extends PureComponent {
 
     const article = this.props.info;
     const sections = this.sections;
+    const authorInfoMatch = { params: { id: article.author } };
 
     return (
       <div>
@@ -190,6 +193,8 @@ export class ArticleCard extends PureComponent {
                 </div>
               </article>
             </section>
+
+            <AuthorInfo match={authorInfoMatch} />
           </div>
         </div>
         {fireAuthorRedirect ? (

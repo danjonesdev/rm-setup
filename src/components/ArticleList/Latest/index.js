@@ -49,7 +49,7 @@ export class LatestArticleListLoaded extends PureComponent {
         <div className="row">
           {this.props.list.map((article, i) => (
             <div key={i} className="link  w-100  zoom-in-fade-in-iteration--cont">
-              <article className={`col-sm-12  col-md-6  tac-sm  pv3  latestArticleList__col--latest  ${isLeavingClass}`}>
+              <article className={`col-sm-12  col-md-6  pv3  latestArticleList__col--latest  ${isLeavingClass}`}>
 
                 <figure className="rel  pb3">
                   <div onClick={() => this.handleClick(article.title, 'article')} className="over-hidden  latestArticleList__img--cont onClick={() => this.handleClick(article._id, 'article')}">

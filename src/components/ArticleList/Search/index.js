@@ -49,7 +49,7 @@ export class SearchArticleList extends PureComponent {
         <div className="row">
           {this.props.list.map((article, i) => (
             <div key={i} className="link  w-100  zoom-in-fade-in-iteration--cont">
-              <article className={`col-sm-12  tac-sm  pv3  searchArticleList__col--search  ${isLeavingClass}`}>
+              <article className={`col-sm-12  pv3  searchArticleList__col--search  ${isLeavingClass}`}>
 
                 <div className="row">
                   <div className="col-sm-12">
