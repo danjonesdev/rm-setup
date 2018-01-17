@@ -41,7 +41,7 @@ export class ArticleCard extends PureComponent {
 
     if (title) {
       return (
-        <h2 className="pb4  pt2  title-font">{title}</h2>
+        <h1 className="pb4  pt2  title-font">{title}</h1>
       );
     }
     console.log('Not Returned: ArticleCard.heading');

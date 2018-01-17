@@ -2,6 +2,7 @@
 /* eslint-disable import/no-named-as-default, react/no-array-index-key, react/self-closing-comp */
 
 import React, { PureComponent } from 'react';
+import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
 // Export this for unit testing more easily
@@ -26,7 +27,7 @@ export class ArticleCard extends PureComponent {
                   </div>
 
                   <div className="col-md-18">
-                    <h2 className="black  t7  pt2  tac-md  cp  title-font">{author.name}</h2>
+                    <Link to={`/Author/${author.name.replace(/\s+/g, '-')}`} className="black  t7  pt2  tac-md  cp  title-font  fw6">{author.name}</Link>
                     <p className="grey  t8  pv2  tac-md">{author.description}</p>
                     <hr />
                     <div className="tac-md  pb2">

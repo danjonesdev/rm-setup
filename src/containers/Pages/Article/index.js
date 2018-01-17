@@ -21,7 +21,6 @@ export class Article extends PureComponent {
     return (
       <main>
         <ArticleInfo match={this.props.match} />
-        <h2 className="tac  mb4">Comments</h2>
         <div className="container  tac">
           <div className="row">
             <div className="col-md-16 col-md-offset-4">
