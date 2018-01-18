@@ -27,8 +27,8 @@ export class SearchArticleList extends PureComponent {
                   </div>
                   <div className="col-sm-12">
                     <span className="grey  t8"><time dateTime="10/17/09">10/17/09</time> | </span>
-                    <Link to={`/Author/${article.author.replace(/\s+/g, '-')}`}><span className="grey  t8  cp  link">{article.author}</span></Link>
-                    <Link to={`/Article/${article.title.replace(/\s+/g, '-')}`}><h2 className="black  t7  pt2  cp  title-font  over-hidden  searchArticleList__title">{article.title}</h2></Link>
+                    <Link to={`/Author/${article.author.replace(/\s+/g, '-')}`} className="no-underline"><span className="grey  t8  cp  link">{article.author}</span></Link>
+                    <Link to={`/Article/${article.title.replace(/\s+/g, '-')}`} className="no-underline"><h2 className="black  t7  pt2  cp  title-font  over-hidden  searchArticleList__title">{article.title}</h2></Link>
                     <p className="grey  t8  pv2  over-hidden  searchArticleList__intro">{article.description}</p>
                   </div>
                 </div>

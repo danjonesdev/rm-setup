@@ -19,7 +19,7 @@ export class Author extends PureComponent {
     return (
       <main>
         <AuthorInfo match={this.props.match} />
-        <h2 className="tac  mb4">Articles</h2>
+        <h2 className="tac  mb4">Latest from this Author</h2>
         <AuthorArticles match={this.props.match} />
       </main>
     );

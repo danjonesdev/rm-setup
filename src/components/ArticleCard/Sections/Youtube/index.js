@@ -12,7 +12,7 @@ export class Link extends PureComponent {
     console.log(this.props);
     return (
       <div>
-        <YouTube className="center  tac  db" videoId={this.props.videoId} />
+        <YouTube className="center  tac  db w-100" videoId={this.props.videoId} />
       </div>
     );
   }

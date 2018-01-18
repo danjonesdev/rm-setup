@@ -23,8 +23,8 @@ export class LatestArticleListLoaded extends PureComponent {
                   </Link>
                 </figure>
                 <span className="grey  t8">{article.created} | </span>
-                <Link to={`/Author/${article.author.replace(/\s+/g, '-')}`}><span className="grey  t8  cp  link">{article.author}</span></Link>
-                <Link to={`/Article/${article.title.replace(/\s+/g, '-')}`}><h2 className="black  t7  pt2  cp  title-font  over-hidden  latestArticleList__title">{article.title}</h2></Link>
+                <Link to={`/Author/${article.author.replace(/\s+/g, '-')}`} className="no-underline"><span className="grey  t8  cp  link">{article.author}</span></Link>
+                <Link to={`/Article/${article.title.replace(/\s+/g, '-')}`} className="no-underline"><h2 className="black  t7  pt2  cp  title-font  over-hidden  latestArticleList__title">{article.title}</h2></Link>
                 <p className="grey  t8  pv2  over-hidden  latestArticleList__intro">{article.description}</p>
 
               </article>

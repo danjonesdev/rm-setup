@@ -27,12 +27,12 @@ export class ArticleCard extends PureComponent {
                   </div>
 
                   <div className="col-md-18">
-                    <Link to={`/Author/${author.name.replace(/\s+/g, '-')}`} className="black  t7  pt2  tac-md  cp  title-font  fw6">{author.name}</Link>
+                    <Link to={`/Author/${author.name.replace(/\s+/g, '-')}`} className="link  black  t7  pt2  db  tac-md  cp  title-font  fw6  no-underline">{author.name}</Link>
                     <p className="grey  t8  pv2  tac-md">{author.description}</p>
                     <hr />
                     <div className="tac-md  pb2">
                       {author.links.map((link, i) => (
-                        <a key={i} className="pr3  t8  fornt-normal-a  dark-grey  authorCard__social-link" href={link.url}>{link.text}</a>
+                        <a key={i} className="link  no-underline  pr3  t8  fornt-normal-a  dark-grey  authorCard__social-link" href={link.url}>{link.text}</a>
                       ))}
                     </div>
                   </div>
