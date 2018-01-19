@@ -13,8 +13,8 @@ export class ArticleCard extends PureComponent {
     return (
       <div className="container  mv4">
         <div className="row">
-          <div className="col-md-16  col-md-offset-4">
-            <div className="row">
+          <div className="col-xs-20  col-xs-offset-2  col-md-16  col-md-offset-4">
+            <div className="row  shadow2  br2">
               <div className="link  w-100  authorCard__cont">
                 <div className="center  pt3">
 

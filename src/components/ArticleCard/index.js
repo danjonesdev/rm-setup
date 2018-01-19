@@ -158,7 +158,7 @@ export class ArticleCard extends PureComponent {
             <section className="rel">
               <article className="container  articleCard__content">
                 <div className="row">
-                  <div className="col-md-16  col-md-offset-4">
+                  <div className="col-md-16  col-md-offset-4  ph4-sm">
                     <span className="grey  t8">{article.created} | </span>
                     <Link to={`/Article/${article.author.replace(/\s+/g, '-')}`} className="no-underline"><span className="grey  t8  cp">{article.author}</span></Link>
                     {this.heading()}
