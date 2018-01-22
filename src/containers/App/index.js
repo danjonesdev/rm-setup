@@ -11,9 +11,11 @@ import config from '../../config';
 import routes from '../../routes';
 import '../../theme/main.scss';
 
-import Header from './Header';
-import Nav from './Nav';
 import BurgerIco from './BurgerIco';
+import Nav from './Nav';
+import Header from './Header';
+import Footer from './Footer';
+
 
 const App = (): Element<'div'> => {
   // Use it when sub routes are added to any route it'll work
@@ -39,8 +41,7 @@ const App = (): Element<'div'> => {
         <Header />
         <Switch>{routes.map(route => routeWithSubRoutes(route))}</Switch>
       </div>
-
-
+      <Footer />
     </div>
   );
 };
