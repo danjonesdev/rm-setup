@@ -18,7 +18,7 @@ export class Category extends PureComponent {
 
   render() {
     return (
-      <main>
+      <main className="page-fade-in">
         <Helmet title={this.props.match.params.query} />
         <h1 className="tac  black  title-font  t5  pt4">{this.props.match.params.query}</h1>
         <CategoryArticles match={this.props.match} />

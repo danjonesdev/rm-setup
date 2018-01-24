@@ -18,7 +18,7 @@ export class Article extends PureComponent {
 
   render() {
     return (
-      <main>
+      <main className="page-fade-in">
         <ArticleInfo match={this.props.match} />
         <div className="container  tac">
           <div className="row">

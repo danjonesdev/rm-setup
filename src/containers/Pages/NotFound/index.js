@@ -11,7 +11,7 @@ export class NotFound extends PureComponent {
 
   render() {
     return (
-      <main>
+      <main className="page-fade-in">
         <Helmet title="Oops" />
         <p>Oops, Page was not found!</p>
       </main>

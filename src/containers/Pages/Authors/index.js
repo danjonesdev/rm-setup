@@ -16,7 +16,7 @@ export class Authors extends PureComponent {
 
   render() {
     return (
-      <main>
+      <main className="page-fade-in">
         <Helmet title="Authors" />
         <AuthorsFragment />
       </main>
