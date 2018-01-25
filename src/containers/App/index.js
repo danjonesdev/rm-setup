@@ -40,8 +40,8 @@ const App = (): Element<'div'> => {
       <div className="App">
         <Header />
         <Switch>{routes.map(route => routeWithSubRoutes(route))}</Switch>
+        <Footer />
       </div>
-      <Footer />
     </div>
   );
 };

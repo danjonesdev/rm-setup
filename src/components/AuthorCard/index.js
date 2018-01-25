@@ -11,7 +11,7 @@ export class ArticleCard extends PureComponent {
     const author = this.props.info;
 
     return (
-      <div className="container  mv4">
+      <div className="container  mv4  zoom-in-fade-in-iteration--cont">
         <div className="row">
           <div className="col-xs-20  col-xs-offset-2  col-md-16  col-md-offset-4">
             <div className="row  shadow2  br2">
@@ -20,8 +20,8 @@ export class ArticleCard extends PureComponent {
 
                   <div className="col-md-6">
                     <figure className="rel  pb3  center">
-                      <div className="br-100  authorCard__img--cont">
-                        <img className="mb3  center  w4  br-100  zoom-in-fade-in-iteration--item  authorCard__img" alt={author.name} src={`http://res.cloudinary.com/dzz8ji5lj/image/upload/${author.img}`} />
+                      <div className="authorCard__img--cont">
+                        <img className="mb3  center  w4  zoom-in-fade-in-iteration--item  authorCard__img" alt={author.name} src={`http://res.cloudinary.com/dzz8ji5lj/image/upload/${author.img}`} />
                       </div>
                     </figure>
                   </div>
