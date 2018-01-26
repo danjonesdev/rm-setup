@@ -18,7 +18,7 @@ export class About extends PureComponent {
             <div className="col-sm-12">
               <h1 className="mt4">About Rendah</h1>
               <p className="pv4">
-                {'It didnt seem right that whilst so much was happening within the scene, there were so few places to read about it. Rendah was created to provide some webspace exposure for all these new up and coming halftime proiducers and DJs, we honestly just wanted somewhere for people to read about the hype, so here it is.'}
+                {'It didnt seem right that whilst so much was happening within the scene, there were so few places to read about it. Rendah was created to provide some webspace exposure for halftime/beats producers and DJs, we honestly just wanted somewhere for people to read about the hype, so here it is.'}
               </p>
             </div>
             <div className="col-sm-12">
