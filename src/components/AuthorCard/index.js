@@ -32,7 +32,7 @@ export class ArticleCard extends PureComponent {
                     <hr />
                     <div className="tac-md  pb2">
                       {author.links.map((link, i) => (
-                        <a key={i} className="link  no-underline  pr3  t8  fornt-normal-a  dark-grey  authorCard__social-link" href={link.url}>{link.text}</a>
+                        <a key={i} className="link  no-underline  pr3  t8  fornt-normal-a  dark-grey  authorCard__social-link" href={link.url} target="_blank">{link.text}</a>
                       ))}
                     </div>
                   </div>

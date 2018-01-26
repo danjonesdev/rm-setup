@@ -19,7 +19,7 @@ export class Author extends PureComponent {
     return (
       <main className="page-fade-in">
         <AuthorInfo match={this.props.match} />
-        <h2 className="tac  mb4">Latest from this Author</h2>
+        <p className="tac  mb2  mt3">Latest from this Author</p>
         <AuthorArticles match={this.props.match} />
       </main>
     );

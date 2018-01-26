@@ -1,12 +1,13 @@
 /* stylelint-disable */
 
 .link {
+  outline: 0;
   text-decoration: none;
   transition: all 0.2s ease-in;
 }
 
 .link:focus {
-  outline: 1px dotted currentColor;
+  outline: 0;
 }
 
 .link:hover {
