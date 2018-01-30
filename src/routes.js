@@ -17,6 +17,7 @@ import ArticlePage from './containers/Pages/Article';
 import AuthorPage from './containers/Pages/Author';
 import NotFoundPage from './containers/Pages/NotFound';
 import AboutPage from './containers/Pages/About';
+import ContactPage from './containers/Pages/Contact';
 import AuthorsPage from './containers/Pages/Authors';
 
 export default [
@@ -69,6 +70,10 @@ export default [
   {
     path: '/About',
     component: AboutPage,
+  },
+  {
+    path: '/Contact',
+    component: ContactPage,
   },
   {
     path: '*',
