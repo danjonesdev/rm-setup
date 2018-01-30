@@ -23,7 +23,7 @@ export class About extends PureComponent {
             </div>
           </div>
           <div className="row">
-            <div className="col-sm-16  col-md-offset-4">
+            <div className="col-sm-18  col-sm-offset-3">
               <h2 className="pv2">Why?</h2>
               <p className="pv3">
                 It didn&#39;t seem right that whilst so much was happening within the scene, there were so few places to read about it.
@@ -33,7 +33,7 @@ export class About extends PureComponent {
             </div>
           </div>
           <div className="row">
-            <div className="col-sm-12  col-md-offset-6">
+            <div className="col-sm-18  col-sm-offset-3">
               <h2 className="pv2">Who?</h2>
               <p className="pv3">
                 Web developer/Halftime beats Producer <a href="www.github.com" rel="noopener noreferrer" target="_blank" className="underline  black  link">Dan Jones</a>
@@ -44,7 +44,7 @@ export class About extends PureComponent {
             </div>
           </div>
           <div className="row">
-            <div className="col-sm-12  col-md-offset-6">
+            <div className="col-sm-18  col-sm-offset-3">
               <h2 className="pv2">What About You?</h2>
               <p className="pv3">
                 We&#39;re constantly encouraging people to get involved, as clichue as it sounds, Rendah is about community, so wether you&#39;re an
