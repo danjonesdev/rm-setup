@@ -17,16 +17,16 @@ export class Footer extends PureComponent {
             <div className="col-md-12">
               <ul className="pa0  ma0  footer__ul">
                 <li>
-                  <Link className="title-font  black  dib  ph2  t5  pt2  link" to={'/'}>Home</Link>
+                  <Link className="title-font  black  dib  ph2  t5  pt1  link" to={'/'}>Home</Link>
                 </li>
                 <li>
-                  <Link className="title-font  black  dib  ph2  t5  pt2  link" to={'/Authors'}>Authors</Link>
+                  <Link className="title-font  black  dib  ph2  t5  pt1  link" to={'/Authors'}>Authors</Link>
                 </li>
                 <li>
-                  <Link className="title-font  black  dib  ph2  t5  pt2  link" to={'/About'}>About Us</Link>
+                  <Link className="title-font  black  dib  ph2  t5  pt1  link" to={'/About'}>About Us</Link>
                 </li>
                 <li>
-                  <Link className="title-font  black  dib  ph2  t5  pt2  link" to={'/Contact'}>Contact</Link>
+                  <Link className="title-font  black  dib  ph2  t5  pt1  link" to={'/Contact'}>Contact</Link>
                 </li>
               </ul>
             </div>
