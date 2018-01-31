@@ -1,7 +1,7 @@
 {
-  "name": "react-cool-starter",
+  "name": "rm-setup",
   "version": "2.5.1",
-  "description": "A starter boilerplate for an universal web application with the best development experience and best practices.",
+  "description": "rm-setup",
   "main": "index.js",
   "engines": {
     "node": ">=6.0",
@@ -9,12 +9,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/wellyshen/react-cool-starter"
+    "url": ""
   },
   "keywords": [
-    "starter",
-    "boilerpate",
-    "universal",
     "react",
     "redux",
     "react router",
@@ -24,17 +21,14 @@
     "flow",
     "hot reloading",
     "babel",
-    "postcss",
-    "jest",
-    "unit testing",
     "performance optimizing"
   ],
-  "author": "WellyShen <hivoid19@gmail.com> (https://github.com/wellyshen)",
+  "author": "Dan Jones",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/wellyshen/react-cool-starter/issues"
+    "url": ""
   },
-  "homepage": "https://github.com/wellyshen/react-cool-starter",
+  "homepage": "",
   "scripts": {
     "start": "better-npm-run start",
     "start:production": "yarn build && yarn start:prod",
