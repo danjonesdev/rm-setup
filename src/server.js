@@ -338,17 +338,19 @@ MongoClient.connect('mongodb://dannyjones360:test@ds123930.mlab.com:23930/halfti
     console.log('db connected');
 })
 
-if (port) {
-  app.listen(port, host, (err) => {
-    const url = `http://${host}:${port}`;
+app.listen(app.get('port'));
 
-    if (err) console.error(`==> 😭  OMG!!! ${err}`);
-
-    console.info(chalk.green(`==> 🌎  Listening at ${url}`));
-
-    // Open Chrome
-    require('../tools/openBrowser')(url);
-  });
-} else {
-  console.error(chalk.red('==> 😭  OMG!!! No PORT environment variable has been specified'));
-}
+// if (port) {
+//   app.listen(host, (err) => {
+//     const url = `http://${host}:${app.get('port')}`;
+//
+//     if (err) console.error(`==> 😭  OMG!!! ${err}`);
+//
+//     console.info(chalk.green(`==> 🌎  Listening at ${url}`));
+//
+//     // Open Chrome
+//     require('../tools/openBrowser')(url);
+//   });
+// } else {
+//   console.error(chalk.red('==> 😭  OMG!!! No PORT environment variable has been specified'));
+// }

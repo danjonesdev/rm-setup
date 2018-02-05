@@ -1,6 +1,6 @@
 module.exports = {
-  host: 3000 || 'localhost', // Define your host from 'package.json'
-  port: 3000,
+  host: process.env.NODE_HOST || 'localhost', // Define your host from 'package.json'
+  port: process.env.PORT,
   app: {
     htmlAttributes: { lang: 'en' },
     title: 'Rendah',
