@@ -22,8 +22,6 @@ import { port, host } from './config';
 
 const app = express();
 
-app.set('port', process.env.PORT || 3000);
-
 // Using helmet to secure Express with various HTTP headers
 app.use(helmet());
 // Prevent HTTP parameter pollution.
