@@ -15,11 +15,11 @@ export class AuthorList extends PureComponent {
         <div className="row">
           {this.props.list.map((author, i) => (
             <Link to={`/Author/${author.name.replace(/\s+/g, '-')}`} key={i} className="link  w-100  zoom-in-fade-in-iteration--cont">
-              <div className={'col-sm-12  col-md-6  pv3  latestArticleList__col--latest'}>
+              <div className="col-sm-12  col-md-6  pv3  latestArticleList__col--latest">
 
                 <figure className="rel  pb3">
-                  <div className="br2  authorList__img--cont">
-                    <img className="mb3  br2  center  zoom-in-fade-in-iteration--item  authorList__img" alt={author.name} src={`http://res.cloudinary.com/dzz8ji5lj/image/upload/${author.img}`} />
+                  <div className="shadow2  authorList__img--cont">
+                    <img className="mb3  center  zoom-in-fade-in-iteration--item  authorList__img" alt={author.name} src={`http://res.cloudinary.com/dzz8ji5lj/image/upload/${author.img}`} />
                   </div>
                 </figure>
                 <h2 className="link  black  t7  pt2  tac  cp  title-font">{author.name}</h2>

@@ -20,8 +20,8 @@ export class ArticleCard extends PureComponent {
 
                   <div className="col-md-6">
                     <figure className="rel  pb3  center">
-                      <div className="br2  authorCard__img--cont">
-                        <img className="mb3  br2  center  w4  zoom-in-fade-in-iteration--item  authorCard__img" alt={author.name} src={`http://res.cloudinary.com/dzz8ji5lj/image/upload/${author.img}`} />
+                      <div className="shadow2  authorCard__img--cont">
+                        <img className="mb3  center  w4  zoom-in-fade-in-iteration--item  authorCard__img" alt={author.name} src={`http://res.cloudinary.com/dzz8ji5lj/image/upload/${author.img}`} />
                       </div>
                     </figure>
                   </div>
@@ -32,7 +32,7 @@ export class ArticleCard extends PureComponent {
                     <hr />
                     <div className="tac-md  pb2">
                       {author.links.map((link, i) => (
-                        <a key={i} className="link  no-underline  pr3  t8  fornt-normal-a  dark-grey  authorCard__social-link" href={link.url} target="_blank">{link.text}</a>
+                        <a key={i} className="link  pr3  t8  fornt-normal-a  dark-grey  authorCard__social-link" href={link.url} target="_blank">{link.text}</a>
                       ))}
                     </div>
                   </div>

@@ -10,7 +10,7 @@ import { Fb, Tw, Insta } from '../../../components/Elements/Svg';
 import SearchInput from '../../../components/SearchInput';
 
 const Header = (): Element<'div'> => (
-  <div className="rel  bb  bw1  z9">
+  <div className="rel  shadow2  z9">
     <header role="banner">
       <Link className="link  latestArticleList__cont" to={'/'}>
         <img className="logo" width="50" src={require('../assets/Rendah-Logo-Medium.png')} alt="Logo" role="presentation" />

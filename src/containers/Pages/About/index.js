@@ -16,9 +16,9 @@ export class About extends PureComponent {
     return (
       <main className="page-fade-in">
         <Helmet title="About" />
-        <div className="container  tac">
+        <div className="container  mb4">
           <div className="row">
-            <div className="col-xs-24">
+            <div className="col-sm-18  col-sm-offset-3">
               <h1 className="mt4  mb3">About Rendah</h1>
             </div>
           </div>
