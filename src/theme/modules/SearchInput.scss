@@ -2,14 +2,19 @@
 
 .searchInput {
   margin: 0 auto;
-  width: 180px;
+  width: 200px;
   align-self: center;
   padding-top: 8px;
 }
 
 .searchInput__form {
-  width: 180px;
+  width: 200px;
   display: inline-block;
+}
+
+.searchInput__search-icon {
+  width: 12px;
+  height: auto;
 }
 
 .searchInput__input {

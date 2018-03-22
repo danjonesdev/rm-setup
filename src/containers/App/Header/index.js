@@ -16,7 +16,7 @@ const Header = (): Element<'div'> => (
         <img className="logo" width="50" src={require('../assets/Rendah-Logo-Medium.png')} alt="Logo" role="presentation" />
       </Link>
       <div className="header__social--cont  pr2">
-        <SearchInput textAlign="tar" />
+        <SearchInput textAlign="tal" />
         <a className="header__social  ph1  dn-sm" href="https://www.facebook.com/rendahmag/" rel="noopener noreferrer" target="_blank"><Fb /></a>
         <a className="header__social  ph1  dn-sm" href="https://twitter.com/RendahMag" rel="noopener noreferrer" target="_blank"><Tw /></a>
         <a className="header__social  ph1  dn-sm" href="https://www.instagram.com/rendahmag/" rel="noopener noreferrer" target="_blank"><Insta /></a>
