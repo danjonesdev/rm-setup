@@ -14,6 +14,7 @@ import Seo from './Seo';
 // import QA from './Sections/QA';
 import Heading from './Sections/Heading';
 import Paragraph from './Sections/Paragraph';
+import Image from './Sections/Image';
 import Question from './Sections/Question';
 import Answer from './Sections/Answer';
 import BulletList from './Sections/BulletList';
@@ -59,12 +60,15 @@ export class ArticleCard extends PureComponent {
               />
             </div>
           );
-        // case 'img':
-        //   return (
-        //     <div className="pv3">
-        //       <p>img goes here</p>
-        //     </div>
-        //   );
+        case 'image':
+          return (
+            <div className="pv3">
+              <Image
+                key={i}
+                img={item.section.img}
+              />
+            </div>
+          );
         case 'question':
           return (
             <div className="pv3">
