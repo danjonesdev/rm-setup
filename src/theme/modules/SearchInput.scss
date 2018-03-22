@@ -12,6 +12,15 @@
   display: inline-block;
 }
 
+.searchInput__submit {
+  background: none;
+  outline: 0;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  box-shadow: 0;
+}
+
 .searchInput__search-icon {
   width: 12px;
   height: auto;

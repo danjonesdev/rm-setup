@@ -13,7 +13,7 @@ const Header = (): Element<'div'> => (
   <div className="rel  shadow2  z9">
     <header role="banner">
       <Link className="link  latestArticleList__cont" to={'/'}>
-        <img className="logo" width="50" src={require('../assets/Rendah-Logo-Medium.png')} alt="Logo" role="presentation" />
+        <img className="logo" width="50" src={require('../assets/Rendah-Logo-Small.png')} alt="Logo" role="presentation" />
       </Link>
       <div className="header__social--cont  pr2">
         <SearchInput textAlign="tal" />

@@ -12,7 +12,7 @@ export class SearchInput extends PureComponent {
     this.state = {
       fireRedirect: false,
       inputValue: '',
-      placeholder: 'search by keyword...',
+      placeholder: 'Search by keyword...',
     };
   }
 
@@ -44,7 +44,7 @@ export class SearchInput extends PureComponent {
     return (
       <div className="searchInput">
         <form className="searchInput__form" onSubmit={this.submitForm}>
-          <img className="di  searchInput__search-icon" width="50" src={require('../../containers/App/assets/search.png')} alt="Logo" role="presentation" />
+          <button className="searchInput__submit  cp" tyle="submit"><img className="di  searchInput__search-icon" width="50" src={require('../../containers/App/assets/search.png')} alt="Logo" role="presentation" /></button>
           <input className={`ph2  ${this.props.textAlign}  searchInput__input`} type="search" placeholder={this.state.placeholder} value={this.state.inputValue} onChange={evt => this.updateInputValue(evt)} />
         </form>
         {this.redir()}
