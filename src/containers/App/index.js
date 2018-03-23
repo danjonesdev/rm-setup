@@ -11,8 +11,6 @@ import config from '../../config';
 import routes from '../../routes';
 import '../../theme/main.scss';
 
-import BurgerIco from './BurgerIco';
-import Nav from './Nav';
 import Header from './Header';
 import Footer from './Footer';
 
@@ -34,9 +32,6 @@ const App = (): Element<'div'> => {
   return (
     <div>
       <Helmet {...config.app} />
-      <input type="checkbox" id="navigation" />
-      <BurgerIco />
-      <Nav />
       <div className="App">
         <Header />
         <Switch>{routes.map(route => routeWithSubRoutes(route))}</Switch>
