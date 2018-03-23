@@ -1,12 +1,11 @@
 /* stylelint-disable */
-
 html {
   box-sizing: border-box;
 }
 
 *,
-*::before,
-*::after {
+*::after,
+*::before {
   box-sizing: inherit;
 }
 
@@ -25,13 +24,25 @@ h3,
 h4,
 h5,
 h6 {
+  line-height: 20px;
   letter-spacing: 0.05em;
   margin: 0;
 }
 
 p {
+  line-height: 20px;
   margin: 0;
-  font-size: 1.2rem
+  font-size: 1.2rem;
+}
+
+em {
+  &:before {
+    content: '"';
+  }
+
+  &:after {
+    content: '"';
+  }
 }
 
 figure {
@@ -44,7 +55,6 @@ svg {
   max-width: 100%;
   height: auto;
 }
-
 // input,
 // select,
 // textarea {

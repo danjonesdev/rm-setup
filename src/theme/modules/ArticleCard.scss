@@ -38,6 +38,10 @@
     margin-top: 40px;
     animation: articleCard__content--appear 0.4s ease both;
     animation-delay: 0.4s;
+
+        p {
+          line-height: 28px;
+        }
   }
 
   // anims

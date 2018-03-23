@@ -1,5 +1,9 @@
 /* stylelint-disable */
 
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css?family=Righteous');
+@import url('https://fonts.googleapis.com/css?family=Lato:400,400i,700,700i');
+
 // Typography
 $system-sans: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, 'Ubuntu', 'Roboto', 'Noto', 'Segoe Ui', Arial, sans-serif;
 $helvetica: 'Helvetica Neue', Helvetica, sans-serif;
@@ -9,11 +13,8 @@ $serif: serif;
 
 // theme
 
-@import url('https://fonts.googleapis.com/css?family=Righteous');
-@import url('https://fonts.googleapis.com/css?family=Lato:400,400i,700,700i');
-
 $title-font: 'Roboto', sans-serif;
-$normal-font: 'Lato', sans-serif;
+$normal-font: 'Roboto', sans-serif;
 
 // Colors
 
