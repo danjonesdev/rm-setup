@@ -10,7 +10,7 @@ export class Answer extends PureComponent {
     console.log(this.props);
     return (
       <div>
-        <p><em className="normal-font  dark-grey">{this.props.text}</em></p>
+        <p><em className="normal-font  grey">{this.props.text}</em></p>
       </div>
     );
   }

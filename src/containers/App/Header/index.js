@@ -16,7 +16,7 @@ const Header = (): Element<'div'> => (
         <img className="logo" width="50" src={require('../assets/Rendah-Logo-Small.png')} alt="Logo" role="presentation" />
       </Link>
       <nav className="nav  tal  pt4">
-        <ul className="nav__list  ma0">
+        <ul className="nav__list  ma0  pa0  tac  center">
           <li className="dib">
             <Link className="nav__link  title-font  black  dib  ph2  t6  link" to={'/'}>Home</Link>
           </li>
