@@ -28,9 +28,9 @@ export class Home extends PureComponent {
         <p className="pt3  t6  fw6  black  tac  title-font">Subscribe to Rendah</p>
         <div className="pt1  pb4"><SubscribeBanner /></div>
         <LatestArticles />
-        <CategoryGrid />
         <p className="pt4  t6  fw6  black  tac  title-font">Search the site for more</p>
         <div className="pt1  pb4"><SearchInput textAlign="tac" /></div>
+        <CategoryGrid />
         <Instagram />
       </main>
     );
