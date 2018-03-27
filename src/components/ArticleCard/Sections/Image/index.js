@@ -7,7 +7,6 @@ import PropTypes from 'prop-types';
 // Export this for unit testing more easily
 export class Image extends PureComponent {
   render() {
-    console.log(this.props);
     return (
       <div>
         <img className="w-100  db  center" alt={this.props.img} src={`http://res.cloudinary.com/dzz8ji5lj/image/upload/${this.props.img}`} />

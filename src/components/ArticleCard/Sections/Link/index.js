@@ -7,7 +7,6 @@ import PropTypes from 'prop-types';
 // Export this for unit testing more easily
 export class Link extends PureComponent {
   render() {
-    console.log(this.props);
     return (
       <div>
         <p className="pb1  fornt-normal-a  dark-grey">{this.props.text}</p>

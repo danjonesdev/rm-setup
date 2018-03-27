@@ -7,7 +7,6 @@ import PropTypes from 'prop-types';
 // Export this for unit testing more easily
 export class Question extends PureComponent {
   render() {
-    console.log(this.props);
     return (
       <div>
         <p className="normal-font  fw6  dark-grey">{this.props.text}</p>

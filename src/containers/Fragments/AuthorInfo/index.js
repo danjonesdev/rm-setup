@@ -16,8 +16,6 @@ export class AuthorInfo extends PureComponent {
     fetchAuthorIfNeeded(params.id);
 
     const id = this.props.match.params.id;
-    console.log('match');
-    console.log(this.props.match);
     this.props.fetchAuthorIfNeeded(id);
   }
 

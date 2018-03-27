@@ -54,7 +54,6 @@ if (__DEV__) {
 
 //GET week
 app.get('/api/week', (req, res) => {
-    console.log('week');
 
     var articles = [];
 
@@ -76,7 +75,6 @@ app.get('/api/week', (req, res) => {
 
 //GET articles
 app.get('/api/articles', (req, res) => {
-    console.log('articles');
 
     var articles = [];
 
@@ -98,7 +96,6 @@ app.get('/api/articles', (req, res) => {
 
 //GET authorArticles
 app.get('/api/authorArticles', (req, res) => {
-    console.log('authorArticles');
 
     var articles = [];
 
@@ -126,7 +123,6 @@ app.get('/api/authorArticles', (req, res) => {
 
 //GET extra
 app.get('/api/extra', (req, res) => {
-    console.log('extra');
 
     var articles = [];
 
@@ -146,7 +142,6 @@ app.get('/api/extra', (req, res) => {
 
 //GET authors
 app.get('/api/authors', (req, res) => {
-    console.log('authors');
 
     var authors = [];
 
@@ -167,7 +162,6 @@ app.get('/api/authors', (req, res) => {
 
 //GET search
 app.get('/api/search', (req, res) => {
-    console.log('/api/search');
 
     var articles = [];
 
@@ -194,7 +188,6 @@ app.get('/api/search', (req, res) => {
 
 //GET category
 app.get('/api/category', (req, res) => {
-    console.log('category');
 
     var articles = [];
 
@@ -218,7 +211,6 @@ app.get('/api/category', (req, res) => {
 
 //GET article
 app.get('/api/article', (req, res) => {
-    console.log('article');
 
     var ObjectId = require('mongodb').ObjectID;
     var article = {};
@@ -239,7 +231,6 @@ app.get('/api/article', (req, res) => {
 
 //GET author
 app.get('/api/author', (req, res) => {
-    console.log('author');
 
     var ObjectId = require('mongodb').ObjectID;
     var article = {};

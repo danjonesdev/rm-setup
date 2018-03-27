@@ -9,7 +9,6 @@ import YouTube from 'react-youtube';
 // Export this for unit testing more easily
 export class Link extends PureComponent {
   render() {
-    console.log(this.props);
     return (
       <div>
         <YouTube className="center  tac  db w-100" videoId={this.props.videoId} />
