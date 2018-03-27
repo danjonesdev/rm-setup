@@ -150,7 +150,7 @@ export class ArticleCard extends PureComponent {
 
     return (
       <div>
-        <Seo article={article} />
+        <Seo data={article} />
         <div>
           <div className="articleCard">
 

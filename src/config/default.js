@@ -12,7 +12,7 @@ module.exports = {
       },
       {
         name: 'apple-mobile-web-app-title',
-        content: 'Vernacare',
+        content: 'Rendah',
       },
       {
         name: 'apple-mobile-web-app-capable',
