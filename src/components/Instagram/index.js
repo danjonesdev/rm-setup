@@ -12,7 +12,7 @@ export class Instagram extends React.Component {
   }
   render() {
     return (
-      <div className="container  pv3">
+      <div className="container  pv4">
         <div className="row">
           <div className="col-sm-3" />
           <div className="col-sm-18">
