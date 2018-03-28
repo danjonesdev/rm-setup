@@ -19,7 +19,7 @@ export class Contact extends PureComponent {
         <Helmet title="Contact" />
         <div className="container  tal">
           <div className="row">
-            <div className="col-xs-14">
+            <div className="col-sm-14">
               <h1 className="black  title-font  t5  pt5  pv4">Contact</h1>
               <p>Get involved. We&apos;re constantly on the look out for new members for the Rendah team.</p>
               <ul>
@@ -31,7 +31,7 @@ export class Contact extends PureComponent {
               <p>Even if you&apos;re none of the above and want to get involved, we encourage you to get in touch!<br /><br /></p>
               <p>Please email: <a href="mailto:info@rendahmag.com" target="_blank" rel="noopener noreferrer">info@rendahmag.com</a></p>
             </div>
-            <div className="col-xs-10">
+            <div className="col-sm-10">
               <div className="container-fluid  pv4">
                 <div className="row">
                   <div className="col-sm-24  pt4">
