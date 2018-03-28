@@ -12,25 +12,17 @@ export class Instagram extends React.Component {
   }
   render() {
     return (
-      <div className="container  pv4">
-        <div className="row">
-          <div className="col-sm-3" />
-          <div className="col-sm-18">
-            <div id="instaFeed" className="row  ph5  ph2-md">
-              <Instafeed
-                limit="9"
-                resolution="standard_resolution"
-                sortBy="most-recent"
-                target="instaFeed"
-                template=""
-                userId="6646546960"
-                clientId="1375f42790124e1ba319055cd4f93ec5"
-                accessToken="6646546960.1677ed0.8eb1d2cceba64706aed91890d352c904"
-              />
-            </div>
-            <div className="col-sm-3" />
-          </div>
-        </div>
+      <div id="instaFeed" className="row  ph5  ph2-md">
+        <Instafeed
+          limit="9"
+          resolution="standard_resolution"
+          sortBy="most-recent"
+          target="instaFeed"
+          template=""
+          userId="6646546960"
+          clientId="1375f42790124e1ba319055cd4f93ec5"
+          accessToken="6646546960.1677ed0.8eb1d2cceba64706aed91890d352c904"
+        />
       </div>
     );
   }
