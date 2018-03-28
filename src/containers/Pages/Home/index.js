@@ -10,7 +10,6 @@ import LatestArticles from '../../../containers/Fragments/LatestArticles';
 import CategoryGrid from '../../../components/CategoryGrid';
 import SearchInput from '../../../components/SearchInput';
 import SubscribeBanner from '../../../components/SubscribeBanner';
-import Instagram from '../../../components/Instagram';
 
 export class Home extends PureComponent {
   componentDidMount() {
@@ -31,15 +30,6 @@ export class Home extends PureComponent {
         <p className="pt4  t6  fw6  black  tac  title-font">Search the site for more</p>
         <div className="pt1  pb4"><SearchInput textAlign="tac" /></div>
         <CategoryGrid />
-        <div className="container-fluid  pv4">
-          <div className="row">
-            <div className="col-sm-3" />
-            <div className="col-sm-18">
-              <Instagram />
-            </div>
-            <div className="col-sm-3" />
-          </div>
-        </div>
       </main>
     );
   }
