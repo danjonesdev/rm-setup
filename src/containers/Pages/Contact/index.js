@@ -29,7 +29,7 @@ export class Contact extends PureComponent {
                 <li className="pv1">Are you a visual artist and want to promote artwork on the site? - <strong>Get involved</strong></li>
               </ul>
               <p>Even if you&apos;re none of the above and want to get involved, we encourage you to get in touch!<br /><br /></p>
-              <p>Please email: <a href="mailto:info@rendahmag.com" target="_blank" rel="noopener noreferrer">info@rendahmag.com</a></p>
+              <p>Please email: <a href="mailto:info@rendahmag.com">info@rendahmag.com</a></p>
             </div>
             <div className="col-sm-10">
               <div className="container-fluid  pv4">
