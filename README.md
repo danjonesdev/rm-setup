@@ -10,11 +10,6 @@
 
 **1. You can start by cloning the repository on your local machine by running:**
 
-```bash
-git clone https://github.com/wellyshen/react-cool-starter.git
-cd react-cool-starter
-```
-
 **2. Install all of the dependencies:**
 
 ```bash
@@ -40,12 +35,6 @@ I use [better-npm-run](https://github.com/benoror/better-npm-run) to manage the 
 `start:production`|Bundle files to `./public/assets` and run it on the production server at `localhost:8080`.
 `start:prod`|Run your app on the production server only at `localhost:8080`.
 `build`|Remove the previous bundled files and bundle it to `./public/assets`.
-`lint`|Lint all `.js` and `.scss` files.
-`lint:js`|Lint all `.js` files.
-`lint:style`|Lint all `.scss` files.
-`flow`|Run type checking for `.js` files.
-`test`|Run testing once (with code coverage reports).
-`test:watch`|Run testing on every test file change.
 `clean:all`|Remove the client/server bundled stuff and the coverage report.
 `clean:build`|Remove the `./public/assets` folder to clean the client bundled files.
 `clean:test`|Remove the `./coverage` folder to clean the code coverage report.
